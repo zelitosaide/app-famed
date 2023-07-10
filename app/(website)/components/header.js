@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header style={{ background: "rgb(var(--accent-rgb))" }} className="pl-32 pr-32">
+    <header style={{ backgroundColor: "rgb(var(--accent-rgb))" }} className="pl-32 pr-32">
       <ul className="text-slate-200 flex text-sm font-medium">
         <li className="pt-2 pb-2 pl-3 pr-3 hover:bg-[#0d5e0c] cursor-pointer flex">
           Sobre a Faculdade

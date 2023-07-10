@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Navbar from "./components/navbar";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <div style={{ backgroundColor: "rgb(var(--card-rgb))", height: 80 }}></div>
+        <Navbar />
         {children}
         <Footer />
       </body>
