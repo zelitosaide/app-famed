@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Header />
+        <div style={{ backgroundColor: "rgb(var(--card-rgb))", height: 80 }}></div>
         {children}
         <Footer />
       </body>
