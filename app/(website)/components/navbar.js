@@ -4,12 +4,12 @@ import logo from "@/public/logo.png";
 
 export default function Navbar() {
   return (
-    <div style={{ backgroundColor: "rgb(var(--card-rgb))" }} className="pl-32 pr-32 flex items-center justify-between">
+    <div style={{ backgroundColor: "rgb(var(--card-rgb))" }} className="pl-28 pr-28 flex items-center justify-between">
       <Image
         alt="Famed logo"
         src={logo}
         width={208}
-        className="p-3 grow-0"
+        className="pl-3 pt-3 pb-5 grow-0 cursor-pointer"
       />
       <ul className="uppercase flex text-[#178415] font-bold text-lg">
         <li className="p-3 flex items-center cursor-pointer hover:underline underline-offset-8 decoration-2 decoration-[#6BAA65]">
