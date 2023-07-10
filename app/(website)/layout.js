@@ -5,12 +5,12 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "FAMED",
   description: "Faculdade de Medicina da Universidade Eduardo Mondlane, FAMED - UEM",
-}
+};
 
 export default function RootLayout({ children }) {
   return (
