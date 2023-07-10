@@ -11,7 +11,7 @@
   --border-rgb: 186, 224, 186;
   --card-rgb: 242, 248, 242;
 }
-
+ 
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
