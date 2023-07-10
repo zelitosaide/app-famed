@@ -1,3 +1,7 @@
 export default function Header() {
-  return <h1 style={{ background: "rgb(var(--primary-button-rgb))"}}>Header</h1>;
+  return (
+    <header style={{ background: "rgb(var(--secondary-button-rgb))"}}>
+      Header
+    </header>
+  );
 }
