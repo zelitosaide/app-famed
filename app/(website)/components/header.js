@@ -5,7 +5,7 @@ export default function Header() {
         <li className="pt-2 pb-2 pl-3 pr-3 hover:bg-[#0d5e0c] cursor-pointer flex items-center">
           Sobre a Faculdade
           <svg
-            classname="w-2.5 h-2.5 ml-2.5"
+            className="w-2.5 h-2.5 ml-2.5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -23,7 +23,7 @@ export default function Header() {
         <li className="pt-2 pb-2 pl-3 pr-3 hover:bg-[#0d5e0c] cursor-pointer flex items-center">
           Links úteis
           <svg
-            classname="w-2.5 h-2.5 ml-2.5"
+            className="w-2.5 h-2.5 ml-2.5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
