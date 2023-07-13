@@ -144,6 +144,12 @@ ListItem.displayName = "ListItem";
 export default function Home() {
   return (
     <main>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <NavigationMenuDemo />
     </main>
   );
