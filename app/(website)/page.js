@@ -150,7 +150,7 @@ export default function Home() {
       <br />
       <br />
       <br />
-      <NavigationMenuDemo />
+      {/* <NavigationMenuDemo /> */}
     </main>
   );
 }
