@@ -36,7 +36,7 @@ export default function Navbar() {
         <li className="p-3 flex items-center cursor-pointer hover:underline underline-offset-8 decoration-2 decoration-[#6BAA65]">
           Investigação
           <svg
-            classname="w-2.5 h-2.5 ml-2.5"
+            className="w-2.5 h-2.5 ml-2.5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
