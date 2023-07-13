@@ -17,7 +17,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav style={{ background: 'pink' }}>
+    <nav style={{ background: 'pink', marginLeft: 400 }}>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -30,7 +30,7 @@ export default function Navbar() {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Ensino</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 {components.map((component) => (
                   <ListItem
                     key={component.title}
@@ -45,6 +45,19 @@ export default function Navbar() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Investigação</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                {components.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    {component.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
@@ -55,6 +68,19 @@ export default function Navbar() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Submissão de Protocolos</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                {components.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    {component.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
