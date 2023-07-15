@@ -1,6 +1,12 @@
-import Image from "next/image";
+"use client";
 
+import "./navbar.css";
+
+import Image from "next/image";
 import logo from "@/public/logo.png";
+
+import { Root, List, Item, Trigger, Link } from "@radix-ui/react-navigation-menu";
+import { CaretDownIcon } from "@radix-ui/react-icons";
 
 export default function Navbar() {
   return (
@@ -11,7 +17,41 @@ export default function Navbar() {
         width={208}
         className="pl-3 pt-3 pb-5 grow-0 cursor-pointer"
       />
-      <ul className="uppercase flex text-[#178415] font-bold text-lg">
+
+      <div>
+        <Root>
+          <List>
+            <Item>
+              <Link href="/">Página Inicial</Link>
+            </Item>
+            <Item>
+              <Trigger>
+                Ensino <CaretDownIcon aria-hidden />
+              </Trigger>
+            </Item>
+            <Item>
+              <Trigger>
+                Investigação <CaretDownIcon aria-hidden />
+              </Trigger>
+            </Item>
+            <Item>
+              <Link href="/">Extensão</Link>
+            </Item>
+            <Item>
+              <Trigger>
+                Submissão de Protocolos <CaretDownIcon aria-hidden />
+              </Trigger>
+            </Item>
+            <Item>
+              <Link href="/">Notícias</Link>
+            </Item>
+          </List>
+        </Root>
+      </div>
+
+
+
+      {/* <ul className="uppercase flex text-[#178415] font-bold text-lg">
         <li className="p-3 flex items-center cursor-pointer hover:underline underline-offset-8 decoration-2 decoration-[#6BAA65]">
           Página Inicial
         </li>
@@ -39,7 +79,7 @@ export default function Navbar() {
         <li className="p-3 flex items-center cursor-pointer hover:underline underline-offset-8 decoration-2 decoration-[#6BAA65]">
           Notícias
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 }
