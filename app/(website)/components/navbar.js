@@ -22,28 +22,28 @@ export default function Navbar() {
         <Root className="NavigationMenuRoot">
           <List className="NavigationMenuList">
             <Item>
-              <Link href="/">Página Inicial</Link>
+              <Link className="NavigationMenuLink" href="/">Página Inicial</Link>
             </Item>
             <Item>
-              <Trigger>
+              <Trigger className="NavigationMenuTrigger">
                 Ensino <CaretDownIcon aria-hidden />
               </Trigger>
             </Item>
             <Item>
-              <Trigger>
+              <Trigger className="NavigationMenuTrigger">
                 Investigação <CaretDownIcon aria-hidden />
               </Trigger>
             </Item>
             <Item>
-              <Link href="/">Extensão</Link>
+              <Link className="NavigationMenuLink" href="/">Extensão</Link>
             </Item>
             <Item>
-              <Trigger>
+              <Trigger className="NavigationMenuTrigger">
                 Submissão de Protocolos <CaretDownIcon aria-hidden />
               </Trigger>
             </Item>
             <Item>
-              <Link href="/">Notícias</Link>
+              <Link className="NavigationMenuLink" href="/">Notícias</Link>
             </Item>
           </List>
         </Root>

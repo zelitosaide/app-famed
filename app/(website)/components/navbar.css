@@ -13,17 +13,49 @@ button, p {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 100vw;
   z-index: 1;
 }
 
 .NavigationMenuList {
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(var(--card-rgb));
   padding: 4px;
   border-radius: 6px;
   list-style: none;
-  box-shadow: 0 2px 10px var(--black-a7);
   margin: 0;
+}
+
+.NavigationMenuTrigger,
+.NavigationMenuLink {
+  padding: 8px 12px;
+  outline: none;
+  user-select: none;
+  line-height: 1;
+  font-size: 18px;
+  color: #178415;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.NavigationMenuTrigger:focus,
+.NavigationMenuLink:focus {
+  box-shadow: 0 0 0 2px rgb(23 132 21 / 76%);
+}
+.NavigationMenuTrigger:hover,
+.NavigationMenuLink:hover {
+  background-color: rgb(23 132 21 / 12%);
+}
+
+.NavigationMenuTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.NavigationMenuLink {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1;
 }
