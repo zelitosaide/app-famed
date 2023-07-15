@@ -19,8 +19,8 @@ export default function Navbar() {
       />
 
       <div>
-        <Root>
-          <List>
+        <Root className="NavigationMenuRoot">
+          <List className="NavigationMenuList">
             <Item>
               <Link href="/">Página Inicial</Link>
             </Item>
