@@ -5,7 +5,7 @@ import logo from "@/public/logo.png";
 
 import Image from "next/image";
 import { Root, List, Item, Trigger, Link, Content } from "@radix-ui/react-navigation-menu";
-import { CaretDownIcon, ComponentInstanceIcon, FrameIcon, ShadowIcon, ShadowInnerIcon, ShadowNoneIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon, ArrowTopRightIcon, CaretDownIcon, ComponentInstanceIcon, DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { Separator } from "@radix-ui/react-separator";
 
 export default function Navbar() {
@@ -31,9 +31,32 @@ export default function Navbar() {
               <div className="NavigationMenuContentWrapper">
                 <Content className="NavigationMenuContent">
                   <div className="NavigationMenuContentBoundary">
+
                     <div>
                       <h3 className="NavigationMenuContentSectionHeader">
-                        <ComponentInstanceIcon /> Cursos de Pós-Graduação
+                        <ComponentInstanceIcon /> Cursos de Graduação:
+                      </h3>
+                      <Separator className="SeparatorRoot" />
+                      <ul className="List one">
+                        <li>
+                          <Link asChild>
+                            <a className="ListItemLink" href="/">
+                              <div className="ListItemHeading">Curso de Licenciatura em Medicina</div>
+                              <p className="ListItemText">
+                                Tem como finalidade de habilitar profissionais de nível superior 
+                                no ramo da Medicina...
+                              </p>
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <Separator className="SeparatorRoot" />
+
+                    <div>
+                      <h3 className="NavigationMenuContentSectionHeader">
+                        <ComponentInstanceIcon /> Cursos de Pós-Graduação:
                       </h3>
                       <Separator className="SeparatorRoot" />
                       <ul className="List">
@@ -102,8 +125,29 @@ export default function Navbar() {
                             </a>
                           </Link>
                         </li>
+
+                        <li>
+                          <Link asChild>
+                            <a className="ListItemLink" href="/">
+                              <div className="ListItemHeading">Doutoramento em Biociências e Saúde Pública</div>
+                              <p className="ListItemText">
+                                O Programa visa criar oportunidades para que o doutorando adquira conhecimentos...
+                              </p>
+                            </a>
+                          </Link>
+                        </li>
                       </ul>
                     </div>
+
+                    <Separator className="SeparatorRoot" />
+
+                    <div>
+                      <h3 className="NavigationMenuContentSectionHeader">
+                        <ComponentInstanceIcon /> Cursos de curta duração <DoubleArrowRightIcon />
+                      </h3>
+                    </div>
+
+
                   </div>
                 </Content>
               </div>
