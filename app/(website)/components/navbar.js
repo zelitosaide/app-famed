@@ -5,7 +5,7 @@ import logo from "@/public/logo.png";
 
 import Image from "next/image";
 import { Root, List, Item, Trigger, Link, Content } from "@radix-ui/react-navigation-menu";
-import { ArrowRightIcon, ArrowTopRightIcon, CaretDownIcon, ComponentInstanceIcon, DoubleArrowRightIcon } from "@radix-ui/react-icons";
+import { CaretDownIcon, ComponentInstanceIcon, DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { Separator } from "@radix-ui/react-separator";
 
 export default function Navbar() {
