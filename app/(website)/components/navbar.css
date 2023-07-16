@@ -92,17 +92,35 @@ button, p {
   animation: scaleOut 200ms ease;
 }
 
-.List {
-  display: grid;
-  padding: 16px;
-  margin: 0;
-  column-gap: 10px;
-  list-style: none;
+.NavigationMenuContentSectionHeader {
+  margin-top: 15px;
+  margin-left: 12px;
+  margin-bottom: 15px;
+
+  font-weight: 500;
+  color: #178415;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.SeparatorRoot {
+  background-color: rgb(23 132 21 / 21%);
+}
+
+.SeparatorRoot[data-orientation='horizontal'] {
+  height: 1px;
+  width: 100%;
 }
 
 .List {
-  width: 600px;
-  grid-template-columns: 0.75fr 1fr;
+  display: grid;
+  padding: 12px 16px 16px 16px;
+  margin: 0;
+  list-style: none;
+  width: 700px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .ListItemLink {

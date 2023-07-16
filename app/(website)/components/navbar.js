@@ -5,7 +5,8 @@ import logo from "@/public/logo.png";
 
 import Image from "next/image";
 import { Root, List, Item, Trigger, Link, Content } from "@radix-ui/react-navigation-menu";
-import { CaretDownIcon } from "@radix-ui/react-icons";
+import { CaretDownIcon, ComponentInstanceIcon, FrameIcon, ShadowIcon, ShadowInnerIcon, ShadowNoneIcon } from "@radix-ui/react-icons";
+import { Separator } from "@radix-ui/react-separator";
 
 export default function Navbar() {
   return (
@@ -30,73 +31,79 @@ export default function Navbar() {
               <div className="NavigationMenuContentWrapper">
                 <Content className="NavigationMenuContent">
                   <div className="NavigationMenuContentBoundary">
-                    <ul className="List">
-                      <li>
-                        <Link asChild>
-                          <a className="ListItemLink" href="/">
-                            <div className="ListItemHeading">Mestrado em Saúde Pública Presencial (MSP)</div>
-                            <p className="ListItemText">
-                              Formação multidisciplinar, orientada para a solução...
-                            </p>
-                          </a>
-                        </Link>
-                      </li>
+                    <div>
+                      <h3 className="NavigationMenuContentSectionHeader">
+                        <ComponentInstanceIcon /> Cursos de Pós-Graduação
+                      </h3>
+                      <Separator className="SeparatorRoot" />
+                      <ul className="List">
+                        <li>
+                          <Link asChild>
+                            <a className="ListItemLink" href="/">
+                              <div className="ListItemHeading">Mestrado em Saúde Pública Presencial (MSP)</div>
+                              <p className="ListItemText">
+                                Formação multidisciplinar, orientada para a solução...
+                              </p>
+                            </a>
+                          </Link>
+                        </li>
 
-                      <li>
-                        <Link asChild>
-                          <a className="ListItemLink" href="/">
-                            <div className="ListItemHeading">Mestrado em Saúde Pública à Distância (MSPD)</div>
-                            <p className="ListItemText">
-                              Mestrado em Saúde Pública à Distância (MSPD), com os seguintes ramos...
-                            </p>
-                          </a>
-                        </Link>
-                      </li>
+                        <li>
+                          <Link asChild>
+                            <a className="ListItemLink" href="/">
+                              <div className="ListItemHeading">Mestrado em Saúde Pública à Distância (MSPD)</div>
+                              <p className="ListItemText">
+                                Mestrado em Saúde Pública à Distância (MSPD), com os seguintes ramos...
+                              </p>
+                            </a>
+                          </Link>
+                        </li>
 
-                      <li>
-                        <Link asChild>
-                          <a className="ListItemLink" href="/">
-                            <div className="ListItemHeading">Mestrado em Biociências (MBC)</div>
-                            <p className="ListItemText">
-                              Visa formar profissionais de nível superior qualificados...
-                            </p>
-                          </a>
-                        </Link>
-                      </li>
+                        <li>
+                          <Link asChild>
+                            <a className="ListItemLink" href="/">
+                              <div className="ListItemHeading">Mestrado em Biociências (MBC)</div>
+                              <p className="ListItemText">
+                                Visa formar profissionais de nível superior qualificados...
+                              </p>
+                            </a>
+                          </Link>
+                        </li>
 
-                      <li>
-                        <Link asChild>
-                          <a className="ListItemLink" href="/">
-                            <div className="ListItemHeading">Mestrado em Epidemiologia de Campo e Laboratorial (MECL)</div>
-                            <p className="ListItemText">
-                              Formação em serviço, baseada nos Princípios Fundamentais da...
-                            </p>
-                          </a>
-                        </Link>
-                      </li>
+                        <li>
+                          <Link asChild>
+                            <a className="ListItemLink" href="/">
+                              <div className="ListItemHeading">Mestrado em Epidemiologia de Campo e Laboratorial (MECL)</div>
+                              <p className="ListItemText">
+                                Formação em serviço, baseada nos Princípios Fundamentais da...
+                              </p>
+                            </a>
+                          </Link>
+                        </li>
 
-                      <li>
-                        <Link asChild>
-                          <a className="ListItemLink" href="/">
-                            <div className="ListItemHeading">Mestrado em Saúde Mental e Psico-intervenções (MSMPI)</div>
-                            <p className="ListItemText">
-                              Formação de profissionais com competências em pesquisa, avaliação...
-                            </p>
-                          </a>
-                        </Link>
-                      </li>
+                        <li>
+                          <Link asChild>
+                            <a className="ListItemLink" href="/">
+                              <div className="ListItemHeading">Mestrado em Saúde Mental e Psico-intervenções (MSMPI)</div>
+                              <p className="ListItemText">
+                                Formação de profissionais com competências em pesquisa, avaliação...
+                              </p>
+                            </a>
+                          </Link>
+                        </li>
 
-                      <li>
-                        <Link asChild>
-                          <a className="ListItemLink" href="/">
-                            <div className="ListItemHeading">Mestrado em Emergências Pediatrias e Neonatais (MEPN)</div>
-                            <p className="ListItemText">
-                              Formação de profissionais de saúde para providenciar cuidados...
-                            </p>
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
+                        <li>
+                          <Link asChild>
+                            <a className="ListItemLink" href="/">
+                              <div className="ListItemHeading">Mestrado em Emergências Pediatrias e Neonatais (MEPN)</div>
+                              <p className="ListItemText">
+                                Formação de profissionais de saúde para providenciar cuidados...
+                              </p>
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </Content>
               </div>
