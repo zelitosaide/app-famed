@@ -16,12 +16,12 @@ export default function Navbar() {
         </Item>
         <Item>
           <Trigger className="NavigationMenuTrigger">
-            Ensino <CaretDownIcon aria-hidden />
+            Ensino <CaretDownIcon className="CaretDown" aria-hidden />
           </Trigger>
           <div className="NavigationMenuContentWrapper">
             <Content className="NavigationMenuContent">
               <div className="NavigationMenuContentBoundary">
-                <ul className="List two">
+                <ul className="List">
                   <li>
                     <Link asChild>
                       <a className="ListItemLink" href="/">
@@ -82,7 +82,7 @@ export default function Navbar() {
         </Item>
         <Item>
           <Trigger className="NavigationMenuTrigger">
-            Investigação <CaretDownIcon aria-hidden />
+            Investigação <CaretDownIcon className="CaretDown" aria-hidden />
           </Trigger>
           <div>
 
@@ -93,7 +93,7 @@ export default function Navbar() {
         </Item>
         <Item>
           <Trigger className="NavigationMenuTrigger">
-            Submissão de Protocolos <CaretDownIcon aria-hidden />
+            Submissão de Protocolos <CaretDownIcon className="CaretDown" aria-hidden />
           </Trigger>
           <div>
 
