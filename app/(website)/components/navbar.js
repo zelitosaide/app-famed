@@ -4,7 +4,8 @@ import "./navbar.css";
 import logo from "@/public/logo.png";
 
 import Image from "next/image";
-import { Root, List, Item, Trigger, Link, Content } from "@radix-ui/react-navigation-menu";
+import NextLink from "next/link";
+import { Root, List, Item, Link, Trigger, Content } from "@radix-ui/react-navigation-menu";
 import { CaretDownIcon, ComponentInstanceIcon, DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { Separator } from "@radix-ui/react-separator";
 
@@ -22,7 +23,7 @@ export default function Navbar() {
         <Root className="NavigationMenuRoot">
           <List className="NavigationMenuList">
             <Item>
-              <Link className="NavigationMenuLink" href="/">Página Inicial</Link>
+              <NextLink className="NavigationMenuLink" href="/">Página Inicial</NextLink>
             </Item>
             <Item>
               <Trigger className="NavigationMenuTrigger">
@@ -180,7 +181,7 @@ export default function Navbar() {
               </div>
             </Item>
             <Item>
-              <Link className="NavigationMenuLink" href="/">Extensão</Link>
+              <NextLink className="NavigationMenuLink" href="/extension">Extensão</NextLink>
             </Item>
             <Item>
               <Trigger className="NavigationMenuTrigger">
@@ -210,7 +211,7 @@ export default function Navbar() {
               </div>
             </Item>
             <Item>
-              <Link className="NavigationMenuLink" href="/">Notícias</Link>
+              <NextLink className="NavigationMenuLink" href="/news">Notícias</NextLink>
             </Item>
           </List>
         </Root>
