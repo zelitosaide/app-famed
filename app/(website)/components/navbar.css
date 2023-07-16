@@ -129,6 +129,12 @@ button, p {
   grid-template-columns: 1fr;
 }
 
+.List.two {
+  grid-template-columns: 1fr;
+  width: 350px;
+  padding: 6px;
+}
+
 .ListItemLink {
   display: block;
   outline: none;
@@ -138,6 +144,10 @@ button, p {
   border-radius: 6px;
   font-size: 15px;
   line-height: 1;
+}
+
+.List.two .ListItemLink {
+  padding: 6px 6px 3px;
 }
 
 .ListItemLink:focus {
