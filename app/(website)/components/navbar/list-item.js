@@ -9,7 +9,7 @@ const ListItem = forwardRef(({ children, ...props }, ref) => {
     <li>
       {props.href.includes("http") ? (
         <Link asChild>
-          <a className="ListItem" {...props} ref={ref}>
+          <a target="_blank" className="ListItem" {...props} ref={ref}>
             <div>{children}</div>
           </a>
         </Link>
