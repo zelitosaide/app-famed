@@ -8,7 +8,6 @@ import NextLink from "next/link";
 import { Root, List, Item, Link, Trigger, Content } from "@radix-ui/react-navigation-menu";
 import { CaretDownIcon, ComponentInstanceIcon, DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { Separator } from "@radix-ui/react-separator";
-import ListItem from "./list-item";
 
 export default function Navbar() {
   return (
@@ -161,9 +160,21 @@ export default function Navbar() {
               <div className="NavigationMenuContentWrapper">
                 <Content className="NavigationMenuContent">
                   <div className="NavigationMenuContentBoundary">
-                    <ul className="RowList">
-                      <ListItem href="/">Projectos de Pesquisa</ListItem>
-                      <ListItem href="/">Publicações</ListItem>
+                    <ul className="List two">
+                      <li>
+                        <Link asChild>
+                          <a className="ListItemLink" href="/">
+                            <div className="ListItemHeading">Projectos de Pesquisa</div>
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link asChild>
+                          <a className="ListItemLink" href="/">
+                            <div className="ListItemHeading">Publicações</div>
+                          </a>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </Content>
@@ -179,9 +190,21 @@ export default function Navbar() {
               <div className="NavigationMenuContentWrapper">
                 <Content className="NavigationMenuContent">
                   <div className="NavigationMenuContentBoundary">
-                    <ul className="RowList">
-                      <ListItem href="/">Iniciar Submissão de Protocolos</ListItem>
-                      <ListItem href="/">Instruções de Submissão de Protocolos</ListItem>
+                    <ul className="List two">
+                      <li>
+                        <Link asChild>
+                          <a className="ListItemLink" href="/">
+                            <div className="ListItemHeading">Iniciar Submissão de Protocolos</div>
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link asChild>
+                          <a className="ListItemLink" href="/">
+                            <div className="ListItemHeading">Instruções de Submissão de Protocolos</div>
+                          </a>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </Content>

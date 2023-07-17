@@ -116,19 +116,6 @@ button, p {
   width: 100%;
 }
 
-.RowList {
-  padding: 6px;
-}
-
-
-
-
-
-
-
-
-
-
 .List {
   display: grid;
   padding: 12px 16px 12px 16px;
@@ -140,6 +127,12 @@ button, p {
 
 .List.one {
   grid-template-columns: 1fr;
+}
+
+.List.two {
+  grid-template-columns: 1fr;
+  width: 350px;
+  padding: 6px;
 }
 
 .ListItemLink {
