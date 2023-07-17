@@ -120,16 +120,7 @@ button, p {
   padding: 6px;
 }
 
-
-
-
-
-
-
-
-
-
-.List {
+.GridList {
   display: grid;
   padding: 12px 16px 12px 16px;
   margin: 0;
@@ -138,7 +129,7 @@ button, p {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.List.one {
+.GridList.one {
   grid-template-columns: 1fr;
 }
 
