@@ -39,14 +39,14 @@ export default function Navbar() {
                         <ComponentInstanceIcon /> Cursos de Graduação:
                       </h3>
                       <Separator className="SeparatorRoot" />
-                      <ul className="List one">
+                      <ul className="GridList one">
                         <li>
                           <Link asChild>
                             <a className="ListItemLink" href="/">
                               <div className="ListItemHeading">Curso de Licenciatura em Medicina</div>
                               <p className="ListItemText">
                                 Tem como finalidade de habilitar profissionais de nível superior 
-                                no ramo da Medicina...
+                                no ramo...
                               </p>
                             </a>
                           </Link>
@@ -61,7 +61,7 @@ export default function Navbar() {
                         <ComponentInstanceIcon /> Cursos de Pós-Graduação:
                       </h3>
                       <Separator className="SeparatorRoot" />
-                      <ul className="List">
+                      <ul className="GridList two">
                         <li>
                           <Link asChild>
                             <a className="ListItemLink" href="/">
