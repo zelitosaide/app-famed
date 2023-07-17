@@ -99,7 +99,7 @@ export default function Navbar() {
                             <a className="ListItemLink" href="/">
                               <div className="ListItemHeading">Mestrado em Epidemiologia de Campo e Laboratorial (MECL)</div>
                               <p className="ListItemText">
-                                Formação em serviço, baseada nos Princípios Fundamentais da...
+                                Formação em serviço, baseada nos Princípios Fundamentais da Epidemiologia.
                               </p>
                             </a>
                           </Link>
@@ -110,7 +110,7 @@ export default function Navbar() {
                             <a className="ListItemLink" href="/">
                               <div className="ListItemHeading">Mestrado em Saúde Mental e Psico-intervenções (MSMPI)</div>
                               <p className="ListItemText">
-                                Formação de profissionais com competências em pesquisa, avaliação...
+                                Formação de profissionais com competências em pesquisa, avaliação e intervenção nas diferentes áreas da saúde mental.
                               </p>
                             </a>
                           </Link>
@@ -121,7 +121,7 @@ export default function Navbar() {
                             <a className="ListItemLink" href="/">
                               <div className="ListItemHeading">Mestrado em Emergências Pediatrias e Neonatais (MEPN)</div>
                               <p className="ListItemText">
-                                Formação de profissionais de saúde para providenciar cuidados...
+                                Formação de profissionais de saúde para providenciar cuidados de saúde, na área de pediatria e neonatologia.
                               </p>
                             </a>
                           </Link>
