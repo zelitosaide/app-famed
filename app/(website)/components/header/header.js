@@ -41,17 +41,17 @@ export default function Header() {
                 <Content className="H-NavigationMenuContent">
                   <div className="H-NavigationMenuContentBoundary">
                     <ul className="H-RowList">
-                      <ListItem href="/">Plataforma de Ensino Online(VULA)</ListItem>
+                      <ListItem href="https://vula.uem.mz/">Plataforma de Ensino Online (VULA)</ListItem>
                       <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Base de Dados (RedCap)</ListItem>
+                      <ListItem href="https://redcap.uem.mz/">Base de Dados (RedCap)</ListItem>
                       <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Sistema Integrado de Gestão Académica (SIGA)</ListItem>
+                      <ListItem href="https://estudante.siga.uem.mz/">Sistema Integrado de Gestão Académica (SIGA)</ListItem>
                       <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Universidade Eduardo Mondlane (UEM)</ListItem>
+                      <ListItem href="https://www.uem.mz/">Universidade Eduardo Mondlane (UEM)</ListItem>
                       <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Direção do Registo Académico (UEM)</ListItem>
+                      <ListItem href="https://www.dra.uem.mz/">Direção do Registo Académico (UEM)</ListItem>
                       <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Departamento de Admissão a Univerdade</ListItem>
+                      <ListItem href="https://admissao.uem.mz/">Departamento de Admissão a Univerdade</ListItem>
                     </ul>
                   </div>
                 </Content>
