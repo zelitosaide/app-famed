@@ -5,8 +5,6 @@ import { forwardRef } from "react";
 import { Link } from "@radix-ui/react-navigation-menu";
 
 const ListItem = forwardRef(({ children, ...props }, ref) => {
-  console.log(props.href.includes("https"));
-
   return (
     <li>
       {props.href.includes("http") ? (
