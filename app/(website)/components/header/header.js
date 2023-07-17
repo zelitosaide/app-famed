@@ -68,13 +68,13 @@ export default function Header() {
       </div>
 
       <div className="flex gap-2 items-center pr-3">
-        <NextLink className="SocialNetwork p-1.5 rounded" target="_blank" href="https://redcap.uem.mz/">
+        <NextLink className="SocialNetwork p-1.5 rounded" target="_blank" href="https://www.instagram.com/faculdademedicinauem/">
           <InstagramLogoIcon />
         </NextLink>
-        <NextLink className="SocialNetwork p-1.5 rounded" target="_blank" href="https://redcap.uem.mz/">
+        <NextLink className="SocialNetwork p-1.5 rounded" target="_blank" href="https://www.linkedin.com/in/faculdade-de-medicina-uem">
           <LinkedInLogoIcon />
         </NextLink>
-        <NextLink className="SocialNetwork p-1.5 rounded" target="_blank" href="https://redcap.uem.mz/">
+        <NextLink className="SocialNetwork p-1.5 rounded" target="_blank" href="https://twitter.com/FamedUEM">
           <TwitterLogoIcon />
         </NextLink>
       </div>
