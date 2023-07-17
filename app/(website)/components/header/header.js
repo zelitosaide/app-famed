@@ -5,7 +5,7 @@ import "./header.css";
 import ListItem from "../navbar/list-item";
 import NextLink from "next/link";
 
-import { CaretDownIcon } from "@radix-ui/react-icons";
+import { CaretDownIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { Item, List, Root, Trigger, Content } from "@radix-ui/react-navigation-menu";
 import { Separator } from "@radix-ui/react-separator";
 
@@ -64,7 +64,17 @@ export default function Header() {
         </Root>
       </div>
 
-      <div>Left</div>
+      <div className="flex gap-2 items-center pr-3">
+        <NextLink className="SocialNetwork" style={{ padding: 6, borderRadius: 3 }} target="_blank" href="https://redcap.uem.mz/">
+          <InstagramLogoIcon />
+        </NextLink>
+        <NextLink className="SocialNetwork" style={{ padding: 6, borderRadius: 3 }} target="_blank" href="https://redcap.uem.mz/">
+          <LinkedInLogoIcon />
+        </NextLink>
+        <NextLink className="SocialNetwork" style={{ padding: 6, borderRadius: 3 }} target="_blank" href="https://redcap.uem.mz/">
+          <TwitterLogoIcon />
+        </NextLink>
+      </div>
     </header>
   );
 }
