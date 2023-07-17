@@ -45,8 +45,7 @@ export default function Navbar() {
                             <a className="ListItemLink" href="/">
                               <div className="ListItemHeading">Curso de Licenciatura em Medicina</div>
                               <p className="ListItemText">
-                                Tem como finalidade de habilitar profissionais de nível superior 
-                                no ramo...
+                                Tem como finalidade de habilitar profissionais de nível superior no ramo da Medicina Humana.
                               </p>
                             </a>
                           </Link>
@@ -67,7 +66,7 @@ export default function Navbar() {
                             <a className="ListItemLink" href="/">
                               <div className="ListItemHeading">Mestrado em Saúde Pública Presencial (MSP)</div>
                               <p className="ListItemText">
-                                Formação multidisciplinar, orientada para a solução...
+                                Formação multidisciplinar, orientada para a solução de problemas de Saúde em Moçambique.
                               </p>
                             </a>
                           </Link>
