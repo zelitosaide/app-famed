@@ -180,7 +180,7 @@ export default function Navbar() {
                 <Content className="NavigationMenuContent">
                   <div className="NavigationMenuContentBoundary">
                     <ul className="RowList">
-                      <ListItem href="/">Iniciar Submissão de Protocolos</ListItem>
+                      <ListItem href="/news">Iniciar Submissão de Protocolos</ListItem>
                       <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
                       <ListItem href="/">Instruções de Submissão de Protocolos</ListItem>
                       {/* <ListItem href="/">Plataforma de Ensino Online(VULA)</ListItem>
