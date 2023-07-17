@@ -12,3 +12,7 @@
 .ListItem:hover {
   background-color: rgb(23 132 21 / 10%) !important;
 }
+
+.ListItem:focus {
+  box-shadow: 0 0 0 2px rgb(23 132 21 / 21%);
+}
