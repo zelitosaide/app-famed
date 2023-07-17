@@ -77,7 +77,7 @@ export default function Navbar() {
                             <a className="ListItemLink" href="/">
                               <div className="ListItemHeading">Mestrado em Saúde Pública à Distância (MSPD)</div>
                               <p className="ListItemText">
-                                Mestrado em Saúde Pública à Distância (MSPD), com os seguintes ramos...
+                                Formação multidisciplinar, orientada para a solução de problemas de Saúde em Moçambique.
                               </p>
                             </a>
                           </Link>
@@ -88,7 +88,7 @@ export default function Navbar() {
                             <a className="ListItemLink" href="/">
                               <div className="ListItemHeading">Mestrado em Biociências (MBC)</div>
                               <p className="ListItemText">
-                                Visa formar profissionais de nível superior qualificados...
+                                Visa formar profissionais de nível superior qualificados, nos domínios das Biociências.
                               </p>
                             </a>
                           </Link>
