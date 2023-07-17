@@ -182,7 +182,7 @@ export default function Navbar() {
                     <ul className="RowList">
                       <ListItem href="/news">Iniciar Submissão de Protocolos</ListItem>
                       <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Instruções de Submissão de Protocolos</ListItem>
+                      <ListItem href="http://localhost:3000/">Instruções de Submissão de Protocolos</ListItem>
                       {/* <ListItem href="/">Plataforma de Ensino Online(VULA)</ListItem>
                       <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
                       <ListItem href="/">Base de Dados (RedCap)</ListItem>

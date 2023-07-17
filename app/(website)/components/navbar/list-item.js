@@ -16,7 +16,7 @@ const ListItem = forwardRef(({ children, ...props }, ref) => {
           </a>
         </Link>
       ) : (
-        <Link>
+        <Link asChild>
           <NextLink href={props.href} className="ListItem">
             <div>{children}</div>
           </NextLink>
