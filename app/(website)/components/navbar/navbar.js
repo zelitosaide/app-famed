@@ -132,7 +132,7 @@ export default function Navbar() {
                             <a className="ListItemLink" href="/">
                               <div className="ListItemHeading">Doutoramento em Biociências e Saúde Pública</div>
                               <p className="ListItemText">
-                                O Programa visa criar oportunidades para que o doutorando adquira conhecimentos...
+                                Visa criar oportunidades para que o doutorando adquira conhecimentos e competências, nas áreas de Biociências e Saúde Pública.
                               </p>
                             </a>
                           </Link>
