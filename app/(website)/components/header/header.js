@@ -60,18 +60,21 @@ export default function Header() {
             <Item>
               <NextLink className="H-NavigationMenuLink" href="/extension">Consultas de Bioestatística</NextLink>
             </Item>
+            <Item>
+              <NextLink className="H-NavigationMenuLink" href="/extension">Cursos de curta duração</NextLink>
+            </Item>
           </List>
         </Root>
       </div>
 
       <div className="flex gap-2 items-center pr-3">
-        <NextLink className="SocialNetwork" style={{ padding: 6, borderRadius: 3 }} target="_blank" href="https://redcap.uem.mz/">
+        <NextLink className="SocialNetwork p-1.5 rounded" target="_blank" href="https://redcap.uem.mz/">
           <InstagramLogoIcon />
         </NextLink>
-        <NextLink className="SocialNetwork" style={{ padding: 6, borderRadius: 3 }} target="_blank" href="https://redcap.uem.mz/">
+        <NextLink className="SocialNetwork p-1.5 rounded" target="_blank" href="https://redcap.uem.mz/">
           <LinkedInLogoIcon />
         </NextLink>
-        <NextLink className="SocialNetwork" style={{ padding: 6, borderRadius: 3 }} target="_blank" href="https://redcap.uem.mz/">
+        <NextLink className="SocialNetwork p-1.5 rounded" target="_blank" href="https://redcap.uem.mz/">
           <TwitterLogoIcon />
         </NextLink>
       </div>
