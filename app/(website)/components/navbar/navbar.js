@@ -161,9 +161,9 @@ export default function Navbar() {
                 <Content className="NavigationMenuContent">
                   <div className="NavigationMenuContentBoundary">
                     <ul className="RowList">
-                      <ListItem href="/">Projectos de Pesquisa</ListItem>
+                      <ListItem href="/">Projectos de Pesquisa da Faculdade</ListItem>
                       <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Publicações</ListItem>
+                      <ListItem href="/">Publicações da Faculdade</ListItem>
                     </ul>
                   </div>
                 </Content>
