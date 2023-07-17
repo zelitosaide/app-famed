@@ -2,7 +2,7 @@
 
 import "./header.css";
 
-import ListItem from "../navbar/list-item";
+import ListItem from "../list-item/list-item";
 import NextLink from "next/link";
 
 import { CaretDownIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";

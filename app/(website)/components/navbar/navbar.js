@@ -8,17 +8,19 @@ import NextLink from "next/link";
 import { Root, List, Item, Link, Trigger, Content } from "@radix-ui/react-navigation-menu";
 import { CaretDownIcon, ComponentInstanceIcon, DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { Separator } from "@radix-ui/react-separator";
-import ListItem from "./list-item";
+import ListItem from "../list-item/list-item";
 
 export default function Navbar() {
   return (
     <div style={{ backgroundColor: "rgb(var(--card-rgb))" }} className="pl-28 pr-28 flex items-center justify-between relative">
-      <Image
-        alt="Famed logo"
-        src={logo}
-        width={208}
-        className="pl-3 pt-3 pb-5 grow-0 cursor-pointer"
-      />
+      <NextLink href="/">
+        <Image
+          alt="Famed logo"
+          src={logo}
+          width={208}
+          className="pl-3 pt-3 pb-5 grow-0 cursor-pointer"
+        />
+      </NextLink>
 
       <div>
         <Root className="NavigationMenuRoot">
