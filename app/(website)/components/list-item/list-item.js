@@ -24,4 +24,6 @@ const ListItem = forwardRef(({ children, ...props }, ref) => {
   )
 });
 
+ListItem.displayName = "ListItem";
+
 export default ListItem;
