@@ -29,3 +29,7 @@
   color: #fff;
   background: #178415;
 }
+
+.swiper-pagination {
+  padding: 20px;
+}
