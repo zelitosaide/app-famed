@@ -51,8 +51,13 @@ export default function Carousel() {
           quality={100}
         />
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Professor Catedrático Albertino Damasceno e sua equipa recebem Menção Honrosa -Prémio Bial</h2>
+          <p>
+            Professor Catedrático Albertino Damasceno da Faculdade de Medicina da Universidade Eduardo 
+            Mondlane e médico cardiologista do Hospital Central de Maputo que ao longo de 25 anos trabalha 
+            na investigação alargada sobre hipertensão arterial em Moçambique recebeu no dia 8 de Fevereiro 
+            de 2023, a Mençã
+          </p>
           {/* Link */}
         </div>
       </SwiperSlide>
@@ -63,8 +68,13 @@ export default function Carousel() {
           quality={100}
         />
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Professor Catedrático Albertino Damasceno e sua equipa recebem Menção Honrosa -Prémio Bial</h2>
+          <p>
+            Professor Catedrático Albertino Damasceno da Faculdade de Medicina da Universidade Eduardo 
+            Mondlane e médico cardiologista do Hospital Central de Maputo que ao longo de 25 anos trabalha 
+            na investigação alargada sobre hipertensão arterial em Moçambique recebeu no dia 8 de Fevereiro 
+            de 2023, a Mençã
+          </p>
           {/* Link */}
         </div>
       </SwiperSlide>
@@ -75,8 +85,13 @@ export default function Carousel() {
           quality={100}
         />
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Professor Catedrático Albertino Damasceno e sua equipa recebem Menção Honrosa -Prémio Bial</h2>
+          <p>
+            Professor Catedrático Albertino Damasceno da Faculdade de Medicina da Universidade Eduardo 
+            Mondlane e médico cardiologista do Hospital Central de Maputo que ao longo de 25 anos trabalha 
+            na investigação alargada sobre hipertensão arterial em Moçambique recebeu no dia 8 de Fevereiro 
+            de 2023, a Mençã
+          </p>
           {/* Link */}
         </div>
       </SwiperSlide>
@@ -87,8 +102,13 @@ export default function Carousel() {
           quality={100}
         />
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Professor Catedrático Albertino Damasceno e sua equipa recebem Menção Honrosa -Prémio Bial</h2>
+          <p>
+            Professor Catedrático Albertino Damasceno da Faculdade de Medicina da Universidade Eduardo 
+            Mondlane e médico cardiologista do Hospital Central de Maputo que ao longo de 25 anos trabalha 
+            na investigação alargada sobre hipertensão arterial em Moçambique recebeu no dia 8 de Fevereiro 
+            de 2023, a Mençã
+          </p>
           {/* Link */}
         </div>
       </SwiperSlide>
@@ -99,8 +119,13 @@ export default function Carousel() {
           quality={100}
         />
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Professor Catedrático Albertino Damasceno e sua equipa recebem Menção Honrosa -Prémio Bial</h2>
+          <p>
+            Professor Catedrático Albertino Damasceno da Faculdade de Medicina da Universidade Eduardo 
+            Mondlane e médico cardiologista do Hospital Central de Maputo que ao longo de 25 anos trabalha 
+            na investigação alargada sobre hipertensão arterial em Moçambique recebeu no dia 8 de Fevereiro 
+            de 2023, a Mençã
+          </p>
           {/* Link */}
         </div>
       </SwiperSlide>
@@ -111,8 +136,13 @@ export default function Carousel() {
           quality={100}
         />
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Professor Catedrático Albertino Damasceno e sua equipa recebem Menção Honrosa -Prémio Bial</h2>
+          <p>
+            Professor Catedrático Albertino Damasceno da Faculdade de Medicina da Universidade Eduardo 
+            Mondlane e médico cardiologista do Hospital Central de Maputo que ao longo de 25 anos trabalha 
+            na investigação alargada sobre hipertensão arterial em Moçambique recebeu no dia 8 de Fevereiro 
+            de 2023, a Mençã
+          </p>
           {/* Link */}
         </div>
       </SwiperSlide>
@@ -123,8 +153,13 @@ export default function Carousel() {
           quality={100}
         />
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Professor Catedrático Albertino Damasceno e sua equipa recebem Menção Honrosa -Prémio Bial</h2>
+          <p>
+            Professor Catedrático Albertino Damasceno da Faculdade de Medicina da Universidade Eduardo 
+            Mondlane e médico cardiologista do Hospital Central de Maputo que ao longo de 25 anos trabalha 
+            na investigação alargada sobre hipertensão arterial em Moçambique recebeu no dia 8 de Fevereiro 
+            de 2023, a Mençã
+          </p>
           {/* Link */}
         </div>
       </SwiperSlide>
@@ -135,8 +170,13 @@ export default function Carousel() {
           quality={100}
         />
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Professor Catedrático Albertino Damasceno e sua equipa recebem Menção Honrosa -Prémio Bial</h2>
+          <p>
+            Professor Catedrático Albertino Damasceno da Faculdade de Medicina da Universidade Eduardo 
+            Mondlane e médico cardiologista do Hospital Central de Maputo que ao longo de 25 anos trabalha 
+            na investigação alargada sobre hipertensão arterial em Moçambique recebeu no dia 8 de Fevereiro 
+            de 2023, a Mençã
+          </p>
           {/* Link */}
         </div>
       </SwiperSlide>
@@ -147,8 +187,13 @@ export default function Carousel() {
           quality={100}
         />
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Professor Catedrático Albertino Damasceno e sua equipa recebem Menção Honrosa -Prémio Bial</h2>
+          <p>
+            Professor Catedrático Albertino Damasceno da Faculdade de Medicina da Universidade Eduardo 
+            Mondlane e médico cardiologista do Hospital Central de Maputo que ao longo de 25 anos trabalha 
+            na investigação alargada sobre hipertensão arterial em Moçambique recebeu no dia 8 de Fevereiro 
+            de 2023, a Mençã
+          </p>
           {/* Link */}
         </div>
       </SwiperSlide>
