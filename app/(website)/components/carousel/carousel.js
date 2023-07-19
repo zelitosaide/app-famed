@@ -1,10 +1,10 @@
 "use client";
 
-import "./carousel.css";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+import "./carousel.css";
 
 import Image from "next/image";
 
