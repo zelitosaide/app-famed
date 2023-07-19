@@ -9,7 +9,7 @@ import "./carousel.css";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 import image1 from "@/public/image-1.jpeg";
 import image2 from "@/public/image-2.jpg";
@@ -31,10 +31,12 @@ export default function Carousel() {
 
   return (
     <Swiper
-      navigation={true} 
+      cssMode={true}
+      navigation={true}
+      mousewheel={true}
+      keyboard={true}
+      modules={[Navigation, Pagination, Mousewheel, Keyboard]}
       pagination={pagination}
-      modules={[Navigation, Pagination]}
-      loop={true}
     >
       <SwiperSlide>
         <Image
@@ -54,7 +56,7 @@ export default function Carousel() {
           {/* Link */}
         </div>
       </SwiperSlide>
-      
+
       <SwiperSlide>
         <Image
           src={image1}
