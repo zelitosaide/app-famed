@@ -21,10 +21,11 @@
 
 .swiper-slide > div {
   position: absolute;
-  top: 230px;
+  /* top: 230px; */
+  top: 100px;
   left: 112px;
   width: 600px;
-  height: 250px;
+  height: 330px;
   background-color: #178415;
   opacity: 0.9;
 
