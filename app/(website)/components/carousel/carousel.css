@@ -46,6 +46,21 @@
   display: block;
 }
 
+.swiper-slide > div > a {
+  background-color: var(--slate-4);
+  color: #178415;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 4px 12px; 
+  margin-top: 10px; 
+  display: inline-block;
+}
+
+.swiper-slide > div > a:hover {
+  background-color: #0d5e0c;
+  color: var(--slate-4);
+}
+
 .swiper-pagination-bullet {
   width: 20px;
   height: 20px;

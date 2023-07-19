@@ -20,6 +20,7 @@ import image6 from "@/public/image-6.jpeg";
 import image7 from "@/public/image-7.jpg";
 import image8 from "@/public/image-8.jpeg";
 import image9 from "@/public/image-9.jpg";
+import Link from "next/link";
 
 export default function Carousel() {
   const pagination = {
@@ -53,7 +54,12 @@ export default function Carousel() {
             Faculdade de Medicina da Universidade Eduardo Mondlane. Fazem parte desta coorte, 34 estudantes de várias áreas 
             de saúde e afins.
           </p>
-          {/* Link */}
+          <Link 
+            href="/"
+            style={{  }}
+          >
+            Ver mais
+          </Link>
         </div>
       </SwiperSlide>
 
