@@ -38,6 +38,25 @@ export default function Carousel() {
     >
       <SwiperSlide>
         <Image
+          src={image3}
+          alt="Image3"
+          quality={100}
+        />
+        <div>
+          <h2>
+            Iniciou a 18ª Coorte do curso de Mestrado em Saúde Publica na Faculdade de Medicina na sua edição de 2023-2024.
+          </h2>
+          <p>
+            No dia 20 de Fevereiro de 2023, realizou.se a cerimónia de abertura do curso de Mestrado em Saúde Pública na 
+            Faculdade de Medicina da Universidade Eduardo Mondlane. Fazem parte desta coorte, 34 estudantes de várias áreas 
+            de saúde e afins.
+          </p>
+          {/* Link */}
+        </div>
+      </SwiperSlide>
+      
+      <SwiperSlide>
+        <Image
           src={image1}
           alt="Image1"
           quality={100}
@@ -70,23 +89,7 @@ export default function Carousel() {
           {/* Link */}
         </div>
       </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src={image3}
-          alt="Image3"
-          quality={100}
-        />
-        <div>
-          <h2>Professor Catedrático Albertino Damasceno e sua equipa recebem Menção Honrosa -Prémio Bial</h2>
-          <p>
-            Professor Catedrático Albertino Damasceno da Faculdade de Medicina da Universidade Eduardo 
-            Mondlane e médico cardiologista do Hospital Central de Maputo que ao longo de 25 anos trabalha 
-            na investigação alargada sobre hipertensão arterial em Moçambique recebeu no dia 8 de Fevereiro 
-            de 2023, a Mençã
-          </p>
-          {/* Link */}
-        </div>
-      </SwiperSlide>
+      
       <SwiperSlide>
         <Image
           src={image4}
