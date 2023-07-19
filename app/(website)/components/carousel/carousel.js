@@ -40,7 +40,7 @@ export default function Carousel() {
       loop={true}
       spaceBetween={30}
       autoplay={{
-        delay: 2500,
+        delay: 100000,
         disableOnInteraction: false,
       }}
     >
