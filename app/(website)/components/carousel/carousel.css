@@ -49,11 +49,14 @@
 .swiper-slide > div > a {
   background-color: var(--slate-4);
   color: #178415;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
   padding: 4px 12px; 
   margin-top: 10px; 
-  display: inline-block;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
 }
 
 .swiper-slide > div > a:hover {
