@@ -9,7 +9,18 @@ import { CaretDownIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } f
 import { Item, List, Root, Trigger, Content } from "@radix-ui/react-navigation-menu";
 import { Separator } from "@radix-ui/react-separator";
 
-export default function Header() {
+const links = [
+  { 
+    title: "Sobre a Faculdade", 
+    children: [
+      { title: "Sobre a Faculdade de Medicina" },
+      { title: "Documentos e regumentos da Faculdade" },
+      { title: "Departamentos e Unidades" },
+    ]
+  }
+];
+
+export default async function Header() {
   return (
     <header style={{ backgroundColor: "rgb(var(--accent-rgb))" }} className="pl-28 pr-28 flex justify-between">
       <div>
