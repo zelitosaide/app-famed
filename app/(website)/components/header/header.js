@@ -29,6 +29,12 @@ export const links = [
       { title: "Departamento de Admissão a Univerdade" },
     ]
   },
+  {
+    title: "Consultas de Bioestatística"
+  },
+  {
+    title: "Cursos de curta duração"
+  }
 ];
 
 export default async function Header() {
