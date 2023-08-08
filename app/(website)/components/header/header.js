@@ -12,7 +12,7 @@ import { Separator } from "@radix-ui/react-separator";
 export const links = [
   { 
     title: "Sobre a Faculdade",
-    href: "",
+    segment: "sobre-a-faculdade",
     children: [
       { title: "Sobre a Faculdade de Medicina" },
       { title: "Documentos e regumentos da Faculdade" },
