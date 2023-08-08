@@ -8,8 +8,11 @@ import NextLink from "next/link";
 import { CaretDownIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { Item, List, Root, Trigger, Content } from "@radix-ui/react-navigation-menu";
 import { Separator } from "@radix-ui/react-separator";
+import { getHeaderLinks } from "@/app/api/server";
 
 export default async function Header() {
+  const links = await getHeaderLinks();
+  
   return (
     <header style={{ backgroundColor: "rgb(var(--accent-rgb))" }} className="pl-28 pr-28 flex justify-between">
       <div>
