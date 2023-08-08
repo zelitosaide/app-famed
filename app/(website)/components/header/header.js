@@ -30,14 +30,32 @@ export const links = [
   },
   { 
     title: "Links úteis", 
-    href: "",
+    segment: "links-uteis",
     children: [
-      { title: "Plataforma de Ensino Online (VULA)" },
-      { title: "Base de Dados (RedCap)" },
-      { title: "Sistema Integrado de Gestão Académica (SIGA)" },
-      { title: "Universidade Eduardo Mondlane (UEM)" },
-      { title: "Direção do Registo Académico (UEM)" },
-      { title: "Departamento de Admissão a Univerdade" },
+      { 
+        title: "Plataforma de Ensino Online (VULA)", 
+        href: "",
+      },
+      { 
+        title: "Base de Dados (RedCap)",
+        href: "",
+      },
+      { 
+        title: "Sistema Integrado de Gestão Académica (SIGA)",
+        href: "",
+      },
+      { 
+        title: "Universidade Eduardo Mondlane (UEM)",
+        href: "",
+      },
+      { 
+        title: "Direção do Registo Académico (UEM)",
+        href: "",
+      },
+      { 
+        title: "Departamento de Admissão a Univerdade",
+        href: "",
+      },
     ]
   },
   {
