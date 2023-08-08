@@ -24,27 +24,27 @@ export async function getHeaderLinks() {
       children: [
         { 
           title: "Plataforma de Ensino Online (VULA)", 
-          href: "",
+          href: "https://vula.uem.mz/",
         },
         { 
           title: "Base de Dados (RedCap)",
-          href: "",
+          href: "https://redcap.uem.mz/",
         },
         { 
           title: "Sistema Integrado de Gestão Académica (SIGA)",
-          href: "",
+          href: "https://estudante.siga.uem.mz/",
         },
         { 
           title: "Universidade Eduardo Mondlane (UEM)",
-          href: "",
+          href: "https://www.uem.mz/",
         },
         { 
           title: "Direção do Registo Académico (UEM)",
-          href: "",
+          href: "https://www.dra.uem.mz/",
         },
         { 
           title: "Departamento de Admissão a Univerdade",
-          href: "",
+          href: "https://admissao.uem.mz/",
         },
       ]
     },
