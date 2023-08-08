@@ -9,7 +9,7 @@ import { CaretDownIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } f
 import { Item, List, Root, Trigger, Content } from "@radix-ui/react-navigation-menu";
 import { Separator } from "@radix-ui/react-separator";
 
-const links = [
+export const links = [
   { 
     title: "Sobre a Faculdade", 
     children: [
@@ -17,7 +17,18 @@ const links = [
       { title: "Documentos e regumentos da Faculdade" },
       { title: "Departamentos e Unidades" },
     ]
-  }
+  },
+  { 
+    title: "Links úteis", 
+    children: [
+      { title: "Plataforma de Ensino Online (VULA)" },
+      { title: "Base de Dados (RedCap)" },
+      { title: "Sistema Integrado de Gestão Académica (SIGA)" },
+      { title: "Universidade Eduardo Mondlane (UEM)" },
+      { title: "Direção do Registo Académico (UEM)" },
+      { title: "Departamento de Admissão a Univerdade" },
+    ]
+  },
 ];
 
 export default async function Header() {
