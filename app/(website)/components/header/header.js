@@ -14,9 +14,18 @@ export const links = [
     title: "Sobre a Faculdade",
     segment: "sobre-a-faculdade",
     children: [
-      { title: "Sobre a Faculdade de Medicina" },
-      { title: "Documentos e regumentos da Faculdade" },
-      { title: "Departamentos e Unidades" },
+      { 
+        title: "Sobre a Faculdade de Medicina",
+        segment: "sobre-a-faculdade-de-medicina",
+      },
+      { 
+        title: "Documentos e regumentos da Faculdade",
+        segment: "documentos-e-regumentos-da-faculdade",
+      },
+      { 
+        title: "Departamentos e Unidades",
+        segment: "departamentos-e-unidades",
+      },
     ]
   },
   { 
