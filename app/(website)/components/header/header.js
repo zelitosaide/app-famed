@@ -12,6 +12,7 @@ import { Separator } from "@radix-ui/react-separator";
 export const links = [
   { 
     title: "Sobre a Faculdade",
+    href: "",
     children: [
       { title: "Sobre a Faculdade de Medicina" },
       { title: "Documentos e regumentos da Faculdade" },
@@ -20,6 +21,7 @@ export const links = [
   },
   { 
     title: "Links úteis", 
+    href: "",
     children: [
       { title: "Plataforma de Ensino Online (VULA)" },
       { title: "Base de Dados (RedCap)" },
