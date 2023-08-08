@@ -60,11 +60,11 @@ export const links = [
   },
   {
     title: "Consultas de Bioestatística",
-    href: "consultas-de-bioestatistica"
+    segment: "consultas-de-bioestatistica"
   },
   {
     title: "Cursos de curta duração",
-    href: "cursos-de-curta-duracao"
+    segment: "cursos-de-curta-duracao"
   }
 ];
 
