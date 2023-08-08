@@ -11,7 +11,7 @@ import { Separator } from "@radix-ui/react-separator";
 
 export const links = [
   { 
-    title: "Sobre a Faculdade", 
+    title: "Sobre a Faculdade",
     children: [
       { title: "Sobre a Faculdade de Medicina" },
       { title: "Documentos e regumentos da Faculdade" },
@@ -30,10 +30,12 @@ export const links = [
     ]
   },
   {
-    title: "Consultas de Bioestatística"
+    title: "Consultas de Bioestatística",
+    href: "consultas-de-bioestatistica"
   },
   {
-    title: "Cursos de curta duração"
+    title: "Cursos de curta duração",
+    href: "cursos-de-curta-duracao"
   }
 ];
 
