@@ -1,6 +1,5 @@
 import "./header.css";
 
-// import { InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { getHeaderLinks, getSocialNetworks } from "@/app/api/server";
 
 import LeftHeader from "./left-header";
@@ -11,7 +10,10 @@ export default async function Header() {
   const socialNetworks = await getSocialNetworks();
   
   return (
-    <header style={{ backgroundColor: "rgb(var(--accent-rgb))" }} className="pl-28 pr-28 flex justify-between">
+    <header 
+      style={{ backgroundColor: "rgb(var(--accent-rgb))" }} 
+      className="pl-28 pr-28 flex justify-between"
+    >
       <div>
         <LeftHeader links={links} />
       </div>
