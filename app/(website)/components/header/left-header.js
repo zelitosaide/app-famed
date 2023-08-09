@@ -2,6 +2,7 @@
 
 import NextLink from "next/link";
 
+import { Fragment } from "react";
 import { Item, List, Root, Trigger, Content } from "@radix-ui/react-navigation-menu";
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import { Separator } from "@radix-ui/react-separator";
@@ -29,10 +30,10 @@ export default function LeftHeader({ links }) {
                               child.segment ? `/${item.segment}/${child.segment}` : child.href;
 
                             return (
-                              <>
+                              <Fragment key={child.title}>
                                 <ListItem href={href}>{child.title}</ListItem>
                                 <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                              </>
+                              </Fragment>
                             );
                           })}
                         </ul>
