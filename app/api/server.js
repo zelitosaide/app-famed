@@ -1,6 +1,7 @@
 export async function getHeaderLinks() {
   return [
     { 
+      id: 1,
       title: "Sobre a Faculdade",
       segment: "sobre-a-faculdade",
       children: [
@@ -19,6 +20,7 @@ export async function getHeaderLinks() {
       ]
     },
     { 
+      id: 2,
       title: "Links úteis",
       children: [
         { 
@@ -48,10 +50,12 @@ export async function getHeaderLinks() {
       ]
     },
     {
+      id: 3,
       title: "Consultas de Bioestatística",
       segment: "consultas-de-bioestatistica"
     },
     {
+      id: 4,
       title: "Cursos de curta duração",
       segment: "cursos-de-curta-duracao"
     }

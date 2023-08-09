@@ -12,6 +12,13 @@ export default function LeftHeader({ links }) {
   return (
     <Root className="H-NavigationMenuRoot">
       <List className="H-NavigationMenuList">
+        {links.map(function(item) {
+          return (
+            <Item key={item.id}>
+              {item.title}
+            </Item>
+          );
+        })}
         <Item>
           <Trigger className="H-NavigationMenuTrigger">
             Sobre a Faculdade <CaretDownIcon className="H-CaretDown" aria-hidden />
