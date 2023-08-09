@@ -62,6 +62,26 @@ export async function getHeaderLinks() {
   ];
 }
 
+export async function getSocialNetworks() {
+  return [
+    {
+      id: 1,
+      name: "InstagramLogoIcon",
+      href: "https://www.instagram.com/faculdademedicinauem/"
+    },
+    {
+      id: 2,
+      name: "LinkedInLogoIcon",
+      href: "https://www.linkedin.com/in/faculdade-de-medicina-uem"
+    },
+    {
+      id: 3,
+      name: "TwitterLogoIcon",
+      href: "https://twitter.com/FamedUEM"
+    },
+  ];
+}
+
 export async function getNavLinks() {
   return [
     { 
