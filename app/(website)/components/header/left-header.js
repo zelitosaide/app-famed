@@ -15,10 +15,21 @@ export default function LeftHeader({ links }) {
         {links.map(function(item) {
           return (
             <Item key={item.id}>
-              {item.title}
+              {item.children ? (
+                <>
+                  <Trigger className="H-NavigationMenuTrigger">
+                    {item.title} <CaretDownIcon className="H-CaretDown" aria-hidden />
+                  </Trigger>
+                </>
+              ): (
+                <NextLink className="H-NavigationMenuLink" href={`/${item.segment}`}>
+                  {item.title}
+                </NextLink>
+              )}
             </Item>
           );
         })}
+
         <Item>
           <Trigger className="H-NavigationMenuTrigger">
             Sobre a Faculdade <CaretDownIcon className="H-CaretDown" aria-hidden />
@@ -60,12 +71,6 @@ export default function LeftHeader({ links }) {
               </div>
             </Content>
           </div>
-        </Item>
-        <Item>
-          <NextLink className="H-NavigationMenuLink" href="/extension">Consultas de Bioestatística</NextLink>
-        </Item>
-        <Item>
-          <NextLink className="H-NavigationMenuLink" href="/extension">Cursos de curta duração</NextLink>
         </Item>
       </List>
     </Root>
