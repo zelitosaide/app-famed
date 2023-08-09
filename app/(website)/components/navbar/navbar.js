@@ -185,17 +185,6 @@ export default function Navbar() {
                       <ListItem href="/news">Iniciar Submissão de Protocolos</ListItem>
                       <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
                       <ListItem href="http://localhost:3000/">Instruções de Submissão de Protocolos</ListItem>
-                      {/* <ListItem href="/">Plataforma de Ensino Online(VULA)</ListItem>
-                      <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Base de Dados (RedCap)</ListItem>
-                      <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Sistema Integrado de Gestão Académica (SIGA)</ListItem>
-                      <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Universidade Eduardo Mondlane (UEM)</ListItem>
-                      <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Direção do Registo Académico (UEM)</ListItem>
-                      <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                      <ListItem href="/">Departamento de Admissão a Univerdade</ListItem> */}
                     </ul>
                   </div>
                 </Content>
