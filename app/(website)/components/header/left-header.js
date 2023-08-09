@@ -40,7 +40,7 @@ export default function LeftHeader({ links }) {
                     </Content>
                   </div>
                 </>
-              ): (
+              ) : (
                 <NextLink className="H-NavigationMenuLink" href={`/${item.segment}`}>
                   {item.title}
                 </NextLink>
