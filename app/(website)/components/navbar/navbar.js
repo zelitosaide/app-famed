@@ -42,7 +42,7 @@ export default function Navbar({ links }) {
                   </div>
                 </>
               ) : (
-                <NextLink className="NavigationMenuLink" href={item.segment}>
+                <NextLink className="NavigationMenuLink" href={`/${item.segment}`}>
                   {item.title}
                 </NextLink>
               )}
