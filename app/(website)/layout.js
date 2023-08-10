@@ -1,8 +1,8 @@
 import "../globals.css";
 
-import Header from "./components/header/header";
+import HeaderContainer from "./components/header/header-container";
 import Footer from "./components/footer";
-import Navbar from "./components/navbar/navbar";
+import NavbarContainer from "./components/navbar/navbar-container";
 
 export const metadata = {
   title: "FAMED",
@@ -13,8 +13,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header />
-        <Navbar />
+        <HeaderContainer />
+        <NavbarContainer />
         {children}
         <Footer />
       </body>

@@ -5,7 +5,6 @@ import NextLink from "next/link";
 import { Root, List, Item, Link, Trigger, Content } from "@radix-ui/react-navigation-menu";
 import { CaretDownIcon, ComponentInstanceIcon, DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { Separator } from "@radix-ui/react-separator";
-import { Fragment } from "react";
 
 import ListItem from "./list-item";
 
@@ -13,43 +12,10 @@ export default function Navbar({ links }) {
   return (
     <Root className="NavigationMenuRoot">
       <List className="NavigationMenuList">
-        {links.map(function(item) {
-          return (
-            <Item key={item.id}>
-              {item.children ? (
-                <>
-                  <Trigger className="NavigationMenuTrigger">
-                    {item.title} <CaretDownIcon className="CaretDown" aria-hidden />
-                  </Trigger>
-                  <div className="NavigationMenuContentWrapper">
-                    <Content className="NavigationMenuContent">
-                      <div className="NavigationMenuContentBoundary">
-                        <ul className="RowList">
-                          {item.children.map(function(child) {
-                            const href = 
-                              child.segment ? `/${item.segment}/${child.segment}` : child.href;
-
-                            return (
-                              <Fragment key={child.title}>
-                                <ListItem href={href}>{child.title}</ListItem>
-                                <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                              </Fragment>
-                            );
-                          })}
-                        </ul>
-                      </div>
-                    </Content>
-                  </div>
-                </>
-              ) : (
-                <NextLink className="NavigationMenuLink" href={item.segment}>
-                  {item.title}
-                </NextLink>
-              )}
-            </Item>
-          );
-        })}
-        {/* <Item>
+        <Item>
+          <NextLink className="NavigationMenuLink" href="/">Página Inicial</NextLink>
+        </Item>
+        <Item>
           <Trigger className="NavigationMenuTrigger">
             Ensino <CaretDownIcon className="CaretDown" aria-hidden />
           </Trigger>
@@ -192,6 +158,9 @@ export default function Navbar({ links }) {
           </div>
         </Item>
         <Item>
+          <NextLink className="NavigationMenuLink" href="/extension">Extensão</NextLink>
+        </Item>
+        <Item>
           <Trigger className="NavigationMenuTrigger">
             Submissão de Protocolos <CaretDownIcon className="CaretDown" aria-hidden />
           </Trigger>
@@ -206,7 +175,10 @@ export default function Navbar({ links }) {
               </div>
             </Content>
           </div>
-        </Item> */}
+        </Item>
+        <Item>
+          <NextLink className="NavigationMenuLink" href="/news">Notícias</NextLink>
+        </Item>
       </List>
     </Root>
   );

@@ -5,9 +5,13 @@ import { getHeaderLinks, getSocialNetworks } from "@/app/api/server";
 import LeftHeader from "./left-header";
 import RightHeader from "./right-header";
 
-export default async function Header() {
-  const links = await getHeaderLinks();
-  const socialNetworks = await getSocialNetworks();
+export default async function HeaderContainer() {
+  const linksData = getHeaderLinks();
+  const socialNetworksData = getSocialNetworks();
+
+  const [links, socialNetworks] = await Promise.all([
+    linksData, socialNetworksData
+  ]);
   
   return (
     <header 

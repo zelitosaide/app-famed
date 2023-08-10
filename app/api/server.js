@@ -85,10 +85,12 @@ export async function getSocialNetworks() {
 export async function getNavLinks() {
   return [
     { 
+      id: 1,
       title: "Página Inicial",
       segment: "/",
     },
     {
+      id: 2,
       title: "Ensino",
       children: [
         { 
@@ -130,6 +132,7 @@ export async function getNavLinks() {
       ]
     },
     {
+      id: 3,
       title: "Investigação",
       segment: "investigacao",
       children: [
@@ -144,16 +147,18 @@ export async function getNavLinks() {
       ]
     },
     { 
+      id: 4,
       title: "Extensão",
       segment: "extensao",
     },
     {
+      id: 5,
       title: "Submissão de Protocolos",
       segment: "submissao-de-protocolos",
       children: [
         { 
           title: "Iniciar Submissão de Protocolos",
-          segment: "iniciar-submissao-de-protocolos",
+          href: "https://cibs.uem.mz/",
         },
         { 
           title: "Instruções de Submissão de Protocolos",
@@ -162,6 +167,7 @@ export async function getNavLinks() {
       ]
     },
     { 
+      id: 6,
       title: "Notícias",
       segment: "noticias",
     },

@@ -7,7 +7,7 @@ import { Item, List, Root, Trigger, Content } from "@radix-ui/react-navigation-m
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import { Separator } from "@radix-ui/react-separator";
 
-import ListItem from "../list-item/list-item";
+import ListItem from "./list-item";
 
 export default function LeftHeader({ links }) {
   return (
