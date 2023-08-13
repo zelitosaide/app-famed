@@ -150,13 +150,7 @@ export async function getNavLinks() {
         {
           id: 4,
           title: "CURSOS DE CURTA DURAÇÃO",
-          segment: "curta-duracao",
-          children: [
-            { 
-              title: "Doutoramento em Biociências e Saúde Pública",
-              segment: "doutoramento-em-biociencias-e-saude-publica",
-            },
-          ]
+          segment: "curta-duracao"
         },
       ],
     },
