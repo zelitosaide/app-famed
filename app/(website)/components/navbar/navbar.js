@@ -42,20 +42,25 @@ export default function Navbar({ links }) {
                                     <h3 className="NavigationMenuContentSectionHeader">
                                       <ComponentInstanceIcon /> {child.title}:
                                     </h3>
+
                                     <Separator className="SeparatorRoot" />
 
-                                    <ul className="GridList one">
-                                      <li>
-                                        <Link asChild>
-                                          <a className="ListItemLink" href="/">
-                                            <div className="ListItemHeading">Curso de Licenciatura em Medicina</div>
-                                            <p className="ListItemText">
-                                              Tem como finalidade de habilitar profissionais de nível superior no ramo da Medicina Humana.
-                                            </p>
-                                          </a>
-                                        </Link>
-                                      </li>
-                                    </ul>
+                                    {child.children.length > 2 ? (
+                                      ""
+                                    ) : (
+                                      <ul className="GridList one">
+                                        <li>
+                                          <Link asChild>
+                                            <a className="ListItemLink" href="/">
+                                              <div className="ListItemHeading">{child.children[0].title}</div>
+                                              <p className="ListItemText">
+                                                {child.children[0].description}
+                                              </p>
+                                            </a>
+                                          </Link>
+                                        </li>
+                                      </ul>
+                                    )}
                                   </>
                                 )}
                               </div>

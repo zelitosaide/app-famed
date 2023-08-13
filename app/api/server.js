@@ -101,6 +101,7 @@ export async function getNavLinks() {
           children: [
             { 
               title: "Curso de Licenciatura em Medicina",
+              description: "Tem como finalidade de habilitar profissionais de nível superior no ramo da Medicina Humana.",
               segment: "curso-de-licenciatura-em-medicina",
             },
           ]
@@ -143,6 +144,7 @@ export async function getNavLinks() {
           children: [
             { 
               title: "Doutoramento em Biociências e Saúde Pública",
+              description: " Visa criar oportunidades para que o doutorando adquira conhecimentos e competências, nas áreas de Biociências e Saúde Pública.",
               segment: "doutoramento-em-biociencias-e-saude-publica",
             },
           ]
