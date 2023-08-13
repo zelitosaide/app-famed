@@ -93,47 +93,72 @@ export async function getNavLinks() {
       id: 2,
       title: "Ensino",
       segment: "ensino",
-      children: {
-        
-      },
       children: [
-        { 
-          title: "Curso de Licenciatura em Medicina",
-          segment: "curso-de-licenciatura-em-medicina",
+        {
+          id: 1,
+          title: "CURSOS DE GRADUAÇÃO",
+          segment: "graduacao",
+          children: [
+            { 
+              title: "Curso de Licenciatura em Medicina",
+              segment: "curso-de-licenciatura-em-medicina",
+            },
+          ]
         },
-        { 
-          title: "Mestrado em Saúde Pública Presencial (MSP)",
-          segment: "mestrado-em-saude-publica-presencial-msp",
+        {
+          id: 2,
+          title: "CURSOS DE MESTRADO",
+          segment: "mestrado",
+          children: [
+            { 
+              title: "Mestrado em Saúde Pública Presencial (MSP)",
+              segment: "mestrado-em-saude-publica-presencial-msp",
+            },
+            { 
+              title: "Mestrado em Saúde Pública à Distância (MSPD)",
+              segment: "mestrado-em-saude-publica-a-distancia-mspd",
+            },
+            { 
+              title: "Mestrado em Biociências (MBC)",
+              segment: "mestrado-em-biociencias-mbc",
+            },
+            { 
+              title: "Mestrado em Epidemiologia de Campo e Laboratorial (MECL)",
+              segment: "mestrado-em-epidemiologia-de-campo-e-laboratorial-mecl",
+            },
+            { 
+              title: "Mestrado em Saúde Mental e Psico-intervenções (MSMPI)",
+              segment: "mestrado-em-saude-mental-e-psico-intervencoes-msmpi",
+            },
+            { 
+              title: "Mestrado em Emergências Pediatrias e Neonatais (MEPN)",
+              segment: "mestrado-em-emergencias-pediatrias-e-neonatais-mepn",
+            },
+          ]
         },
-        { 
-          title: "Mestrado em Saúde Pública à Distância (MSPD)",
-          segment: "mestrado-em-saude-publica-a-distancia-mspd",
+        {
+          id: 3,
+          title: "CURSOS DE DOUTORAMENTO",
+          segment: "doutoramento",
+          children: [
+            { 
+              title: "Doutoramento em Biociências e Saúde Pública",
+              segment: "doutoramento-em-biociencias-e-saude-publica",
+            },
+          ]
         },
-        { 
-          title: "Mestrado em Biociências (MBC)",
-          segment: "mestrado-em-biociencias-mbc",
+        {
+          id: 4,
+          title: "CURSOS DE CURTA DURAÇÃO",
+          segment: "curta-duracao",
+          children: [
+            { 
+              title: "Doutoramento em Biociências e Saúde Pública",
+              segment: "doutoramento-em-biociencias-e-saude-publica",
+            },
+          ]
         },
-        { 
-          title: "Mestrado em Epidemiologia de Campo e Laboratorial (MECL)",
-          segment: "mestrado-em-epidemiologia-de-campo-e-laboratorial-mecl",
-        },
-        { 
-          title: "Mestrado em Saúde Mental e Psico-intervenções (MSMPI)",
-          segment: "mestrado-em-saude-mental-e-psico-intervencoes-msmpi",
-        },
-        { 
-          title: "Mestrado em Emergências Pediatrias e Neonatais (MEPN)",
-          segment: "mestrado-em-emergencias-pediatrias-e-neonatais-mepn",
-        },
-        { 
-          title: "Doutoramento em Biociências e Saúde Pública",
-          segment: "doutoramento-em-biociencias-e-saude-publica",
-        },
-        { 
-          title: "Cursos de curta duração",
-          segment: "cursos-de-curta-duracao",
-        },
-      ]
+      ],
     },
     {
       id: 3,
