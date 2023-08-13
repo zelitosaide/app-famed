@@ -13,7 +13,7 @@ export default function Navbar({ links }) {
   return (
     <Root className="NavigationMenuRoot">
       <List className="NavigationMenuList">
-        {/* {links.map(function(item) {
+        {links.map(function(item) {
           return (
             <Item key={item.id}>
               {item.children ? (
@@ -21,25 +21,29 @@ export default function Navbar({ links }) {
                   <Trigger className="NavigationMenuTrigger">
                     {item.title} <CaretDownIcon className="CaretDown" aria-hidden />
                   </Trigger>
-                  <div className="NavigationMenuContentWrapper">
-                    <Content className="NavigationMenuContent">
-                      <div className="NavigationMenuContentBoundary">
-                        <ul className="RowList">
-                          {item.children.map(function(child) {
-                            const href = 
-                              child.segment ? `/${item.segment}/${child.segment}` : child.href;
+                  {item.title === "Ensino" ? (
+                    "Ola"
+                  ) : (
+                    <div className="NavigationMenuContentWrapper">
+                      <Content className="NavigationMenuContent">
+                        <div className="NavigationMenuContentBoundary">
+                          <ul className="RowList">
+                            {item.children.map(function(child) {
+                              const href = 
+                                child.segment ? `/${item.segment}/${child.segment}` : child.href;
 
-                            return (
-                              <Fragment key={child.title}>
-                                <ListItem href={href}>{child.title}</ListItem>
-                                <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
-                              </Fragment>
-                            );
-                          })}
-                        </ul>
-                      </div>
-                    </Content>
-                  </div>
+                              return (
+                                <Fragment key={child.title}>
+                                  <ListItem href={href}>{child.title}</ListItem>
+                                  <Separator style={{ margin: "6px 0"}} className="SeparatorRoot" />
+                                </Fragment>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      </Content>
+                    </div>
+                  )}
                 </>
               ) : (
                 <NextLink className="NavigationMenuLink" href={`/${item.segment}`}>
@@ -48,8 +52,9 @@ export default function Navbar({ links }) {
               )}
             </Item>
           );
-        })} */}
+        })} 
 
+        {/* 
         <Item>
           <Trigger className="NavigationMenuTrigger">
             Ensino <CaretDownIcon className="CaretDown" aria-hidden />
@@ -208,6 +213,8 @@ export default function Navbar({ links }) {
             </Content>
           </div>
         </Item>
+
+        */}
       </List>
     </Root>
   );
