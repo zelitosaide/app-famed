@@ -13,7 +13,7 @@ export default function Navbar({ links }) {
   return (
     <Root className="NavigationMenuRoot">
       <List className="NavigationMenuList">
-        {links.map(function(item) {
+        {/* {links.map(function(item) {
           return (
             <Item key={item.id}>
               {item.children ? (
@@ -48,8 +48,9 @@ export default function Navbar({ links }) {
               )}
             </Item>
           );
-        })}
-        {/* <Item>
+        })} */}
+
+        <Item>
           <Trigger className="NavigationMenuTrigger">
             Ensino <CaretDownIcon className="CaretDown" aria-hidden />
           </Trigger>
@@ -206,7 +207,7 @@ export default function Navbar({ links }) {
               </div>
             </Content>
           </div>
-        </Item> */}
+        </Item>
       </List>
     </Root>
   );

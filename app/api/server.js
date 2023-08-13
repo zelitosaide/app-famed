@@ -57,7 +57,7 @@ export async function getHeaderLinks() {
     {
       id: 4,
       title: "Cursos de curta duração",
-      segment: "cursos-de-curta-duracao"
+      segment: "ensino/curta-duracao"
     }
   ];
 }
@@ -92,6 +92,10 @@ export async function getNavLinks() {
     {
       id: 2,
       title: "Ensino",
+      segment: "ensino",
+      children: {
+        
+      },
       children: [
         { 
           title: "Curso de Licenciatura em Medicina",

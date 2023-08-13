@@ -1,5 +1,5 @@
 export default function Page({ params }) {
   return (
-    <h1>Ensino: {params.slug}</h1>
+    <h1>Doutoramento: {params.slug}</h1>
   );
 }
