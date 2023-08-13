@@ -31,20 +31,33 @@ export default function Navbar({ links }) {
                                 {item.children.length - 1 === index ? (
                                   <Link asChild>
                                     <NextLink 
-                                      className="NavigationMenuContentSectionHeader" 
+                                      className="NavigationMenuContentSectionHeader Link" 
                                       href={`/${item.segment}/${child.segment}`}
-                                    >
-                                      {item.title}
+                                    >  
+                                      <ComponentInstanceIcon /> {child.title} <DoubleArrowRightIcon />
                                     </NextLink>
                                   </Link>
                                 ) : (
-                                  <h3 className="NavigationMenuContentSectionHeader">
-                                    <ComponentInstanceIcon /> {child.title}:
-                                  </h3>
-                                )}
-                                
+                                  <>
+                                    <h3 className="NavigationMenuContentSectionHeader">
+                                      <ComponentInstanceIcon /> {child.title}:
+                                    </h3>
+                                    <Separator className="SeparatorRoot" />
 
-                                
+                                    <ul className="GridList one">
+                                      <li>
+                                        <Link asChild>
+                                          <a className="ListItemLink" href="/">
+                                            <div className="ListItemHeading">Curso de Licenciatura em Medicina</div>
+                                            <p className="ListItemText">
+                                              Tem como finalidade de habilitar profissionais de nível superior no ramo da Medicina Humana.
+                                            </p>
+                                          </a>
+                                        </Link>
+                                      </li>
+                                    </ul>
+                                  </>
+                                )}
                               </div>
                             );
                           })

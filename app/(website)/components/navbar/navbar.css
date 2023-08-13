@@ -105,6 +105,19 @@ button, p {
   padding: 6px;
 }
 
+.NavigationMenuContentSectionHeader.Link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.NavigationMenuContentSectionHeader.Link:focus {
+  box-shadow: 0 0 0 2px rgb(23 132 21 / 21%);
+}
+
+.NavigationMenuContentSectionHeader.Link:hover {
+  background-color: rgb(23 132 21 / 10%);
+}
+
 .SeparatorRoot {
   background-color: rgb(23 132 21 / 21%);
 }
