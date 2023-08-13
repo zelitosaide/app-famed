@@ -46,17 +46,38 @@ export default function Navbar({ links }) {
                                     <Separator className="SeparatorRoot" />
 
                                     {child.children.length > 2 ? (
-                                      ""
+                                      <ul className="GridList two">
+                                        {child.children.map(function(c) {
+                                          return (
+                                            <li key={c.id}>
+                                              <Link asChild>
+                                                <NextLink 
+                                                  className="ListItemLink"
+                                                  href={`/${item.segment}/${child.segment}/${c.segment}`}
+                                                >
+                                                  <div className="ListItemHeading">{c.title}</div>
+                                                  <p className="ListItemText">
+                                                    {c.description}
+                                                  </p>
+                                                </NextLink>
+                                              </Link>
+                                            </li>
+                                          );
+                                        })}
+                                      </ul>
                                     ) : (
                                       <ul className="GridList one">
                                         <li>
                                           <Link asChild>
-                                            <a className="ListItemLink" href="/">
+                                            <NextLink 
+                                              className="ListItemLink"
+                                              href={`/${item.segment}/${child.segment}/${child.children[0].segment}`}
+                                            >
                                               <div className="ListItemHeading">{child.children[0].title}</div>
                                               <p className="ListItemText">
                                                 {child.children[0].description}
                                               </p>
-                                            </a>
+                                            </NextLink>
                                           </Link>
                                         </li>
                                       </ul>

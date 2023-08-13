@@ -100,6 +100,7 @@ export async function getNavLinks() {
           segment: "graduacao",
           children: [
             { 
+              id: 1,
               title: "Curso de Licenciatura em Medicina",
               description: "Tem como finalidade de habilitar profissionais de nível superior no ramo da Medicina Humana.",
               segment: "curso-de-licenciatura-em-medicina",
@@ -112,27 +113,39 @@ export async function getNavLinks() {
           segment: "mestrado",
           children: [
             { 
+              id: 1,
               title: "Mestrado em Saúde Pública Presencial (MSP)",
+              description: "Formação multidisciplinar, orientada para a solução de problemas de Saúde em Moçambique.",
               segment: "mestrado-em-saude-publica-presencial-msp",
             },
             { 
+              id: 2,
               title: "Mestrado em Saúde Pública à Distância (MSPD)",
+              description: "Formação multidisciplinar, orientada para a solução de problemas de Saúde em Moçambique.",
               segment: "mestrado-em-saude-publica-a-distancia-mspd",
             },
             { 
+              id: 3,
               title: "Mestrado em Biociências (MBC)",
+              description: "Visa formar profissionais de nível superior qualificados, nos domínios das Biociências.",
               segment: "mestrado-em-biociencias-mbc",
             },
             { 
+              id: 4,
               title: "Mestrado em Epidemiologia de Campo e Laboratorial (MECL)",
+              description: "Formação em serviço, baseada nos Princípios Fundamentais da Epidemiologia.",
               segment: "mestrado-em-epidemiologia-de-campo-e-laboratorial-mecl",
             },
             { 
+              id: 5,
               title: "Mestrado em Saúde Mental e Psico-intervenções (MSMPI)",
+              description: "Formação de profissionais com competências em pesquisa, avaliação e intervenção nas diferentes áreas da saúde mental.",
               segment: "mestrado-em-saude-mental-e-psico-intervencoes-msmpi",
             },
             { 
+              id: 6,
               title: "Mestrado em Emergências Pediatrias e Neonatais (MEPN)",
+              description: "Formação de profissionais de saúde para providenciar cuidados de saúde, na área de pediatria e neonatologia.",
               segment: "mestrado-em-emergencias-pediatrias-e-neonatais-mepn",
             },
           ]
@@ -143,6 +156,7 @@ export async function getNavLinks() {
           segment: "doutoramento",
           children: [
             { 
+              id: 1,
               title: "Doutoramento em Biociências e Saúde Pública",
               description: " Visa criar oportunidades para que o doutorando adquira conhecimentos e competências, nas áreas de Biociências e Saúde Pública.",
               segment: "doutoramento-em-biociencias-e-saude-publica",
