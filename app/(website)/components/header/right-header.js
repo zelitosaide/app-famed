@@ -13,7 +13,7 @@ export default function RightHeader({ socialNetworks }) {
         className="SocialNetwork p-1.5 rounded" 
         target="_blank" 
         href={socialNetwork.href}
-        key={socialNetwork.id}
+        key={socialNetwork.href}
       >
         {icon}
       </Link>
