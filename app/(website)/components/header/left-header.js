@@ -9,25 +9,25 @@ import { Separator } from "@radix-ui/react-separator";
 
 import ListItem from "./list-item";
 
-export default function LeftHeader({ links }) {
+export default function LeftHeader({ headerLinks }) {
   return (
     <Root className="H-NavigationMenuRoot">
       <List className="H-NavigationMenuList">
-        {links.map(function(item) {
+        {headerLinks.map(function(link) {
           return (
-            <Item key={item.id}>
-              {item.children ? (
+            <Item key={link._id}>
+              {link.children.length > 0 ? (
                 <>
                   <Trigger className="H-NavigationMenuTrigger">
-                    {item.title} <CaretDownIcon className="H-CaretDown" aria-hidden />
+                    {link.title} <CaretDownIcon className="H-CaretDown" aria-hidden />
                   </Trigger>
                   <div className="H-NavigationMenuContentWrapper">
                     <Content className="H-NavigationMenuContent">
                       <div className="H-NavigationMenuContentBoundary">
                         <ul className="H-RowList">
-                          {item.children.map(function(child) {
+                          {link.children.map(function(child) {
                             const href = 
-                              child.segment ? `/${item.segment}/${child.segment}` : child.href;
+                              child.segment ? `/${link.segment}/${child.segment}` : child.href;
 
                             return (
                               <Fragment key={child.title}>
@@ -42,8 +42,8 @@ export default function LeftHeader({ links }) {
                   </div>
                 </>
               ) : (
-                <NextLink className="H-NavigationMenuLink" href={`/${item.segment}`}>
-                  {item.title}
+                <NextLink className="H-NavigationMenuLink" href={`/${link.segment}`}>
+                  {link.title}
                 </NextLink>
               )}
             </Item>

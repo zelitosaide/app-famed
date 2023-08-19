@@ -1,16 +1,16 @@
 import "./header.css";
 
-import { getHeaderLinks, getLinks } from "@/app/api/server";
+import { getLinks } from "@/app/api/server";
 
 import LeftHeader from "./left-header";
 import RightHeader from "./right-header";
 
 export default async function HeaderContainer() {
-  const linksData = getHeaderLinks();
+  const headerLinksData = getLinks("cabecalho");
   const socialNetworksData = await getLinks("redes-sociais");
 
-  const [links, socialNetworks] = await Promise.all([
-    linksData, socialNetworksData
+  const [headerLinks, socialNetworks] = await Promise.all([
+    headerLinksData, socialNetworksData
   ]);
   
   return (
@@ -19,7 +19,7 @@ export default async function HeaderContainer() {
       className="pl-28 pr-28 flex justify-between"
     >
       <div>
-        <LeftHeader links={links} />
+        <LeftHeader headerLinks={headerLinks} />
       </div>
 
       <div className="flex gap-2 items-center pr-3">
