@@ -3,9 +3,9 @@ import { InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/
 
 export default function RightHeader({ socialNetworks }) {
   return socialNetworks.map(function(socialNetwork) {
-    const icon = socialNetwork.name === "InstagramLogoIcon" 
+    const icon = socialNetwork.iconName === "InstagramLogoIcon" 
       ? <InstagramLogoIcon /> 
-      : socialNetwork.name === "LinkedInLogoIcon"
+      : socialNetwork.iconName === "LinkedInLogoIcon"
         ? <LinkedInLogoIcon /> : <TwitterLogoIcon />;
 
     return (
