@@ -9,30 +9,30 @@ import { Fragment } from "react";
 
 import ListItem from "./list-item";
 
-export default function Navbar({ links }) {
+export default function Navbar({ navLinks }) {
   return (
     <Root className="NavigationMenuRoot">
       <List className="NavigationMenuList">
-        {links.map(function(item) {
+        {navLinks.map(function(link) {
           return (
-            <Item key={item.id}>
-              {item.children ? (
+            <Item key={link._id}>
+              {link.children.length > 0 ? (
                 <>
                   <Trigger className="NavigationMenuTrigger">
-                    {item.title} <CaretDownIcon className="CaretDown" aria-hidden />
+                    {link.title} <CaretDownIcon className="CaretDown" aria-hidden />
                   </Trigger>
                   <div className="NavigationMenuContentWrapper">
                     <Content className="NavigationMenuContent">
                       <div className="NavigationMenuContentBoundary">
-                        {item.title === "Ensino" ? (
-                          item.children.map(function(child, index) {
+                        {link.title === "Ensino" ? (
+                          link.children.map(function(child) {
                             return (
-                              <div key={child.id}>
-                                {item.children.length - 1 === index ? (
+                              <div key={child.title}>
+                                {child.segment === "curta-duracao" ? (
                                   <Link asChild>
                                     <NextLink 
                                       className="NavigationMenuContentSectionHeader Link" 
-                                      href={`/${item.segment}/${child.segment}`}
+                                      href={`/${link.segment}/${child.segment}`}
                                     >  
                                       <ComponentInstanceIcon /> {child.title} <DoubleArrowRightIcon />
                                     </NextLink>
@@ -49,11 +49,11 @@ export default function Navbar({ links }) {
                                       <ul className="GridList two">
                                         {child.children.map(function(c) {
                                           return (
-                                            <li key={c.id}>
+                                            <li key={c.title}>
                                               <Link asChild>
                                                 <NextLink 
                                                   className="ListItemLink"
-                                                  href={`/${item.segment}/${child.segment}/${c.segment}`}
+                                                  href={`/${link.segment}/${child.segment}/${c.segment}`}
                                                 >
                                                   <div className="ListItemHeading">{c.title}</div>
                                                   <p className="ListItemText">
@@ -71,7 +71,7 @@ export default function Navbar({ links }) {
                                           <Link asChild>
                                             <NextLink 
                                               className="ListItemLink"
-                                              href={`/${item.segment}/${child.segment}/${child.children[0].segment}`}
+                                              href={`/${link.segment}/${child.segment}/${child.children[0].segment}`}
                                             >
                                               <div className="ListItemHeading">{child.children[0].title}</div>
                                               <p className="ListItemText">
@@ -89,9 +89,9 @@ export default function Navbar({ links }) {
                           })
                         ) : (
                           <ul className="RowList">
-                            {item.children.map(function(child) {
+                            {link.children.map(function(child) {
                               const href = 
-                                child.segment ? `/${item.segment}/${child.segment}` : child.href;
+                                child.segment ? `/${link.segment}/${child.segment}` : child.href;
 
                               return (
                                 <Fragment key={child.title}>
@@ -107,8 +107,8 @@ export default function Navbar({ links }) {
                   </div>
                 </>
               ) : (
-                <NextLink className="NavigationMenuLink" href={`/${item.segment}`}>
-                  {item.title}
+                <NextLink className="NavigationMenuLink" href={`/${link.segment}`}>
+                  {link.title}
                 </NextLink>
               )}
             </Item>

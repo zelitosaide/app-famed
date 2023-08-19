@@ -4,10 +4,10 @@ import logo from "@/public/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./navbar";
-import { getNavLinks } from "@/app/api/server";
+import { getLinks } from "@/app/api/server";
 
 export default async function NavbarContainer() {
-  const links = await getNavLinks();
+  const navLinks = await getLinks("nav");
 
   return (
     <div 
@@ -24,7 +24,7 @@ export default async function NavbarContainer() {
       </Link>
 
       <div>
-        <Navbar links={links} />
+        <Navbar navLinks={navLinks} />
       </div>
     </div>
   );
