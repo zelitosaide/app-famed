@@ -23,7 +23,12 @@ export default async function HeaderContainer() {
       </div>
 
       <div className="flex gap-2 items-center pr-3">
-        <RightHeader socialNetworks={socialNetworks[0].children} />
+        <RightHeader 
+          socialNetworks={
+            socialNetworks instanceof Array 
+              ? socialNetworks[0].children 
+              : socialNetworks.children} 
+        />
       </div>
     </header>
   );
