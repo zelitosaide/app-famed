@@ -1,5 +1,10 @@
-export default function Page() {
+export default async function Page() {
   return (
-    <h1>Consultas de bioestatistica</h1>
+    <h1 
+      style={{ color: "#178415" }}
+      className="text-2xl font-bold uppercase"
+    >
+      Consultas de bioestatistica
+    </h1>
   );
 }

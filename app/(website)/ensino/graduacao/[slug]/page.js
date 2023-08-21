@@ -1,5 +1,10 @@
-export default function Page({ params }) {
+export default async function Page({ params }) {
   return (
-    <h1>Graduação: {params.slug}</h1>
+    <h1 
+      style={{ color: "#178415" }}
+      className="text-2xl font-bold uppercase"
+    >
+      {params.slug.split("-").join(" ")}
+    </h1>
   );
 }
