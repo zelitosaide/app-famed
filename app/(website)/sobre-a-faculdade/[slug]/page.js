@@ -1,4 +1,4 @@
-export default function Page({ params }) {
+export default async function Page({ params }) {
   return (
     <h1>Sobre: {params.slug}</h1>
   );
