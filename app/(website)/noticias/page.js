@@ -1,5 +1,10 @@
 export default function Page() {
   return (
-    <h1>Notícias</h1>
+    <h1 
+      style={{ color: "#178415" }}
+      className="text-2xl font-bold uppercase"
+    >
+      Notícias
+    </h1>
   );
 }
