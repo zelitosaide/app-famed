@@ -10,7 +10,7 @@ export default function Layout({ children }) {
           }} 
         />
       </div>
-      <div style={{ padding: "30px 20px"}}>
+      <div style={{ padding: "30px 20px", width: "100%" }}>
         {children}
       </div>
     </div>
