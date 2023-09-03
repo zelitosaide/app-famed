@@ -1,6 +1,6 @@
 "use client";
 
-import { useEditor, EditorContent, FloatingMenu } from "@tiptap/react";
+import { useEditor, EditorContent, FloatingMenu, BubbleMenu } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 
 export default function TipTap() {
