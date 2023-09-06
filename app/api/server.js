@@ -4,3 +4,15 @@ export async function getLinks(category) {
   });
   return res.json();
 }
+
+
+export async function getContent() {
+  return `
+    <h1>
+      It’ll always have a heading …
+    </h1>
+    <p>
+      … if you pass a custom document. That’s the beauty of having full control over the schema.
+    </p>
+  `;
+}
