@@ -8,7 +8,9 @@
 @import '@radix-ui/colors/violet.css';
 
 /* reset */
-button, p {
+/* p, */
+button 
+{
   all: unset;
 }
 
