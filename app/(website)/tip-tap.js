@@ -11,7 +11,7 @@ const CustomDocument = Document.extend({
   // draggable: true
 });
 
-export default function TipTap() {
+export default function TipTap({ content }) {
   const editor = useEditor({
     extensions: [
       CustomDocument,
@@ -31,21 +31,17 @@ export default function TipTap() {
         },
       }),
     ],
-    content: `
-      <h1>It’ll always have a heading …</h1>
-      <p>Hello World! 🌎️</p>
-    `,
+    content: content,
     autofocus: true,
     editable: true,
-    injectCSS: false,
+    injectCSS: false, 
   });
 
   return (
-    <>
-      <FloatingMenu editor={editor}>
-        olas
+    <div className="prose prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
+      <FloatingMenu editor={editor} tippyOptions={{ duration: 100 }}>
       </FloatingMenu>
-      <EditorContent editor={editor} />
-    </>
+      <EditorContent  editor={editor} />
+    </div>
   );
 }
