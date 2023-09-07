@@ -15,6 +15,7 @@
     "@radix-ui/react-separator": "^1.0.3",
     "@tiptap/extension-color": "^2.1.7",
     "@tiptap/extension-document": "^2.1.8",
+    "@tiptap/extension-heading": "^2.1.8",
     "@tiptap/extension-list-item": "^2.1.7",
     "@tiptap/extension-placeholder": "^2.1.8",
     "@tiptap/extension-text-style": "^2.1.7",
