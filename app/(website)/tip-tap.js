@@ -3,7 +3,6 @@
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 
-
 export default function TipTap() {
   const editor = useEditor({
     extensions: [
@@ -14,5 +13,5 @@ export default function TipTap() {
 
   return (
     <EditorContent editor={editor} />
-  )
+  );
 }
