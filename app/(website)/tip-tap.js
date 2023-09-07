@@ -35,6 +35,11 @@ export default function TipTap({ content }) {
     autofocus: true,
     editable: true,
     injectCSS: false, 
+    editorProps: {
+      attributes: {
+        spellcheck: false,
+      },
+    },
   });
 
   return (
