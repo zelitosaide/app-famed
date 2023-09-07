@@ -19,16 +19,14 @@ export default function TipTap() {
       Placeholder.configure({
         placeholder: ({ node }) => {
           if (node.type.name === 'heading') {
-            return 'What’s the title?';
+            return "What’s the title?";
           }
-          return 'Can you add some further context?'
+          return "Can you add some further context?";
         },
       }),
     ],
     content: `
-      <h1>
-        It’ll always have a heading …
-      </h1>
+      <h1>It’ll always have a heading …</h1>
       <p>Hello World! 🌎️</p>
     `,
   });
