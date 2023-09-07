@@ -8,7 +8,12 @@ export default function TipTap() {
     extensions: [
       StarterKit,
     ],
-    content: "<p>Hello World! 🌎️</p>",
+    content: `
+      <h1>
+        It’ll always have a heading …
+      </h1>
+      <p>Hello World! 🌎️</p>
+    `,
   });
 
   return (
