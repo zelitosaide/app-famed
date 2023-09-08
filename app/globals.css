@@ -28,3 +28,104 @@ body {
   pointer-events: none;
   height: 0;
 }
+
+
+/* .tiptap > * + * {
+  margin-top: 0.75em;
+} */
+
+.tiptap ul, .tiptap ol {
+  padding: 0 1rem;
+}
+
+.bubble-menu {
+  display: flex;
+  background-color: #0d0d0d;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.bubble-menu button {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0 0.2rem;
+  opacity: 0.6;
+}
+
+.bubble-menu button:hover, .bubble-menu button.is-active {
+  opacity: 1;
+}
+
+.floating-menu {
+  display: flex;
+  /* background-color: #0d0d0d 10; */
+  /* background-color: #0d0d0d10; */
+  padding: 0.2rem;
+  /* border-radius: 0.5rem; */
+
+  background-color: #fff;
+  border: 1px solid #E8E8EB;
+  border-radius: 6px;
+  box-shadow: 0 3px 15px -3px #0d142121;
+
+
+  /* position: absolute;
+  top: -45px; */
+  white-space: nowrap;
+}
+
+.tippy-box {
+  max-width: unset !important;
+}
+
+.floating-menu button {
+  border: none;
+  background: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0 0.2rem;
+  opacity: 0.6;
+}
+
+.floating-menu button:hover, .floating-menu button.is-active {
+  opacity: 1;
+}
+
+ul[data-type="taskList"] {
+  list-style: none;
+  padding: 0;
+}
+
+ul[data-type="taskList"] p {
+  margin: 0;
+}
+
+ul[data-type="taskList"] li {
+  display: flex;
+}
+
+ul[data-type="taskList"] li > label {
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+  user-select: none;
+}
+
+ul[data-type="taskList"] li > div {
+  flex: 1 1 auto;
+}
+
+ul[data-type="taskList"] li ul li, ul[data-type="taskList"] li ol li {
+  display: list-item;
+}
+
+ul[data-type="taskList"] li ul[data-type="taskList"] > li {
+  display: flex;
+}
+
+.tiptap a {
+  color: #68cef8;
+  cursor: pointer;
+}
