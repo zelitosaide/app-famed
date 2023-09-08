@@ -56,6 +56,8 @@ export default function TipTap({ content }) {
       Youtube.configure({
         controls: false,
         width: 980,
+        progressBarColor: 'white',
+        modestBranding: 'true',
       }),
       Image,
       Dropcursor,
@@ -105,6 +107,14 @@ export default function TipTap({ content }) {
     // update link
     editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
   }, [editor]);
+
+  const addYoutubeVideo = () => {
+    const url = prompt("Enter YouTube URL");
+
+    if (url) {
+      editor.commands.setYoutubeVideo({src: url});
+    }
+  }
 
   if (!editor) {
     return null;
@@ -255,6 +265,8 @@ export default function TipTap({ content }) {
           toggleTaskList
         </button>
         <button onClick={addImage}>setImage</button>
+
+        <button id="add" onClick={addYoutubeVideo}>Add YouTube video</button>
       </FloatingMenu>}
 
       <EditorContent editor={editor} />
