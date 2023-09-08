@@ -9,7 +9,6 @@ import Youtube from "@tiptap/extension-youtube";
 
 const CustomDocument = Document.extend({
   content: "heading block*",
-  // draggable: true
 });
 
 export default function TipTap({ content }) {
