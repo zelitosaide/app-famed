@@ -89,34 +89,32 @@ export default function TipTap({ content }) {
   const addImage = useCallback(() => {
     const url = window.prompt("URL");
 
-    console.log(editor);
-
     if (url) {
       editor.chain().focus().setImage({ src: url }).run();
     }
   }, [editor]);
 
   const setLink = useCallback(() => {
-    const previousUrl = editor.getAttributes('link').href
-    const url = window.prompt('URL', previousUrl)
+    const previousUrl = editor.getAttributes('link').href;
+    const url = window.prompt('URL', previousUrl);
 
     // cancelled
     if (url === null) {
-      return
+      return;
     }
 
     // empty
     if (url === '') {
       editor.chain().focus().extendMarkRange('link').unsetLink()
-        .run()
+        .run();
 
-      return
+      return;
     }
 
     // update link
     editor.chain().focus().extendMarkRange('link').setLink({ href: url })
       .run()
-  }, [editor])
+  }, [editor]);
 
   if (!editor) {
     return null;
@@ -124,7 +122,6 @@ export default function TipTap({ content }) {
 
   return (
     <div className="prose prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
-      <button onClick={addImage}>setImage</button>
       {editor && <BubbleMenu className="bubble-menu" tippyOptions={{ duration: 100 }} editor={editor}>
         <button
           onClick={() => editor.chain().focus().toggleBold().run()}
@@ -176,6 +173,7 @@ export default function TipTap({ content }) {
         >
           unsetLink
         </button>
+        <button onClick={addImage}>setImage</button>
       </BubbleMenu>}
 
       {editor && <FloatingMenu className="floating-menu" tippyOptions={{ duration: 100 }} editor={editor}>
@@ -266,9 +264,10 @@ export default function TipTap({ content }) {
         >
           toggleTaskList
         </button>
+        <button onClick={addImage}>setImage</button>
       </FloatingMenu>}
 
-      <EditorContent  editor={editor} />
+      <EditorContent editor={editor} />
     </div>
   );
 }
