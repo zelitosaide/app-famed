@@ -8,9 +8,6 @@ import Heading from "@tiptap/extension-heading";
 import Youtube from "@tiptap/extension-youtube";
 import Dropcursor from "@tiptap/extension-dropcursor";
 import Image from "@tiptap/extension-image";
-// import Color from "@tiptap/extension-color";
-// import TextStyle from "@tiptap/extension-text-style";
-// import ListItem from "@tiptap/extension-list-item";
 import Highlight from "@tiptap/extension-highlight";
 import TextAlign from "@tiptap/extension-text-align";
 import TaskItem from "@tiptap/extension-task-item";
@@ -40,22 +37,20 @@ export default function TipTap({ content }) {
       TextAlign.configure({
         types: ["heading", "paragraph"],
       }),
-      // Color.configure({ types: [TextStyle.name, ListItem.name] }),
-      // TextStyle.configure({ types: [ListItem.name] }),
       CustomDocument,
       Heading.configure({
         levels: [1, 2],
       }),
       StarterKit.configure({
         document: false,
-        // bulletList: {
-        //   keepMarks: true,
-        //   keepAttributes: false, // TODO : Making this as `false` becase marks are not preserved when I try to preserve attrs, awaiting a bit of help
-        // },
-        // orderedList: {
-        //   keepMarks: true,
-        //   keepAttributes: false, // TODO : Making this as `false` becase marks are not preserved when I try to preserve attrs, awaiting a bit of help
-        // },
+        bulletList: {
+          keepMarks: true,
+          keepAttributes: false, // TODO : Making this as `false` becase marks are not preserved when I try to preserve attrs, awaiting a bit of help
+        },
+        orderedList: {
+          keepMarks: true,
+          keepAttributes: false, // TODO : Making this as `false` becase marks are not preserved when I try to preserve attrs, awaiting a bit of help
+        },
         // history: false,
       }),
       Youtube.configure({
@@ -66,8 +61,6 @@ export default function TipTap({ content }) {
       Dropcursor,
       Placeholder.configure({
         placeholder: ({ node }) => {
-          console.log(node.attrs.level)
-
           if (node.type.name === 'heading' && node.attrs?.level === 1) {
             return "What’s the title?";
           }
@@ -105,15 +98,12 @@ export default function TipTap({ content }) {
 
     // empty
     if (url === '') {
-      editor.chain().focus().extendMarkRange('link').unsetLink()
-        .run();
-
+      editor.chain().focus().extendMarkRange('link').unsetLink().run();
       return;
     }
 
     // update link
-    editor.chain().focus().extendMarkRange('link').setLink({ href: url })
-      .run()
+    editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
   }, [editor]);
 
   if (!editor) {
