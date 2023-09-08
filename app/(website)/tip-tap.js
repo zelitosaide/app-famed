@@ -5,6 +5,7 @@ import StarterKit from "@tiptap/starter-kit";
 import Document from "@tiptap/extension-document";
 import Placeholder from "@tiptap/extension-placeholder";
 import Heading from "@tiptap/extension-heading";
+import Youtube from "@tiptap/extension-youtube";
 
 const CustomDocument = Document.extend({
   content: "heading block*",
@@ -21,6 +22,10 @@ export default function TipTap({ content }) {
       StarterKit.configure({
         document: false,
         // history: false,
+      }),
+      Youtube.configure({
+        controls: false,
+        width: 980,
       }),
       Placeholder.configure({
         placeholder: ({ node }) => {
