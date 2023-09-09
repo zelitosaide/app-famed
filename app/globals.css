@@ -34,6 +34,12 @@ body {
   margin-top: 0.75em;
 } */
 
+.tiptap {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
 .tiptap ul, .tiptap ol {
   padding: 0 1rem;
 }
