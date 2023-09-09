@@ -19,7 +19,7 @@ import 'remixicon/fonts/remixicon.css';
 import { useCallback } from "react";
 
 const CustomDocument = Document.extend({
-  content: "heading block*",
+  content: "heading block+",
 });
 
 export default function TipTap({ content }) {
@@ -68,7 +68,7 @@ export default function TipTap({ content }) {
           if (node.type.name === 'heading' && node.attrs?.level === 1) {
             return "What’s the title?";
           }
-          return "Type the content...";
+          return;
         },
       }),
     ],
