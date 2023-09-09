@@ -79,6 +79,7 @@ export default function TipTap({ content }) {
     editorProps: {
       attributes: {
         spellcheck: false,
+        class: "focus:outline outline-[#E2F0E2] focus:outline-dashed focus:rounded-lg focus:outline-2"
       },
     },
   });
@@ -123,7 +124,7 @@ export default function TipTap({ content }) {
   }
 
   return (
-    <div className="prose prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
+    <div className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
       {editor && <BubbleMenu className="bubble-menu" tippyOptions={{ duration: 100 }} editor={editor}>
         <button
           onClick={() => editor.chain().focus().toggleBold().run()}

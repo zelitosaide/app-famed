@@ -37,7 +37,7 @@ body {
 .tiptap {
   padding-left: 20px;
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .tiptap ul, .tiptap ol {
@@ -132,6 +132,6 @@ ul[data-type="taskList"] li ul[data-type="taskList"] > li {
 }
 
 .tiptap a {
-  color: #68cef8;
+  /* color: #68cef8; */
   cursor: pointer;
 }
