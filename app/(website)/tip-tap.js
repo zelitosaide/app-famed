@@ -14,6 +14,8 @@ import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import Link from "@tiptap/extension-link";
 
+import 'remixicon/fonts/remixicon.css';
+
 import { useCallback } from "react";
 
 const CustomDocument = Document.extend({
@@ -45,11 +47,11 @@ export default function TipTap({ content }) {
         document: false,
         bulletList: {
           keepMarks: true,
-          keepAttributes: false, // TODO : Making this as `false` becase marks are not preserved when I try to preserve attrs, awaiting a bit of help
+          keepAttributes: false,
         },
         orderedList: {
           keepMarks: true,
-          keepAttributes: false, // TODO : Making this as `false` becase marks are not preserved when I try to preserve attrs, awaiting a bit of help
+          keepAttributes: false,
         },
         // history: false,
       }),
@@ -127,53 +129,49 @@ export default function TipTap({ content }) {
           onClick={() => editor.chain().focus().toggleBold().run()}
           className={editor.isActive('bold') ? 'is-active' : ''}
         >
-          Bold
+          <i className="ri-bold"></i>
         </button>
         <button
           onClick={() => editor.chain().focus().toggleItalic().run()}
           className={editor.isActive('italic') ? 'is-active' : ''}
         >
-          Italic
+          <i className="ri-italic"></i>
         </button>
         <button
           onClick={() => editor.chain().focus().toggleStrike().run()}
           className={editor.isActive('strike') ? 'is-active' : ''}
         >
-          Strike
-        </button>
-        <button
-          onClick={() => editor.chain().focus().setColor('#958DF1').run()}
-          className={editor.isActive('textStyle', { color: '#958DF1' }) ? 'is-active' : ''}
-        >
-          purple
+          <i className="ri-strikethrough"></i>
         </button>
         <button onClick={() => editor.chain().focus().toggleHighlight().run()} className={editor.isActive('highlight') ? 'is-active' : ''}>
-          highlight
+          <i className="ri-mark-pen-line"></i>
         </button>
 
         <button onClick={() => editor.chain().focus().setTextAlign('left').run()} className={editor.isActive({ textAlign: 'left' }) ? 'is-active' : ''}>
-          left
+          <i className="ri-align-left"></i>
         </button>
         <button onClick={() => editor.chain().focus().setTextAlign('center').run()} className={editor.isActive({ textAlign: 'center' }) ? 'is-active' : ''}>
-          center
+          <i className="ri-align-center"></i>
         </button>
         <button onClick={() => editor.chain().focus().setTextAlign('right').run()} className={editor.isActive({ textAlign: 'right' }) ? 'is-active' : ''}>
-          right
+          <i className="ri-align-right"></i>
         </button>
         <button onClick={() => editor.chain().focus().setTextAlign('justify').run()} className={editor.isActive({ textAlign: 'justify' }) ? 'is-active' : ''}>
-          justify
+          <i className="ri-align-justify"></i>
         </button>
 
         <button onClick={setLink} className={editor.isActive('link') ? 'is-active' : ''}>
-          setLink
+          <i className="ri-link"></i>
         </button>
         <button
           onClick={() => editor.chain().focus().unsetLink().run()}
           disabled={!editor.isActive('link')}
         >
-          unsetLink
+          <i className="ri-link-unlink"></i>
         </button>
-        <button onClick={addImage}>setImage</button>
+        <button onClick={addImage}>
+          <i className="ri-image-line"></i>
+        </button>
       </BubbleMenu>}
 
       {editor && <FloatingMenu className="floating-menu" tippyOptions={{ duration: 100 }} editor={editor}>
@@ -181,92 +179,91 @@ export default function TipTap({ content }) {
           onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
           className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''}
         >
-          H1
+          <i className="ri-h-1"></i>
         </button>
         <button
           onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
           className={editor.isActive('heading', { level: 2 }) ? 'is-active' : ''}
         >
-          H2
+          <i className="ri-h-2"></i>
         </button>
         <button
           onClick={() => editor.chain().focus().toggleBulletList().run()}
           className={editor.isActive('bulletList') ? 'is-active' : ''}
         >
-          Bullet List
+          <i className="ri-list-unordered"></i>
         </button>
 
         <button
           onClick={() => editor.chain().focus().toggleBold().run()}
           className={editor.isActive('bold') ? 'is-active' : ''}
         >
-          Bold
+          <i className="ri-bold"></i>
         </button>
         <button
           onClick={() => editor.chain().focus().toggleItalic().run()}
           className={editor.isActive('italic') ? 'is-active' : ''}
         >
-          Italic
+          <i className="ri-italic"></i>
         </button>
         <button
           onClick={() => editor.chain().focus().toggleStrike().run()}
           className={editor.isActive('strike') ? 'is-active' : ''}
         >
-          Strike
+          <i className="ri-strikethrough"></i>
         </button>
         <button
           onClick={() => editor.chain().focus().setParagraph().run()}
           className={editor.isActive('paragraph') ? 'is-active' : ''}
         >
-          paragraph
+          <i className="ri-paragraph"></i>
         </button>
 
-        <button
-          onClick={() => editor.chain().focus().toggleBulletList().run()}
-          className={editor.isActive('bulletList') ? 'is-active' : ''}
-        >
-          bullet list
-        </button>
         <button
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
           className={editor.isActive('orderedList') ? 'is-active' : ''}
         >
-          ordered list
+          <i className="ri-list-ordered"></i>
         </button>
         <button
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
           className={editor.isActive('blockquote') ? 'is-active' : ''}
         >
-          blockquote
+          <i className="ri-double-quotes-l"></i>
         </button>
         <button onClick={() => editor.chain().focus().setHorizontalRule().run()}>
-          horizontal rule
+          <i className="ri-separator"></i>
         </button>
         <button onClick={() => editor.chain().focus().toggleHighlight().run()} className={editor.isActive('highlight') ? 'is-active' : ''}>
-          highlight
+          <i className="ri-mark-pen-line"></i>
         </button>
 
         <button onClick={() => editor.chain().focus().setTextAlign('left').run()} className={editor.isActive({ textAlign: 'left' }) ? 'is-active' : ''}>
-          left
+          <i className="ri-align-left"></i>
         </button>
         <button onClick={() => editor.chain().focus().setTextAlign('center').run()} className={editor.isActive({ textAlign: 'center' }) ? 'is-active' : ''}>
-          center
+          <i className="ri-align-center"></i>
         </button>
         <button onClick={() => editor.chain().focus().setTextAlign('right').run()} className={editor.isActive({ textAlign: 'right' }) ? 'is-active' : ''}>
-          right
+          <i className="ri-align-right"></i>
         </button>
         <button onClick={() => editor.chain().focus().setTextAlign('justify').run()} className={editor.isActive({ textAlign: 'justify' }) ? 'is-active' : ''}>
-          justify
+          <i className="ri-align-justify"></i>
         </button>
         <button
           onClick={() => editor.chain().focus().toggleTaskList().run()}
           className={editor.isActive('taskList') ? 'is-active' : ''}
         >
-          toggleTaskList
+          <i className="ri-list-check-2"></i>
         </button>
-        <button onClick={addImage}>setImage</button>
 
-        <button id="add" onClick={addYoutubeVideo}>Add YouTube video</button>
+        <button onClick={addImage}>
+          <i className="ri-image-line"></i>
+        </button>
+
+        <button id="add" onClick={addYoutubeVideo}>
+          <i className="ri-youtube-line"></i>
+        </button>
       </FloatingMenu>}
 
       <EditorContent editor={editor} />
