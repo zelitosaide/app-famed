@@ -2,6 +2,7 @@
   max-width: unset !important;
 }
 
+.bubble-menu .divider,
 .floating-menu .divider {
   background-color: #E8E8EB;;
   height: 1.25rem;
@@ -10,9 +11,9 @@
   width: 1px;
 }
 
+.bubble-menu .editor__header, 
 .floating-menu .editor__header {
   align-items: center;
-  /* background: #0d0d0d; */
   border-radius: 0.4rem;
   display: flex;
   flex: 0 0 auto;
@@ -25,7 +26,9 @@
   box-shadow: 0 3px 15px -3px #0d142121;
 }
 
-.floating-menu .menu-item {
+.bubble-menu .menu-item, 
+.floating-menu .menu-item 
+{
   background-color: transparent;
   border: none;
   border-radius: 0.4rem;
@@ -43,13 +46,10 @@
   justify-content: center;
 }
 
-.floating-menu .menu-item:hover, .floating-menu .menu-item.is-active {
-  /* background-color: #303030; */
+.bubble-menu .menu-item:hover, 
+.floating-menu .menu-item:hover, 
+.bubble-menu .menu-item.is-active,
+.floating-menu .menu-item.is-active {
   background-color: rgb(23 132 21 / 10%);
   opacity: 1;
 }
-
-
-
-
-
