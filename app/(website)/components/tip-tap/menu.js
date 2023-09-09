@@ -1,5 +1,7 @@
 "use client";
 
+import "./tip-tap.css";
+
 import { Fragment, useCallback } from "react";
 import MenuItem from "./menu-item";
 
@@ -191,7 +193,7 @@ export default function Menu({ editor }) {
 
 
   return (
-    <div>
+    <div className="editor__header">
       {items.map((item, index) => (
         <Fragment key={index}>
           {item.type === 'divider' ? <div className="divider" /> : <MenuItem {...item} />}
