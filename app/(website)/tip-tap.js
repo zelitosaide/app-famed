@@ -265,6 +265,17 @@ export default function TipTap({ content }) {
         <button id="add" onClick={addYoutubeVideo}>
           <i className="ri-youtube-line"></i>
         </button>
+
+        <button onClick={setLink} className={editor.isActive('link') ? 'is-active' : ''}>
+          <i className="ri-link"></i>
+        </button>
+        <button
+          onClick={() => editor.chain().focus().unsetLink().run()}
+          disabled={!editor.isActive('link')}
+          className="menu-item"
+        >
+          <i className="ri-link-unlink"></i>
+        </button>
       </FloatingMenu>}
 
       <EditorContent editor={editor} />

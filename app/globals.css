@@ -135,3 +135,27 @@ ul[data-type="taskList"] li ul[data-type="taskList"] > li {
   /* color: #68cef8; */
   cursor: pointer;
 }
+
+.menu-item {
+  background-color: transparent;
+  border: none;
+  border-radius: 0.4rem;
+  color: #fff;
+  cursor: pointer;
+  height: 1.75rem;
+  margin-right: 0.25rem;
+  padding: 0.25rem;
+  width: 1.75rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item i {
+  font-size: 16px;
+}
+
+.menu-item:hover, .menu-item.is-active {
+  background-color: #303030;
+}
