@@ -53,7 +53,6 @@ export default function Content({ content, id }) {
           keepMarks: true,
           keepAttributes: false,
         },
-        // history: false,
       }),
       Youtube.configure({
         controls: false,
@@ -83,7 +82,7 @@ export default function Content({ content, id }) {
       },
     },
     onUpdate({ editor }) {
-      // console.log(editor.getHTML());
+      // console.log(typeof editor.getHTML());
     },
   });
 
