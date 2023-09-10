@@ -92,7 +92,7 @@ export default function Content({ content, id }) {
 
   return (
     <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
-      <BubbleMenu pluginKey={{ }} className="bubble-menu" tippyOptions={{ duration: 100 }} editor={editor}>
+      <BubbleMenu className="bubble-menu" tippyOptions={{ duration: 100 }} editor={editor}>
         <Menu editor={editor} />
       </BubbleMenu>
 
