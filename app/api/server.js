@@ -18,7 +18,7 @@ export async function updateContent(id, content) {
     method: 'PATCH',
     body: JSON.stringify({ content }),
     headers: {
-      'Content-type': 'application/json; charset=UTF-8',
+      "Content-type": "application/json; charset=UTF-8",
       "Access-Control-Allow-Origin": "*"
     },
   });
