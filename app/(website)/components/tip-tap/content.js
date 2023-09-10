@@ -103,7 +103,10 @@ export default function Content({ content, id }) {
       <EditorContent editor={editor} />
 
       <div className="flex" style={{ position: "absolute", top: -2, right: -2 }}>
-        <button>
+        <button
+          className="outline-black outline-2 pl-2 pr-2 rounded-tr-lg"
+          style={{ cursor: "pointer", background: "#E2F0E2" }}
+        >
           <i className="ri-edit-line"></i>
         </button>
         <button 
