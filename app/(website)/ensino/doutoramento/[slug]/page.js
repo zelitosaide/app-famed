@@ -1,10 +1,10 @@
+import Content from "@/app/(website)/components/tip-tap/content";
+import { getContent } from "@/app/api/server";
+
 export default async function Page({ params }) {
+  const data = await getContent(params.slug);
+
   return (
-    <h1 
-      style={{ color: "#178415" }}
-      className="text-2xl font-bold uppercase"
-    >
-      {params.slug.split("-").join(" ")}
-    </h1>
+    <Content content={data.content} />
   );
 }
