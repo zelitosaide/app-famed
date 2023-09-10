@@ -9,5 +9,6 @@ export async function getContent(segment) {
   const res = await fetch(`http://localhost:3001/contents/segment/${segment}`, {
     cache: "no-cache"
   });
+  
   return res.json();
 }

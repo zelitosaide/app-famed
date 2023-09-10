@@ -3,7 +3,7 @@
 .H-NavigationMenuRoot {
   position: relative;
   display: flex;
-  z-index: 3;
+  z-index: 30000;
 }
 
 .H-NavigationMenuList {
