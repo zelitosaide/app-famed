@@ -81,14 +81,19 @@ export default function Content({ content }) {
         class: "focus:outline outline-[#E2F0E2] focus:outline-dashed focus:rounded-lg focus:outline-2"
       },
     },
+    onUpdate({ editor }) {
+      console.log(editor.getHTML());
+    },
   });
 
   if (!editor) {
     return null;
   }
 
+  console.log(editor.getHTML());
+
   return (
-    <div className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
+    <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
       <BubbleMenu pluginKey={{ }} className="bubble-menu" tippyOptions={{ duration: 100 }} editor={editor}>
         <Menu editor={editor} />
       </BubbleMenu>
@@ -98,6 +103,13 @@ export default function Content({ content }) {
       </FloatingMenu>
 
       <EditorContent editor={editor} />
+
+      <div className="flex" style={{ position: "absolute", top: 0, right: 0 }}>
+        <button>
+          <i className="ri-edit-line"></i>
+        </button>
+        <button>Save</button>
+      </div>
     </div>
   );
 }
