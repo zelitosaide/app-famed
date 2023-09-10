@@ -13,12 +13,14 @@ export async function getContent(segment) {
   return res.json();
 }
 
-
 export async function updateContent(id, content) {
   const res = await fetch(`http://localhost:3001/contents/${id}`, {
-    cache: "no-cache",
     method: 'PATCH',
     body: JSON.stringify({ content }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+      "Access-Control-Allow-Origin": "*"
+    },
   });
   
   return res.json();

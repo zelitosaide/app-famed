@@ -16,12 +16,13 @@ import Link from "@tiptap/extension-link";
 
 import 'remixicon/fonts/remixicon.css';
 import Menu from "./menu";
+import { updateContent } from "@/app/api/server";
 
 const CustomDocument = Document.extend({
   content: "heading block+",
 });
 
-export default function Content({ content }) {
+export default function Content({ content, id }) {
   const editor = useEditor({
     extensions: [
       Link.configure({
@@ -82,15 +83,13 @@ export default function Content({ content }) {
       },
     },
     onUpdate({ editor }) {
-      console.log(editor.getHTML());
+      // console.log(editor.getHTML());
     },
   });
 
   if (!editor) {
     return null;
   }
-
-  console.log(editor.getHTML());
 
   return (
     <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
@@ -108,7 +107,13 @@ export default function Content({ content }) {
         <button>
           <i className="ri-edit-line"></i>
         </button>
-        <button>Save</button>
+          <button 
+            onClick={async function() {
+              await updateContent(id, editor.getHTML());
+            }}
+          >
+            Save
+          </button>
       </div>
     </div>
   );
