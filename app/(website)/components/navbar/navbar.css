@@ -17,7 +17,7 @@ button
 .NavigationMenuRoot {
   position: relative;
   display: flex;
-  z-index: 2;
+  z-index: 20000;
 }
 
 .NavigationMenuList {
