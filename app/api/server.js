@@ -5,14 +5,9 @@ export async function getLinks(category) {
   return res.json();
 }
 
-
-export async function getContent() {
-  return `
-    <h1>
-      It’ll always have a heading …
-    </h1>
-    <p>
-      … if you pass a custom document. That’s the beauty of having full control over the schema.
-    </p>
-  `;
+export async function getContent(segment) {
+  const res = await fetch(`http://localhost:3001/contents/segment/${segment}`, {
+    cache: "no-cache"
+  });
+  return res.json();
 }
