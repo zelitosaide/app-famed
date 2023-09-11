@@ -13,11 +13,11 @@ import TextAlign from "@tiptap/extension-text-align";
 import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import Link from "@tiptap/extension-link";
+import Menu from "./menu";
 
 import { useEffect, useState } from "react";
 
-import 'remixicon/fonts/remixicon.css';
-import Menu from "./menu";
+import "remixicon/fonts/remixicon.css";
 import { updateContent } from "@/app/api/server";
 import { showNotification } from "@/app/utils/notifications";
 
