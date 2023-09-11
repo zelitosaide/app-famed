@@ -19,6 +19,7 @@ import { useEffect, useState } from "react";
 import 'remixicon/fonts/remixicon.css';
 import Menu from "./menu";
 import { updateContent } from "@/app/api/server";
+import { showNotification } from "@/app/utils/notifications";
 
 const CustomDocument = Document.extend({
   content: "heading block+",
@@ -124,6 +125,7 @@ export default function Content({ content, id }) {
                 await updateContent(id, editor.getHTML());
                 setIsLoading(false);
                 setIsEditable(false);
+                showNotification("Connected!");
               }, 3000);
             }}
           >
