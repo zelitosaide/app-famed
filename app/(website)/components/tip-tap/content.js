@@ -119,9 +119,7 @@ export default function Content({ content, id }) {
           style={{ cursor: "pointer", background: "#E2F0E2" }}
           onClick={async function() {
             setIsLoading(true);
-            setTimeout(() => {
-              
-            }, 3000);
+            setTimeout(() => {}, 3000);
             await updateContent(id, editor.getHTML());
             setIsLoading(false);
           }}
