@@ -125,7 +125,7 @@ export default function Content({ content, id }) {
                 await updateContent(id, editor.getHTML());
                 setIsLoading(false);
                 setIsEditable(false);
-                showNotification("Connected!");
+                showNotification("Salvo com sucesso!");
               }, 3000);
             }}
           >
