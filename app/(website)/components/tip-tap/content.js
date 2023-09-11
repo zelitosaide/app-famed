@@ -118,7 +118,7 @@ export default function Content({ content, id }) {
               setTimeout(async () => {
                 await updateContent(id, editor.getHTML());
                 setIsLoading(false);
-                setEnableEdition(true);
+                setEnableEdition(false);
               }, 3000);
             }}
           >
