@@ -117,8 +117,7 @@ export default function Content({ content, id }) {
         {isEditable ? (
           <button 
             disabled={isLoading}
-            className="pl-2 pr-2 rounded-tr-lg"
-            style={{ cursor: "pointer", background: "#E2F0E2" }}
+            className="pl-2 pr-2 rounded-tr-lg cursor-pointer bg-[#1b9a19] text-white outline outline-offset-2 outline-2 focus:outline-[#23c520] hover:outline-[#23c520] disabled:opacity-70 disabled:cursor-progress"
             onClick={async function() {
               setIsLoading(true);
               setTimeout(async () => {
