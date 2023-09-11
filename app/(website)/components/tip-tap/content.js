@@ -89,6 +89,7 @@ export default function Content({ content, id }) {
   });
 
   const [isLoading, setIsLoading] = useState(false);
+  const [enableEdition, setEnableEdition] = useState(false);
 
   if (!editor) {
     return null;
@@ -107,25 +108,32 @@ export default function Content({ content, id }) {
       <EditorContent editor={editor} />
 
       <div className="flex" style={{ position: "absolute", top: -2, right: -2 }}>
-        <button
-          className="pl-2 pr-2"
-          style={{ cursor: "pointer", background: "#E2F0E2" }}
-        >
-          <i className="ri-edit-line"></i>
-        </button>
-        <button 
-          disabled={isLoading}
-          className="pl-2 pr-2 rounded-tr-lg"
-          style={{ cursor: "pointer", background: "#E2F0E2" }}
-          onClick={async function() {
-            setIsLoading(true);
-            setTimeout(() => {}, 3000);
-            await updateContent(id, editor.getHTML());
-            setIsLoading(false);
-          }}
-        >
-          {isLoading ? "Save..." : "Save"}
-        </button>
+        {enableEdition ? (
+          <button 
+            disabled={isLoading}
+            className="pl-2 pr-2 rounded-tr-lg"
+            style={{ cursor: "pointer", background: "#E2F0E2" }}
+            onClick={async function() {
+              setIsLoading(true);
+              setTimeout(async () => {
+                await updateContent(id, editor.getHTML());
+                setIsLoading(false);
+              }, 3000);
+            }}
+          >
+            {isLoading ? "Save..." : "Save"}
+          </button>
+        ) : (
+          <button
+            className="pl-2 pr-2 rounded-tr-lg"
+            style={{ cursor: "pointer", background: "#E2F0E2" }}
+            onClick={function() {
+              setEnableEdition(!enableEdition);
+            }}
+          >
+            <i className="ri-edit-line"></i>
+          </button>
+        )}
       </div>
     </div>
   );
