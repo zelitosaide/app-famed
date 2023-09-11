@@ -14,7 +14,7 @@ import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import Link from "@tiptap/extension-link";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import 'remixicon/fonts/remixicon.css';
 import Menu from "./menu";
@@ -89,7 +89,13 @@ export default function Content({ content, id }) {
   });
 
   const [isLoading, setIsLoading] = useState(false);
-  const [enableEdition, setEnableEdition] = useState(false);
+  const [isEditable, setIsEditable] = useState(false);
+
+  useEffect(function () {
+    if (editor) {
+      editor.setEditable(isEditable);
+    }
+  }, [isEditable, editor]);
 
   if (!editor) {
     return null;
@@ -108,7 +114,7 @@ export default function Content({ content, id }) {
       <EditorContent editor={editor} />
 
       <div className="flex" style={{ position: "absolute", top: -2, right: -2 }}>
-        {enableEdition ? (
+        {isEditable ? (
           <button 
             disabled={isLoading}
             className="pl-2 pr-2 rounded-tr-lg"
@@ -118,7 +124,7 @@ export default function Content({ content, id }) {
               setTimeout(async () => {
                 await updateContent(id, editor.getHTML());
                 setIsLoading(false);
-                setEnableEdition(false);
+                setIsEditable(false);
               }, 3000);
             }}
           >
@@ -129,7 +135,7 @@ export default function Content({ content, id }) {
             className="pl-2 pr-2 rounded-tr-lg"
             style={{ cursor: "pointer", background: "#E2F0E2" }}
             onClick={function() {
-              setEnableEdition(!enableEdition);
+              setIsEditable(!isEditable);
             }}
           >
             <i className="ri-edit-line"></i>
