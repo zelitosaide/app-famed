@@ -81,11 +81,8 @@ export default function Content({ content, id }) {
     editorProps: {
       attributes: {
         spellcheck: false,
-        class: "focus:outline outline-[#E2F0E2] focus:outline-dashed focus:rounded-lg focus:outline-2"
+        class: `focus:outline outline-[#E2F0E2] focus:outline-dashed focus:rounded-lg focus:outline-2`
       },
-    },
-    onUpdate({ editor }) {
-      // console.log(typeof editor.getHTML());
     },
   });
 
