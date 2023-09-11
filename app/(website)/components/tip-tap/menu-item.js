@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 export default function MenuItem({ icon, title, action, isActive = null, disabled = null}) {
   const ref = useRef();
