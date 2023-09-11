@@ -14,6 +14,8 @@ import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import Link from "@tiptap/extension-link";
 
+import { useState } from "react";
+
 import 'remixicon/fonts/remixicon.css';
 import Menu from "./menu";
 import { updateContent } from "@/app/api/server";
@@ -86,6 +88,8 @@ export default function Content({ content, id }) {
     },
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   if (!editor) {
     return null;
   }
@@ -110,13 +114,19 @@ export default function Content({ content, id }) {
           <i className="ri-edit-line"></i>
         </button>
         <button 
+          disabled={isLoading}
           className="pl-2 pr-2 rounded-tr-lg"
           style={{ cursor: "pointer", background: "#E2F0E2" }}
           onClick={async function() {
+            setIsLoading(true);
+            setTimeout(() => {
+              
+            }, 3000);
             await updateContent(id, editor.getHTML());
+            setIsLoading(false);
           }}
         >
-          Save
+          {isLoading ? "Save..." : "Save"}
         </button>
       </div>
     </div>
