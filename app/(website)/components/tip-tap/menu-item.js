@@ -4,7 +4,6 @@ import { useRef, useState } from "react";
 
 export default function MenuItem({ icon, title, action, isActive = null, disabled = null}) {
   const ref = useRef();
-  const [file, setFile] = useState(null);
 
   return title === "Image" ? (
     <button
@@ -20,7 +19,11 @@ export default function MenuItem({ icon, title, action, isActive = null, disable
         ref={ref} 
         style={{ display: "none"}} 
         onChange={function(e) {
-          setFile(e.target.files[0]);
+          const formData = new FormData();
+          formData.append("file", e.target.files[0]);
+          formData.append("caption", "Image upload using TipTap");
+          formData.append("category", "TipTap");
+          action(formData);
         }}
       />
       <i className={`ri-${icon}`} />
