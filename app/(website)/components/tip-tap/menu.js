@@ -6,11 +6,20 @@ import { Fragment, useCallback } from "react";
 import MenuItem from "./menu-item";
 
 export default function Menu({ editor }) {
-  const addImage = useCallback(() => {
-    const url = window.prompt("URL");
+  const addImage = useCallback(async (formData) => {
+    const res = await fetch("http://localhost:3001/files", { 
+      method: "POST", 
+      body: formData 
+    });
 
-    if (url) {
-      editor.chain().focus().setImage({ src: url }).run();
+    const data = await res.json();
+
+    if (data.url) {
+      editor
+        .chain()
+        .focus()
+        .setImage({ src: `http://localhost:3001/${data.url}` })
+        .run();
     }
   }, [editor]);
 
