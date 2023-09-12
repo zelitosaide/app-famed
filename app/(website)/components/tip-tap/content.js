@@ -153,10 +153,10 @@ export default function Content({ content, id }) {
       
     }), Image, Dropcursor],
     content: `
-        <p>This is a basic example of implementing images. Drag to re-order.</p>
-        <img src="https://source.unsplash.com/8xznAGy4HcY/800x400" />
-        <img src="https://source.unsplash.com/K9QHL52rE2k/800x400" />
-      `,
+      <p>This is a basic example of implementing images. Drag to re-order.</p>
+      <img src="https://source.unsplash.com/8xznAGy4HcY/800x400" />
+      <img src="https://source.unsplash.com/K9QHL52rE2k/800x400" />
+    `,
   })
 
   const addImage = useCallback(() => {
