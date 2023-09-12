@@ -160,15 +160,15 @@ export default function Content({ content, id }) {
   })
 
   const addImage = useCallback(() => {
-    const url = window.prompt('URL')
+    const url = window.prompt("URL");
 
     if (url) {
-      editor.chain().focus().setImage({ src: url }).run()
+      editor.chain().focus().setImage({ src: url }).run();
     }
-  }, [editor])
+  }, [editor]);
 
   if (!editor) {
-    return null
+    return null;
   }
 
   return (
@@ -179,5 +179,5 @@ export default function Content({ content, id }) {
         <div className="bg-green">Bubble Menu</div>
       </BubbleMenu>
     </div>
-  )
+  );
 }
