@@ -12,7 +12,7 @@ export default function Menu({ editor }) {
       body: formData 
     });
 
-    const data = await res.json();
+    let data = await res.json();
 
     if (data.url) {
       editor
