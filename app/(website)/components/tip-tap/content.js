@@ -346,11 +346,43 @@ export default function Content({ content, id }) {
             <i className={`ri-align-left`} />
           </button>
 
+          <button
+            className={`menu-item ${editor.isActive({ textAlign: 'center' }) ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().setTextAlign('center').run()}
+            title="Align Center"
+          >
+            <i className={`ri-align-center`} />
+          </button>
 
-          {/* {
-            action: ,
-            isActive: () => ,
-          }, */}
+          <button
+            className={`menu-item ${editor.isActive({ textAlign: 'right' }) ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().setTextAlign('right').run()}
+            title="Align Right"
+          >
+            <i className={`ri-align-right`} />
+          </button>
+
+          <button
+            className={`menu-item ${editor.isActive({ textAlign: 'justify' }) ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().setTextAlign('justify').run()}
+            title="Align Justify"
+          >
+            <i className={`ri-align-justify`} />
+          </button>
+
+          <div className="divider" />
+
+          <button
+            className={`menu-item ${editor.isActive('blockquote') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleBlockquote().run()}
+            title="Blockquote"
+          >
+            <i className={`ri-double-quotes-l`} />
+          </button>
+
+
+
+          
 
           
         </div>
