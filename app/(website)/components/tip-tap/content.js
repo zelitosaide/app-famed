@@ -305,6 +305,14 @@ export default function Content({ content, id }) {
           >
             <i className={`ri-bold`} />
           </button>
+
+          <button
+            className={`menu-item ${editor.isActive('italic') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleItalic().run()}
+            title="Italic"
+          >
+            <i className={`ri-italic`} />
+          </button>
           
         </div>
       </FloatingMenu>
