@@ -387,25 +387,6 @@ export default function Content({ content, id }) {
           >
             <i className={`ri-link`} />
           </button>
-
-          <button
-            className={`menu-item ${editor.isActive('link') ? 'is-active' : ''}`}
-            onClick={() => editor.chain().focus().unsetLink().run()}
-            title="Unlink"
-            disabled={!editor.isActive('link')}
-          >
-            <i className={`ri-link-unlink`} />
-          </button>
-          
-          
-
-
-
-
-
-          
-
-          
         </div>
       </FloatingMenu>
 
