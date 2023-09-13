@@ -11,6 +11,7 @@ import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import Highlight from "@tiptap/extension-highlight";
 import TextAlign from "@tiptap/extension-text-align";
+import Link from "@tiptap/extension-link";
 
 import "remixicon/fonts/remixicon.css";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -48,6 +49,12 @@ export default function Content({ content, id }) {
       TextAlign.configure({
         types: ["heading", "paragraph"],
       }),
+      Link.configure({
+        openOnClick: true,
+        autolink: true,
+        linkOnPaste: true,
+        validate: href => /^https?:\/\//.test(href),
+      }),
     ],
     content: content,
     editorProps: {
@@ -78,6 +85,25 @@ export default function Content({ content, id }) {
         .setImage({ src: "http://localhost:3001/" + data.url })
         .run();
     }
+  }, [editor]);
+
+  const setLink = useCallback(() => {
+    const previousUrl = editor.getAttributes('link').href;
+    const url = window.prompt('URL', previousUrl);
+
+    // cancelled
+    if (url === null) {
+      return;
+    }
+
+    // empty
+    if (url === '') {
+      editor.chain().focus().extendMarkRange('link').unsetLink().run();
+      return;
+    }
+
+    // update link
+    editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
   }, [editor]);
 
   useEffect(function () {
@@ -252,6 +278,15 @@ export default function Content({ content, id }) {
           <input ref={ref} className="hidden" type="file" onChange={addImage}/>
           <i className="ri-image-line" />
         </button>
+        <button 
+            className={`menu-item`}
+            // onClick={function() { ref.current.click() }}
+            onClick={setLink}
+            title="File"
+          >
+            <input ref={ref} className="hidden" type="file" onChange={addImage}/>
+            <i className="ri-attachment-line" />
+          </button>
       </BubbleMenu>
 
       <FloatingMenu className="floating-menu" tippyOptions={{ duration: 100, placement: "top-start" }} editor={editor}>
@@ -403,7 +438,8 @@ export default function Content({ content, id }) {
 
           <button 
             className={`menu-item`}
-            onClick={function() { ref.current.click() }}
+            // onClick={function() { ref.current.click() }}
+            onClick={setLink}
             title="File"
           >
             <input ref={ref} className="hidden" type="file" onChange={addImage}/>
