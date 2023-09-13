@@ -180,40 +180,101 @@ export default function Content({ content, id }) {
   return (
     <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
       <BubbleMenu updateDelay={0} className="bubble-menu" tippyOptions={{ placement: "auto" }} editor={editor}>
-        <button 
-          className={`menu-item`}
-          onClick={function() { imageRef.current.click() }}
-          title="Image"
-        >
-          <input ref={imageRef} className="hidden" type="file" onChange={addImage}/>
-          <i className="ri-image-line" />
-        </button>
+        <div className="editor__header">
+          <button
+            className={`menu-item ${editor.isActive('bold') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleBold().run()}
+            title="Bold"
+          >
+            <i className={`ri-bold`} />
+          </button>
 
-        <button 
-          className={`menu-item`}
-          onClick={function() { fileRefBubble.current.click() }}
-          title="File"
-        >
-          <input ref={fileRefBubble} className="hidden" type="file" onChange={setFile}/>
-          <i className="ri-attachment-line" />
-        </button>
+          <button
+            className={`menu-item ${editor.isActive('italic') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleItalic().run()}
+            title="Italic"
+          >
+            <i className={`ri-italic`} />
+          </button>
 
-        <button
-          className={`menu-item ${editor.isActive('link') ? 'is-active' : ''}`}
-          onClick={setLink}
-          title="Link"
-        >
-          <i className={`ri-link`} />
-        </button>
+          <button
+            className={`menu-item ${editor.isActive('strike') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleStrike().run()}
+            title="Strike"
+          >
+            <i className={`ri-strikethrough`} />
+          </button>
 
-        <button
-          className={`menu-item ${editor.isActive('link') ? 'is-active' : ''}`}
-          onClick={() => editor.chain().focus().unsetLink().run()}
-          title="Unlink"
-          disabled={!editor.isActive('link')}
-        >
-          <i className={`ri-link-unlink`} />
-        </button>
+          <button
+            className={`menu-item ${editor.isActive('highlight') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleHighlight().run()}
+            title="Highlight"
+          >
+            <i className={`ri-mark-pen-line`} />
+          </button>
+
+          <div className="divider" />
+
+          <button
+            className={`menu-item ${editor.isActive({ textAlign: 'left' }) ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().setTextAlign('left').run()}
+            title="Align Left"
+          >
+            <i className={`ri-align-left`} />
+          </button>
+
+          <button
+            className={`menu-item ${editor.isActive({ textAlign: 'center' }) ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().setTextAlign('center').run()}
+            title="Align Center"
+          >
+            <i className={`ri-align-center`} />
+          </button>
+
+          <button
+            className={`menu-item ${editor.isActive({ textAlign: 'right' }) ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().setTextAlign('right').run()}
+            title="Align Right"
+          >
+            <i className={`ri-align-right`} />
+          </button>
+
+          <button
+            className={`menu-item ${editor.isActive({ textAlign: 'justify' }) ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().setTextAlign('justify').run()}
+            title="Align Justify"
+          >
+            <i className={`ri-align-justify`} />
+          </button>
+
+          <div className="divider" />
+
+          <button 
+            className={`menu-item`}
+            onClick={function() { fileRefBubble.current.click() }}
+            title="File"
+          >
+            <input ref={fileRefBubble} className="hidden" type="file" onChange={setFile}/>
+            <i className="ri-attachment-line" />
+          </button>
+
+          <button
+            className={`menu-item ${editor.isActive('link') ? 'is-active' : ''}`}
+            onClick={setLink}
+            title="Link"
+          >
+            <i className={`ri-link`} />
+          </button>
+
+          <button
+            className={`menu-item ${editor.isActive('link') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().unsetLink().run()}
+            title="Unlink"
+            disabled={!editor.isActive('link')}
+          >
+            <i className={`ri-link-unlink`} />
+          </button>
+        </div>
       </BubbleMenu>
 
       <FloatingMenu className="floating-menu" tippyOptions={{ duration: 100, placement: "top-start" }} editor={editor}>

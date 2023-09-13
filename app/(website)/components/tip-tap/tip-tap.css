@@ -66,3 +66,7 @@
   width: 100%;
   outline: 5px solid #E2F0E2;
 }
+
+.tiptap div[data-youtube-video] {
+  background-color: #E2F0E2;
+}
