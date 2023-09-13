@@ -313,6 +313,16 @@ export default function Content({ content, id }) {
           >
             <i className={`ri-italic`} />
           </button>
+
+          <button
+            className={`menu-item ${editor.isActive('strike') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleStrike().run()}
+            title="Strike"
+          >
+            <i className={`ri-strikethrough`} />
+          </button>
+
+          
           
         </div>
       </FloatingMenu>
