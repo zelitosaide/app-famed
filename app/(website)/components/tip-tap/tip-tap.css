@@ -27,8 +27,7 @@
 }
 
 .bubble-menu .menu-item, 
-.floating-menu .menu-item 
-{
+.floating-menu .menu-item {
   background-color: transparent;
   border: none;
   border-radius: 0.4rem;

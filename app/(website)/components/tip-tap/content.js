@@ -1,6 +1,8 @@
 "use client";
 
-import { EditorContent, useEditor } from "@tiptap/react";
+import "./tip-tap.css";
+
+import { EditorContent, FloatingMenu, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Document from "@tiptap/extension-document";
 import Heading from "@tiptap/extension-heading";
@@ -74,6 +76,157 @@ export default function Content({ content, id }) {
     return null;
   }
 
+
+  const items = [
+    // {
+    //   icon: 'h-1',
+    //   title: 'Heading 1',
+    //   action: () => editor.chain().focus().toggleHeading({ level: 1 }).run(),
+    //   isActive: () => editor.isActive('heading', { level: 1 }),
+    // },
+    // {
+    //   icon: 'h-2',
+    //   title: 'Heading 2',
+    //   action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
+    //   isActive: () => editor.isActive('heading', { level: 2 }),
+    // },
+    // {
+    //   icon: 'paragraph',
+    //   title: 'Paragraph',
+    //   action: () => editor.chain().focus().setParagraph().run(),
+    //   isActive: () => editor.isActive('paragraph'),
+    // },
+    // {
+    //   icon: 'list-unordered',
+    //   title: 'Bullet List',
+    //   action: () => editor.chain().focus().toggleBulletList().run(),
+    //   isActive: () => editor.isActive('bulletList'),
+    // },
+    // {
+    //   icon: 'list-ordered',
+    //   title: 'Ordered List',
+    //   action: () => editor.chain().focus().toggleOrderedList().run(),
+    //   isActive: () => editor.isActive('orderedList'),
+    // },
+    // {
+    //   icon: 'list-check-2',
+    //   title: 'Task List',
+    //   action: () => editor.chain().focus().toggleTaskList().run(),
+    //   isActive: () => editor.isActive('taskList'),
+    // },
+    // {
+    //   type: 'divider',
+    // },
+    // {
+    //   icon: 'bold',
+    //   title: 'Bold',
+    //   action: () => editor.chain().focus().toggleBold().run(),
+    //   isActive: () => editor.isActive('bold'),
+    // },
+    // {
+    //   icon: 'italic',
+    //   title: 'Italic',
+    //   action: () => editor.chain().focus().toggleItalic().run(),
+    //   isActive: () => editor.isActive('italic'),
+    // },
+    // {
+    //   icon: 'strikethrough',
+    //   title: 'Strike',
+    //   action: () => editor.chain().focus().toggleStrike().run(),
+    //   isActive: () => editor.isActive('strike'),
+    // },
+    // {
+    //   icon: 'mark-pen-line',
+    //   title: 'Highlight',
+    //   action: () => editor.chain().focus().toggleHighlight().run(),
+    //   isActive: () => editor.isActive('highlight'),
+    // },
+    // {
+    //   type: 'divider',
+    // },
+    // {
+    //   icon: 'align-left',
+    //   title: 'Align Left',
+    //   action: () => editor.chain().focus().setTextAlign('left').run(),
+    //   isActive: () => editor.isActive({ textAlign: 'left' }),
+    // },
+    // {
+    //   icon: 'align-center',
+    //   title: 'Align Center',
+    //   action: () => editor.chain().focus().setTextAlign('center').run(),
+    //   isActive: () => editor.isActive({ textAlign: 'center' }),
+    // },
+    // {
+    //   icon: 'align-right',
+    //   title: 'Align Right',
+    //   action: () => editor.chain().focus().setTextAlign('right').run(),
+    //   isActive: () => editor.isActive({ textAlign: 'right' }),
+    // },
+    // {
+    //   icon: 'align-justify',
+    //   title: 'Align Justify',
+    //   action: () => editor.chain().focus().setTextAlign('justify').run(),
+    //   isActive: () => editor.isActive({ textAlign: 'justify' }),
+    // },
+    // {
+    //   type: 'divider',
+    // },
+    // {
+    //   icon: 'double-quotes-l',
+    //   title: 'Blockquote',
+    //   action: () => editor.chain().focus().toggleBlockquote().run(),
+    //   isActive: () => editor.isActive('blockquote'),
+    // },
+    // {
+    //   icon: 'separator',
+    //   title: 'Horizontal Rule',
+    //   action: () => editor.chain().focus().setHorizontalRule().run(),
+    // },
+    // {
+    //   type: 'divider',
+    // },
+    // {
+    //   icon: 'image-line',
+    //   title: 'Image',
+    //   action: addImage,
+    // },
+    // {
+    //   icon: 'youtube-line',
+    //   title: 'YouTube Video',
+    //   action: addYoutubeVideo,
+    // },
+    // {
+    //   icon: 'link',
+    //   title: 'Link',
+    //   action: setLink,
+    //   isActive: () => editor.isActive('link'),
+    // },
+    // {
+    //   icon: 'link-unlink',
+    //   title: 'Unlink',
+    //   action: () => editor.chain().focus().unsetLink().run(),
+    //   disabled: !editor.isActive('link'),
+    // },
+    // {
+    //   type: 'divider',
+    // },
+    // {
+    //   icon: 'format-clear',
+    //   title: 'Clear Format',
+    //   action: () => editor.chain().focus().clearNodes().unsetAllMarks().run(),
+    // },
+    // {
+    //   icon: 'arrow-go-back-line',
+    //   title: 'Undo',
+    //   action: () => editor.chain().focus().undo().run(),
+    // },
+    // {
+    //   icon: 'arrow-go-forward-line',
+    //   title: 'Redo',
+    //   action: () => editor.chain().focus().redo().run(),
+    // },
+  ];
+
   return (
     <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">  
       <BubbleMenu className="bubble-menu" tippyOptions={{ placement: "auto" }} editor={editor}>
@@ -88,14 +241,31 @@ export default function Content({ content, id }) {
       </BubbleMenu>
 
       <FloatingMenu className="floating-menu" tippyOptions={{ duration: 100, placement: "top-start" }} editor={editor}>
-        <button 
-          onClick={function() {
-            ref.current.click();
-          }}
-        >
-          <input ref={ref} className="hidden" type="file" onChange={addImage}/>
-          <i className="ri-image-line" />
-        </button>
+        <div className="editor__header">
+          <button
+            className={`menu-item ${editor.isActive('heading', { level: 1 }) ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
+            title="Heading 1"
+          >
+            <i className={`ri-h-1`} />
+          </button>
+
+          <button
+            className={`menu-item ${editor.isActive('heading', { level: 2 }) ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
+            title="Heading 2"
+          >
+            <i className={`ri-h-2`} />
+          </button>
+
+          <button
+            className={`menu-item ${editor.isActive('paragraph') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().setParagraph().run()}
+            title="Paragraph"
+          >
+            <i className={`ri-paragraph`} />
+          </button>
+        </div>
       </FloatingMenu>
 
       <EditorContent editor={editor} />
