@@ -139,6 +139,25 @@ export default function Content({ content, id }) {
     }
   }
 
+  const setLink = useCallback(() => {
+    const previousUrl = editor.getAttributes('link').href;
+    const url = window.prompt('URL', previousUrl);
+
+    // cancelled
+    if (url === null) {
+      return;
+    }
+
+    // empty
+    if (url === '') {
+      editor.chain().focus().extendMarkRange('link').unsetLink().run();
+      return;
+    }
+
+    // update link
+    editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
+  }, [editor]);
+
   useEffect(function () {
     if (editor) {
       editor.setEditable(isEditable);
@@ -151,11 +170,6 @@ export default function Content({ content, id }) {
 
 
   const items = [
-    // {
-    //   icon: 'youtube-line',
-    //   title: 'YouTube Video',
-    //   action: addYoutubeVideo,
-    // },
     // {
     //   icon: 'link',
     //   title: 'Link',
@@ -373,6 +387,15 @@ export default function Content({ content, id }) {
             <input ref={fileRef} className="hidden" type="file" onChange={setFile}/>
             <i className="ri-attachment-line" />
           </button>
+
+          <button
+            className={`menu-item ${editor.isActive('link') ? 'is-active' : ''}`}
+            onClick={setLink}
+            title="Link"
+          >
+            <i className={`ri-link`} />
+          </button>
+          
           
 
 
