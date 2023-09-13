@@ -7,7 +7,7 @@ import Heading from "@tiptap/extension-heading";
 import Image from "@tiptap/extension-image";
 
 import "remixicon/fonts/remixicon.css";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { updateContent } from "@/app/api/server";
 import { showNotification } from "@/app/utils/notifications";
 
@@ -63,18 +63,18 @@ export default function Content({ content, id }) {
     }
   }, [editor]);
 
+  useEffect(function () {
+    if (editor) {
+      editor.setEditable(isEditable);
+    }
+  }, [isEditable, editor]);
+
   if (!editor) {
     return null;
   }
 
   return (
-    <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
-      <button onClick={function() {
-        ref.current.click();
-      }}>
-        <input ref={ref} className="hidden" type="file" onChange={addImage}/>
-        <i className="ri-image-line" />
-      </button>
+    <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">  
 
       <EditorContent editor={editor} />
 
@@ -106,6 +106,13 @@ export default function Content({ content, id }) {
           </button>
         )}
       </div>
+
+      <button onClick={function() {
+        ref.current.click();
+      }}>
+        <input ref={ref} className="hidden" type="file" onChange={addImage}/>
+        <i className="ri-image-line" />
+      </button>
     </div>
   );
 }
