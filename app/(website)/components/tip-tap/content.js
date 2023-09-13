@@ -10,6 +10,7 @@ import Image from "@tiptap/extension-image";
 import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import Highlight from "@tiptap/extension-highlight";
+import TextAlign from "@tiptap/extension-text-align";
 
 import "remixicon/fonts/remixicon.css";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -41,7 +42,10 @@ export default function Content({ content, id }) {
         nested: true,
       }),
       TaskList,
-      Highlight
+      Highlight,
+      TextAlign.configure({
+        types: ["heading", "paragraph"],
+      }),
     ],
     content: content,
     editorProps: {
@@ -331,6 +335,22 @@ export default function Content({ content, id }) {
           >
             <i className={`ri-mark-pen-line`} />
           </button>
+
+          <div className="divider" />
+
+          <button
+            className={`menu-item ${editor.isActive({ textAlign: 'left' }) ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().setTextAlign('left').run()}
+            title="Align Left"
+          >
+            <i className={`ri-align-left`} />
+          </button>
+
+
+          {/* {
+            action: ,
+            isActive: () => ,
+          }, */}
 
           
         </div>
