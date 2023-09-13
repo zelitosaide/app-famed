@@ -265,6 +265,23 @@ export default function Content({ content, id }) {
           >
             <i className={`ri-paragraph`} />
           </button>
+
+          <button
+            className={`menu-item ${editor.isActive('bulletList') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleBulletList().run()}
+            title="Bullet List"
+          >
+            <i className={`ri-list-unordered`} />
+          </button>
+
+          <button
+            className={`menu-item ${editor.isActive('orderedList') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleOrderedList().run()}
+            title="Ordered List"
+          >
+            <i className={`ri-list-ordered`} />
+          </button>
+          
         </div>
       </FloatingMenu>
 
