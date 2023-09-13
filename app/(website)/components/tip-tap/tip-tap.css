@@ -61,3 +61,8 @@
 .tiptap img.ProseMirror-selectednode {
   outline: 3px solid #68cef8;
 }
+
+.tiptap iframe {
+  width: 100%;
+  outline: 5px solid #E2F0E2;
+}

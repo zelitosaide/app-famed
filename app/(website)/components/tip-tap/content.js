@@ -12,6 +12,7 @@ import TaskList from "@tiptap/extension-task-list";
 import Highlight from "@tiptap/extension-highlight";
 import TextAlign from "@tiptap/extension-text-align";
 import Link from "@tiptap/extension-link";
+import Youtube from "@tiptap/extension-youtube";
 
 import "remixicon/fonts/remixicon.css";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -57,6 +58,11 @@ export default function Content({ content, id }) {
         linkOnPaste: true,
         validate: href => /^https?:\/\//.test(href),
       }),
+      Youtube.configure({
+        controls: false,
+        progressBarColor: 'white',
+        modestBranding: 'false',
+      }),
     ],
     content: content,
     editorProps: {
@@ -89,7 +95,7 @@ export default function Content({ content, id }) {
     }
   }, [editor]);
 
-  const setLink = useCallback(async (e) => {
+  const setFile = useCallback(async (e) => {
     const formData = new FormData();
     formData.append("file", e.target.files[0]);
     formData.append("caption", "File upload using TipTap");
@@ -103,7 +109,6 @@ export default function Content({ content, id }) {
     let data = await res.json();
 
     const url = data?.url;
-    console.log("url");
 
     // cancelled
     if (url === null) {
@@ -126,6 +131,14 @@ export default function Content({ content, id }) {
 
   }, [editor]);
 
+  const addYoutubeVideo = () => {
+    const url = prompt("Enter YouTube URL");
+
+    if (url) {
+      editor.commands.setYoutubeVideo({src: url});
+    }
+  }
+
   useEffect(function () {
     if (editor) {
       editor.setEditable(isEditable);
@@ -138,11 +151,6 @@ export default function Content({ content, id }) {
 
 
   const items = [
-    // {
-    //   icon: 'image-line',
-    //   title: 'Image',
-    //   action: addImage,
-    // },
     // {
     //   icon: 'youtube-line',
     //   title: 'YouTube Video',
@@ -197,7 +205,7 @@ export default function Content({ content, id }) {
           onClick={function() { fileRefBubble.current.click() }}
           title="File"
         >
-          <input ref={fileRefBubble} className="hidden" type="file" onChange={setLink}/>
+          <input ref={fileRefBubble} className="hidden" type="file" onChange={setFile}/>
           <i className="ri-attachment-line" />
         </button>
       </BubbleMenu>
@@ -351,12 +359,21 @@ export default function Content({ content, id }) {
 
           <button 
             className={`menu-item`}
+            onClick={addYoutubeVideo}
+            title="YouTube Video"
+          >
+            <i className="ri-youtube-line" />
+          </button>
+
+          <button 
+            className={`menu-item`}
             onClick={function() { fileRef.current.click() }}
             title="File"
           >
-            <input ref={fileRef} className="hidden" type="file" onChange={setLink}/>
+            <input ref={fileRef} className="hidden" type="file" onChange={setFile}/>
             <i className="ri-attachment-line" />
           </button>
+          
 
 
 
