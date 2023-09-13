@@ -296,6 +296,16 @@ export default function Content({ content, id }) {
             <i className={`ri-list-check-2`} />
           </button>
           
+          <div className="divider" />
+
+          <button
+            className={`menu-item ${editor.isActive('bold') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleBold().run()}
+            title="Bold"
+          >
+            <i className={`ri-bold`} />
+          </button>
+          
         </div>
       </FloatingMenu>
 
