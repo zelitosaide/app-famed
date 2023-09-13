@@ -380,6 +380,26 @@ export default function Content({ content, id }) {
             <i className={`ri-double-quotes-l`} />
           </button>
 
+          <button
+            className={`menu-item`}
+            onClick={() => editor.chain().focus().setHorizontalRule().run()}
+            title="Horizontal Rule"
+          >
+            <i className={`ri-separator`} />
+          </button>
+
+          <div className="divider" />
+
+          <button 
+            className={`menu-item`}
+            onClick={function() { ref.current.click() }}
+            title="Image"
+          >
+            <input ref={ref} className="hidden" type="file" onChange={addImage}/>
+            <i className="ri-image-line" />
+          </button>
+
+
 
 
           
