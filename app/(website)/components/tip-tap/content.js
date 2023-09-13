@@ -170,35 +170,12 @@ export default function Content({ content, id }) {
 
 
   const items = [
-    // {
-    //   icon: 'link',
-    //   title: 'Link',
-    //   action: setLink,
-    //   isActive: () => editor.isActive('link'),
-    // },
+    
     // {
     //   icon: 'link-unlink',
     //   title: 'Unlink',
     //   action: () => editor.chain().focus().unsetLink().run(),
     //   disabled: !editor.isActive('link'),
-    // },
-    // {
-    //   type: 'divider',
-    // },
-    // {
-    //   icon: 'format-clear',
-    //   title: 'Clear Format',
-    //   action: () => editor.chain().focus().clearNodes().unsetAllMarks().run(),
-    // },
-    // {
-    //   icon: 'arrow-go-back-line',
-    //   title: 'Undo',
-    //   action: () => editor.chain().focus().undo().run(),
-    // },
-    // {
-    //   icon: 'arrow-go-forward-line',
-    //   title: 'Redo',
-    //   action: () => editor.chain().focus().redo().run(),
     // },
   ];
 
@@ -221,6 +198,23 @@ export default function Content({ content, id }) {
         >
           <input ref={fileRefBubble} className="hidden" type="file" onChange={setFile}/>
           <i className="ri-attachment-line" />
+        </button>
+
+        <button
+          className={`menu-item ${editor.isActive('link') ? 'is-active' : ''}`}
+          onClick={setLink}
+          title="Link"
+        >
+          <i className={`ri-link`} />
+        </button>
+
+        <button
+          className={`menu-item ${editor.isActive('link') ? 'is-active' : ''}`}
+          onClick={() => editor.chain().focus().unsetLink().run()}
+          title="Unlink"
+          disabled={!editor.isActive('link')}
+        >
+          <i className={`ri-link-unlink`} />
         </button>
       </BubbleMenu>
 
@@ -394,6 +388,15 @@ export default function Content({ content, id }) {
             title="Link"
           >
             <i className={`ri-link`} />
+          </button>
+
+          <button
+            className={`menu-item ${editor.isActive('link') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().unsetLink().run()}
+            title="Unlink"
+            disabled={!editor.isActive('link')}
+          >
+            <i className={`ri-link-unlink`} />
           </button>
           
           
