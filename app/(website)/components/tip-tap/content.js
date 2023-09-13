@@ -37,7 +37,9 @@ export default function Content({ content, id }) {
         levels: [1, 2],
       }),
       CustomDocument, 
-      Image,
+      Image.configure({
+        inline: false
+      }),
       TaskItem.configure({
         nested: true,
       }),
@@ -240,8 +242,8 @@ export default function Content({ content, id }) {
   ];
 
   return (
-    <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">  
-      <BubbleMenu className="bubble-menu" tippyOptions={{ placement: "auto" }} editor={editor}>
+    <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
+      <BubbleMenu updateDelay={0} className="bubble-menu" tippyOptions={{ placement: "auto" }} editor={editor}>
         <button 
           onClick={function() {
             ref.current.click();
@@ -398,6 +400,16 @@ export default function Content({ content, id }) {
             <input ref={ref} className="hidden" type="file" onChange={addImage}/>
             <i className="ri-image-line" />
           </button>
+
+          <button 
+            className={`menu-item`}
+            onClick={function() { ref.current.click() }}
+            title="File"
+          >
+            <input ref={ref} className="hidden" type="file" onChange={addImage}/>
+            <i className="ri-attachment-line" />
+          </button>
+
 
 
 
