@@ -13,6 +13,7 @@ import Highlight from "@tiptap/extension-highlight";
 import TextAlign from "@tiptap/extension-text-align";
 import Link from "@tiptap/extension-link";
 import Youtube from "@tiptap/extension-youtube";
+import Placeholder from "@tiptap/extension-placeholder";
 
 import "remixicon/fonts/remixicon.css";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -62,6 +63,14 @@ export default function Content({ content, id }) {
         controls: false,
         progressBarColor: 'white',
         modestBranding: 'false',
+      }),
+      Placeholder.configure({
+        placeholder: ({ node }) => {
+          if (node.type.name === 'heading' && node.attrs?.level === 1) {
+            return "What’s the title?";
+          }
+          return "Start typing here...";
+        },
       }),
     ],
     content: content,
@@ -167,17 +176,6 @@ export default function Content({ content, id }) {
   if (!editor) {
     return null;
   }
-
-
-  const items = [
-    
-    // {
-    //   icon: 'link-unlink',
-    //   title: 'Unlink',
-    //   action: () => editor.chain().focus().unsetLink().run(),
-    //   disabled: !editor.isActive('link'),
-    // },
-  ];
 
   return (
     <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
