@@ -29,11 +29,25 @@ export default function Content({ content, id }) {
     content: content
   })
 
-  const addImage = useCallback(() => {
-    const url = window.prompt('URL');
+  const addImage = useCallback(async function(e) {
+    const formData = new FormData();
+    formData.append("file", e.target.files[0]);
+    formData.append("caption", "Image upload using TipTap");
+    formData.append("category", "TipTap");
+    
+    const res = await fetch("http://localhost:3001/files", { 
+      method: "POST", 
+      body: formData 
+    });
 
-    if (url) {
-      editor.chain().focus().setImage({ src: url }).run();
+    let data = await res.json();
+
+    if (data.url) {
+      editor
+        .chain()
+        .focus()
+        .setImage({ src: "http://localhost:3001/" + data.url })
+        .run();
     }
   }, [editor]);
 
@@ -43,7 +57,8 @@ export default function Content({ content, id }) {
 
   return (
     <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
-      <button onClick={addImage}>setImage</button>
+      <input type="file" onChange={addImage} 
+    />
       <EditorContent editor={editor} />
     </div>
   );
