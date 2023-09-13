@@ -7,7 +7,9 @@ import Heading from "@tiptap/extension-heading";
 import Image from "@tiptap/extension-image";
 
 import "remixicon/fonts/remixicon.css";
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
+import { updateContent } from "@/app/api/server";
+import { showNotification } from "@/app/utils/notifications";
 
 const CustomDocument = Document.extend({
   content: "heading block+",
@@ -15,6 +17,8 @@ const CustomDocument = Document.extend({
 
 export default function Content({ content, id }) {
   const ref = useRef(null);
+  const [isEditable, setIsEditable] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const editor = useEditor({
     extensions: [
@@ -73,6 +77,35 @@ export default function Content({ content, id }) {
       </button>
 
       <EditorContent editor={editor} />
+
+      <div className="flex" style={{ position: "absolute", top: -2, right: -2 }}>
+        {isEditable ? (
+          <button 
+            disabled={isLoading}
+            className="pl-2 pr-2 rounded-tr-lg cursor-pointer bg-[#1b9a19] text-white outline outline-offset-2 outline-2 focus:outline-[#23c520] hover:outline-[#23c520] disabled:opacity-70 disabled:cursor-progress"
+            onClick={async function() {
+              setIsLoading(true);
+              setTimeout(async () => {
+                await updateContent(id, editor.getHTML());
+                setIsLoading(false);
+                setIsEditable(false);
+                showNotification("Salvo com sucesso!");
+              }, 3000);
+            }}
+          >
+            {isLoading ? "Save..." : "Save"}
+          </button>
+        ) : (
+          <button
+            className="pl-2 pr-2 rounded-tr-lg cursor-pointer bg-[#E2F0E2]"
+            onClick={function() {
+              setIsEditable(!isEditable);
+            }}
+          >
+            <i className="ri-edit-line" />
+          </button>
+        )}
+      </div>
     </div>
   );
 }
