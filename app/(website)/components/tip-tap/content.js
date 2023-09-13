@@ -28,7 +28,13 @@ export default function Content({ content, id }) {
       CustomDocument, 
       Image
     ],
-    content: content
+    content: content,
+    editorProps: {
+      attributes: {
+        spellcheck: false,
+        class: `focus:outline outline-[#E2F0E2] focus:outline-dashed focus:rounded-lg focus:outline-2`
+      },
+    },
   })
 
   const addImage = useCallback(async function(e) {
