@@ -7,6 +7,8 @@ import StarterKit from "@tiptap/starter-kit";
 import Document from "@tiptap/extension-document";
 import Heading from "@tiptap/extension-heading";
 import Image from "@tiptap/extension-image";
+import TaskItem from "@tiptap/extension-task-item";
+import TaskList from "@tiptap/extension-task-list";
 
 import "remixicon/fonts/remixicon.css";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -33,7 +35,11 @@ export default function Content({ content, id }) {
         levels: [1, 2],
       }),
       CustomDocument, 
-      Image
+      Image,
+      TaskItem.configure({
+        nested: true,
+      }),
+      TaskList,
     ],
     content: content,
     editorProps: {
@@ -42,7 +48,7 @@ export default function Content({ content, id }) {
         class: `focus:outline outline-[#E2F0E2] focus:outline-dashed focus:rounded-lg focus:outline-2`
       },
     },
-  })
+  });
 
   const addImage = useCallback(async function(e) {
     const formData = new FormData();
@@ -280,6 +286,14 @@ export default function Content({ content, id }) {
             title="Ordered List"
           >
             <i className={`ri-list-ordered`} />
+          </button>
+
+          <button
+            className={`menu-item ${editor.isActive('taskList') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleTaskList().run()}
+            title="Task List"
+          >
+            <i className={`ri-list-check-2`} />
           </button>
           
         </div>
