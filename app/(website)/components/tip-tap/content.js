@@ -7,13 +7,15 @@ import Heading from "@tiptap/extension-heading";
 import Image from "@tiptap/extension-image";
 
 import "remixicon/fonts/remixicon.css";
-import { useCallback } from "react";
+import { useCallback, useRef } from "react";
 
 const CustomDocument = Document.extend({
   content: "heading block+",
 });
 
 export default function Content({ content, id }) {
+  const ref = useRef(null);
+
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
@@ -57,8 +59,13 @@ export default function Content({ content, id }) {
 
   return (
     <div style={{ position: 'relative' }} className="prose prose-green prose-zinc prose-h1:text-2xl prose-h1:uppercase prose-h1:font-bold prose-h1:text-[#178415] prose-h2:text-xl prose-h2:text-[#178415] prose-h2:font-bold marker:text-[#178415] max-w-none">
-      <input type="file" onChange={addImage} 
-    />
+      <button onClick={function() {
+        ref.current.click();
+      }}>
+        <input ref={ref} className="hidden" type="file" onChange={addImage}/>
+        <i className="ri-image-line" />
+      </button>
+
       <EditorContent editor={editor} />
     </div>
   );
