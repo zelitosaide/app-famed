@@ -9,6 +9,7 @@ import Heading from "@tiptap/extension-heading";
 import Image from "@tiptap/extension-image";
 import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
+import Highlight from "@tiptap/extension-highlight";
 
 import "remixicon/fonts/remixicon.css";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -40,6 +41,7 @@ export default function Content({ content, id }) {
         nested: true,
       }),
       TaskList,
+      Highlight
     ],
     content: content,
     editorProps: {
@@ -322,7 +324,14 @@ export default function Content({ content, id }) {
             <i className={`ri-strikethrough`} />
           </button>
 
-          
+          <button
+            className={`menu-item ${editor.isActive('highlight') ? 'is-active' : ''}`}
+            onClick={() => editor.chain().focus().toggleHighlight().run()}
+            title="Highlight"
+          >
+            <i className={`ri-mark-pen-line`} />
+          </button>
+
           
         </div>
       </FloatingMenu>
