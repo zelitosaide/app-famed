@@ -1,5 +1,7 @@
 "use client";
 
+import "./accordion.css";
+
 import { Root, Item, Header, Trigger } from "@radix-ui/react-accordion";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import { forwardRef } from "react";
