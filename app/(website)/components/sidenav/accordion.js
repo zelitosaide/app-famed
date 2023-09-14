@@ -1,6 +1,7 @@
 "use client";
 
 import { Root, Item, Header, Trigger } from "@radix-ui/react-accordion";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
 import { forwardRef } from "react";
 
 export default function Accordion({ links }) {
@@ -27,7 +28,7 @@ const AccordionTrigger = forwardRef(({ children, className, ...props }, forwarde
       ref={forwardedRef}
     >
       {children}
-      {/* <ChevronDownIcon className="AccordionChevron" aria-hidden /> */}
+      <ChevronRightIcon className="AccordionChevron" aria-hidden />
     </Trigger>
   </Header>
 ));
