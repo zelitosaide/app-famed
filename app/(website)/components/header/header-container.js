@@ -7,7 +7,7 @@ import RightHeader from "./right-header";
 
 export default async function HeaderContainer() {
   const headerLinksData = getLinks("cabecalho");
-  const socialNetworksData = await getLinks("redes-sociais");
+  const socialNetworksData = getLinks("redes-sociais");
 
   const [headerLinks, socialNetworks] = await Promise.all([
     headerLinksData, socialNetworksData

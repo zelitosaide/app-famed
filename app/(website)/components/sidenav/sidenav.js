@@ -1,4 +1,8 @@
-export default function SideNav() {
+import { getLinkByTitle } from "@/app/api/server";
+
+export default async function SideNav() {
+  const sobreNos = getLinkByTitle("Sobre a Faculdade");
+
   return (
     <div 
       style={{ 
