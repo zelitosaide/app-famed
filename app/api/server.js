@@ -5,7 +5,12 @@ export async function getLinks(category) {
   return res.json();
 }
 
-export async function getLinkByTitle(title) {}
+export async function getLinkByTitle(title) {
+  const res = await fetch(`http://localhost:3001/links/title/${title}`, {
+    cache: "no-cache"
+  });
+  return res.json();
+}
 
 export async function getContent(segment) {
   const res = await fetch(`http://localhost:3001/contents/segment/${segment}`, {
