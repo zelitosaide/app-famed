@@ -3,6 +3,8 @@ import { getLinkByTitle } from "@/app/api/server";
 export default async function SideNav() {
   const sobreNos = getLinkByTitle("Sobre a Faculdade");
 
+  // console.log(sobreNos);
+
   return (
     <div 
       style={{ 
