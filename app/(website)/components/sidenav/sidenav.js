@@ -1,4 +1,5 @@
 import { getLinkByTitle } from "@/app/api/server";
+import Accordion from "./accordion";
 
 export default async function SideNav() {
   const sobreNos = getLinkByTitle("Sobre a Faculdade");
@@ -13,12 +14,6 @@ export default async function SideNav() {
   ]);
 
   return (
-    <div 
-      style={{ 
-        width: "100%", 
-        background: "#1b9a19", 
-        height: 400 
-      }} 
-    />
+    <Accordion links={links} />
   );
 }
