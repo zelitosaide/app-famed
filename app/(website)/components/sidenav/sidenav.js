@@ -12,7 +12,6 @@ export default async function SideNav() {
   const consultasBioestatistica = getLinkByTitle("Consultas de Bioestatística");
   const linksUteis = getLinkByTitle("Links úteis");
   
-
   const links = await Promise.all([
     paginaInicial, 
     sobreNos, 
