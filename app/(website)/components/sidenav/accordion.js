@@ -9,7 +9,7 @@ import { forwardRef } from "react";
 
 export default function Accordion({ links }) {
   return (
-    <Root className="AccordionRoot" type="multiple">
+    <Root className="AccordionRoot" type="single" collapsible>
       {links.map(function(link) {
         return (
           <Item className="AccordionItem" key={link._id} value={link._id}>
