@@ -5,15 +5,17 @@ import "./accordion.css";
 import { Root, Item, Header, Trigger, Content } from "@radix-ui/react-accordion";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { Fragment, forwardRef } from "react";
+import { forwardRef } from "react";
 
 export default function Accordion({ links }) {
+  console.log(links);
+
   return (
     <Root className="AccordionRoot" type="multiple">
       {links.map(function(link) {
         return (
           <Item className="AccordionItem" key={link._id} value={link._id}>
-            <AccordionTrigger hasChildren={link.children.length > 0}>
+            <AccordionTrigger segment={link?.segment} hasChildren={link.children.length > 0}>
               {link.title}
             </AccordionTrigger>
             {link.children.length > 0 && (
@@ -44,18 +46,25 @@ export default function Accordion({ links }) {
   );
 }
 
-const AccordionTrigger = forwardRef(({ children, className, hasChildren, ...props }, forwardedRef) => (
+const AccordionTrigger = forwardRef(({ children, className, segment, hasChildren, ...props }, forwardedRef) => (
   <Header className="AccordionHeader">
-    <Trigger
-      className={"AccordionTrigger"}
-      {...props}
-      ref={forwardedRef}
-    >
-      {children}
-      {hasChildren && (
+    {hasChildren ? (
+      <Trigger
+        className={"AccordionTrigger"}
+        {...props}
+        ref={forwardedRef}
+      >
+        {children}
         <ChevronRightIcon className="AccordionChevron" aria-hidden />
-      )}
-    </Trigger>
+      </Trigger>
+    ) : (
+      <Link
+        className={"AccordionTrigger"}
+        href={segment === "/" ? segment : "/" + segment}
+      >
+        {children}
+      </Link>
+    )}
   </Header>
 ));
 
