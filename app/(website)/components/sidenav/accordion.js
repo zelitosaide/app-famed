@@ -2,7 +2,7 @@
 
 import "./accordion.css";
 
-import { Root, Item, Header, Trigger } from "@radix-ui/react-accordion";
+import { Root, Item, Header, Trigger, Content } from "@radix-ui/react-accordion";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import { forwardRef } from "react";
 
@@ -15,6 +15,15 @@ export default function Accordion({ links }) {
             <AccordionTrigger>
               {link.title}
             </AccordionTrigger>
+            {link.children.length > 0 && (
+              link.children.map(function(child) {
+                return (
+                  <AccordionContent key={child.title}>
+                    {child.title}
+                  </AccordionContent>
+                );
+              })
+            )}
           </Item>
         );
       })}
@@ -33,4 +42,14 @@ const AccordionTrigger = forwardRef(({ children, className, ...props }, forwarde
       <ChevronRightIcon className="AccordionChevron" aria-hidden />
     </Trigger>
   </Header>
+));
+
+const AccordionContent = forwardRef(({ children, className, ...props }, forwardedRef) => (
+  <Content
+    className="AccordionContent"
+    {...props}
+    ref={forwardedRef}
+  >
+    <div className="AccordionContentText">{children}</div>
+  </Content>
 ));
