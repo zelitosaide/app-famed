@@ -44,7 +44,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1;
   color: var(--slate-4);
   box-shadow: 0 1px 0 #cde5cd;
@@ -59,7 +59,7 @@ h3 {
 .AccordionContent {
   overflow: hidden;
   font-size: 15px;
-  color: var(--slate-6);
+  color: var(--slate-5);
   background-color: #1b9a19;
 }
 
