@@ -21,7 +21,15 @@ export default function Accordion({ links }) {
                 {
                   link.children.map(function(child) {
                     return (
-                      <Link className="block" href={""} key={child.title}>
+                      <Link 
+                        style={{ 
+                          height: 45, 
+                          display: "flex", 
+                          alignItems: "center",
+                          paddingLeft: 30
+                        }} 
+                        className="block hover:bg-[#1F8E23]" href={""} key={child.title}
+                      >
                         {child.title}
                       </Link>
                     );
@@ -57,6 +65,6 @@ const AccordionContent = forwardRef(({ children, className, ...props }, forwarde
     {...props}
     ref={forwardedRef}
   >
-    <div className="AccordionContentText">{children}</div>
+    {children}
   </Content>
 ));

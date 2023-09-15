@@ -59,7 +59,7 @@ h3 {
 .AccordionContent {
   overflow: hidden;
   font-size: 15px;
-  color: var(--slate-7);
+  color: var(--slate-6);
   background-color: #1b9a19;
 }
 
@@ -68,10 +68,6 @@ h3 {
 }
 .AccordionContent[data-state='closed'] {
   animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
-}
-
-.AccordionContentText {
-  padding: 15px 20px;
 }
 
 .AccordionChevron {
