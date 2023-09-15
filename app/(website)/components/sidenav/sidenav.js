@@ -10,6 +10,8 @@ export default async function SideNav() {
   const subProtocolos = getLinkByTitle("Submissão de Protocolos");
   const noticias = getLinkByTitle("Notícias");
   const consultasBioestatistica = getLinkByTitle("Consultas de Bioestatística");
+  const linksUteis = getLinkByTitle("Links úteis");
+  
 
   const links = await Promise.all([
     paginaInicial, 
@@ -19,7 +21,8 @@ export default async function SideNav() {
     extensao, 
     subProtocolos, 
     noticias,
-    consultasBioestatistica
+    consultasBioestatistica,
+    linksUteis
   ]);
 
   return (
