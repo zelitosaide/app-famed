@@ -8,8 +8,6 @@ import Link from "next/link";
 import { forwardRef } from "react";
 
 export default function Accordion({ links }) {
-  console.log(links);
-
   return (
     <Root className="AccordionRoot" type="multiple">
       {links.map(function(link) {
@@ -22,6 +20,7 @@ export default function Accordion({ links }) {
               <AccordionContent>
                 {
                   link.children.map(function(child) {
+                    const href = child.href ? child.href : `/${link.segment}/${child.segment}`;
                     return (
                       <Link 
                         style={{ 
@@ -30,7 +29,10 @@ export default function Accordion({ links }) {
                           alignItems: "center",
                           paddingLeft: 30
                         }} 
-                        className="block hover:bg-[#1F8E23]" href={""} key={child.title}
+                        className="block hover:bg-[#1F8E23]" 
+                        href={href} 
+                        key={child.title}
+                        target={child.href ? "_blank" : null }
                       >
                         {child.title}
                       </Link>
