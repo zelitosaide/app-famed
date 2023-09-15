@@ -10,7 +10,7 @@ h3 {
 }
 
 .AccordionRoot {
-  width: 300px;
+  width: 100%;
   background-color: rgb(23 132 21 / 70%);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }

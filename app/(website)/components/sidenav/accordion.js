@@ -21,7 +21,7 @@ export default function Accordion({ links }) {
                 {
                   link.children.map(function(child) {
                     return (
-                      <Link className="block p-1" href={""} key={child.title}>
+                      <Link className="block" href={""} key={child.title}>
                         {child.title}
                       </Link>
                     );
