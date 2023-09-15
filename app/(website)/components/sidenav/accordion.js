@@ -12,7 +12,7 @@ export default function Accordion({ links }) {
       {links.map(function(link) {
         return (
           <Item className="AccordionItem" key={link._id} value={link._id}>
-            <AccordionTrigger>
+            <AccordionTrigger hasChildren={link.children.length > 0}>
               {link.title}
             </AccordionTrigger>
             {link.children.length > 0 && (
@@ -31,7 +31,7 @@ export default function Accordion({ links }) {
   );
 }
 
-const AccordionTrigger = forwardRef(({ children, className, ...props }, forwardedRef) => (
+const AccordionTrigger = forwardRef(({ children, className, hasChildren, ...props }, forwardedRef) => (
   <Header className="AccordionHeader">
     <Trigger
       className={"AccordionTrigger"}
@@ -39,7 +39,9 @@ const AccordionTrigger = forwardRef(({ children, className, ...props }, forwarde
       ref={forwardedRef}
     >
       {children}
-      <ChevronRightIcon className="AccordionChevron" aria-hidden />
+      {hasChildren && (
+        <ChevronRightIcon className="AccordionChevron" aria-hidden />
+      )}
     </Trigger>
   </Header>
 ));
