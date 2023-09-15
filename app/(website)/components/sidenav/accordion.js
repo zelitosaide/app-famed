@@ -4,7 +4,8 @@ import "./accordion.css";
 
 import { Root, Item, Header, Trigger, Content } from "@radix-ui/react-accordion";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
-import { forwardRef } from "react";
+import Link from "next/link";
+import { Fragment, forwardRef } from "react";
 
 export default function Accordion({ links }) {
   return (
@@ -16,13 +17,17 @@ export default function Accordion({ links }) {
               {link.title}
             </AccordionTrigger>
             {link.children.length > 0 && (
-              link.children.map(function(child) {
-                return (
-                  <AccordionContent key={child.title}>
-                    {child.title}
-                  </AccordionContent>
-                );
-              })
+              <AccordionContent>
+                {
+                  link.children.map(function(child) {
+                    return (
+                      <Link className="block p-1" href={""} key={child.title}>
+                        {child.title}
+                      </Link>
+                    );
+                  })
+                }
+              </AccordionContent>
             )}
           </Item>
         );
