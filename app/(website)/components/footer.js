@@ -1,3 +1,7 @@
 export default function Footer() {
-  return <h1>Footer</h1>;
+  return (
+    <div style={{ height: 260 }} className="bg-[#074F07]">
+
+    </div>
+  );
 }
