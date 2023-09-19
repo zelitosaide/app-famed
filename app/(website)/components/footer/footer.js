@@ -1,7 +1,8 @@
-import { getLinkByTitle, getLinks } from "@/app/api/server";
+import Link from "next/link";
+
+import { getLinkByTitle } from "@/app/api/server";
 
 import "./footer.css";
-import Link from "next/link";
 
 export default async function Footer() {
   const { children: links} = await getLinkByTitle("Links úteis");
@@ -33,6 +34,20 @@ export default async function Footer() {
           <ul>
             <li>
               <h2 style={{ fontSize: 16, paddingTop: 5 }} className="footer-title">Siga-nos</h2>
+            </li>
+            <li style={{ fontSize: 18 }} className="flex flex-row gap-4">
+              {socialNetworks.map(function(link) {
+                const icon = link.iconName === "InstagramLogoIcon" 
+                  ? "instagram-line"
+                  : link.iconName === "LinkedInLogoIcon"
+                    ? "linkedin-box-fill" : "twitter-fill";
+
+                return (
+                  <Link href={link.href} key={link.href} target="_blank">
+                    <i class={"ri-" + icon} />
+                  </Link>
+                );
+              })}
             </li>
             <li className="footer-copyright">Copyright © 2021 FAMED - UEM</li>
           </ul>
