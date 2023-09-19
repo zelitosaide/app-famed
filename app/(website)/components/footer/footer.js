@@ -28,6 +28,13 @@ export default async function Footer() {
               </Link>
             </li>
           </ul>
+
+          <ul>
+            <li>
+              <h2 style={{ fontSize: 16, paddingTop: 5 }} className="footer-title">Siga-nos</h2>
+            </li>
+            <li className="footer-copyright">Copyright © 2021 FAMED - UEM</li>
+          </ul>
         </div>
         <div>
           <h2 className="footer-title">Links úteis</h2>

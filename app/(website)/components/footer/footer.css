@@ -24,3 +24,10 @@
   padding: 5px 0;
   display: block;
 }
+
+.footer-copyright {
+  color: var(--slate-8);
+  font-size: 15px;
+  padding: 5px 0;
+  display: block;
+}
