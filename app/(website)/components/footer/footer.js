@@ -18,7 +18,9 @@ export default async function Footer() {
             {links.map(function(link) {
               return (
                 <li key={link.href}>
-                  <Link href={link.href} target="_blank">{link.title}</Link>
+                  <Link className="footer-link" href={link.href} target="_blank">
+                    {link.title}
+                  </Link>
                 </li>
               );
             })}
