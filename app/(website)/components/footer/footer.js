@@ -28,6 +28,14 @@ export default async function Footer() {
         </div>
         <div>
           <h2 className="footer-title">Contacto</h2>
+            <ul className="footer-contacto">
+              <li>Av. Salvador Allende nº 702, C. Postal 257</li>
+              <li>Maputo - Moçambique</li>
+              <li>Telefone: (+258) 21 428076</li>
+              <li>Celular: (+258) 825881101</li>
+              <li>Fax: (+258) 21 325255</li>
+              <li>E-mail: info.med@uem.mz</li>
+            </ul>
         </div>
       </div>
     </div>

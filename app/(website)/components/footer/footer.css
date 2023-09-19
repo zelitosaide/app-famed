@@ -17,3 +17,10 @@
 .footer-link:hover {
   text-decoration: underline;
 }
+
+.footer-contacto li {
+  color: var(--slate-8);
+  font-size: 15px;
+  padding: 5px 0;
+  display: block;
+}
