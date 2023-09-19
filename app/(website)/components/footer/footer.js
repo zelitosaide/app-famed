@@ -43,7 +43,7 @@ export default async function Footer() {
                     ? "linkedin-box-fill" : "twitter-fill";
 
                 return (
-                  <Link href={link.href} key={link.href} target="_blank">
+                  <Link className="footer-social-network" href={link.href} key={link.href} target="_blank">
                     <i class={"ri-" + icon} />
                   </Link>
                 );

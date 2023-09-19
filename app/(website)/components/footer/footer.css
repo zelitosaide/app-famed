@@ -31,3 +31,11 @@
   padding: 5px 0;
   display: block;
 }
+
+.footer-social-network {
+  color: var(--slate-8);
+}
+
+.footer-social-network:hover {
+  color: var(--slate-4);
+}
