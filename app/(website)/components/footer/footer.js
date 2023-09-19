@@ -5,7 +5,6 @@ import Link from "next/link";
 
 export default async function Footer() {
   const { children: links} = await getLinkByTitle("Links úteis");
-  console.log(links);
 
   return (
     <div className="bg-[#074F07] pl-28 pr-28 pt-9 pb-9">
