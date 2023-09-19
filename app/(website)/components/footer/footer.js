@@ -11,6 +11,23 @@ export default async function Footer() {
       <div className="grid gap-4 grid-cols-3">
         <div>
           <h2 className="footer-title">Faculdade de Medicina, UEM</h2>
+          <ul>
+            <li>
+              <Link className="footer-link" href="/sobre-a-faculdade/sobre-a-faculdade-de-medicina">
+                Nossa missão
+              </Link>
+            </li>
+            <li>
+              <Link className="footer-link" href="/sobre-a-faculdade/sobre-a-faculdade-de-medicina">
+                Nossa visão
+              </Link>
+            </li>
+            <li>
+              <Link className="footer-link" href="/sobre-a-faculdade/sobre-a-faculdade-de-medicina">
+                Nossos valores
+              </Link>
+            </li>
+          </ul>
         </div>
         <div>
           <h2 className="footer-title">Links úteis</h2>
