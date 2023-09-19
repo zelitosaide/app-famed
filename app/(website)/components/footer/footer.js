@@ -1,10 +1,11 @@
-import { getLinkByTitle } from "@/app/api/server";
+import { getLinkByTitle, getLinks } from "@/app/api/server";
 
 import "./footer.css";
 import Link from "next/link";
 
 export default async function Footer() {
   const { children: links} = await getLinkByTitle("Links úteis");
+  const { children: socialNetworks } = await getLinkByTitle("Redes Sociais");
 
   return (
     <div className="bg-[#074F07] pl-28 pr-28 pt-9 pb-9">
