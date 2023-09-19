@@ -5,6 +5,6 @@ export default async function Page() {
   const data = await getContent("extensao");
 
   return (
-    <Content content={data.content} />
+    <Content content={data.content} id={data._id} />
   );
 }
