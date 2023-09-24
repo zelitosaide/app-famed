@@ -25,11 +25,11 @@ h3 {
   margin-top: 0;
 }
 
-.AccordionItem:focus-within {
+/* .AccordionItem:focus-within {
   position: relative;
   z-index: 1;
   box-shadow: 0 0 0 3px #23c520;
-}
+} */
 
 .AccordionHeader {
   display: flex;
@@ -47,7 +47,7 @@ h3 {
   font-size: 16px;
   line-height: 1;
   color: var(--slate-4);
-  box-shadow: 0 1px 0 #cde5cd;
+  box-shadow: 0 1px 0 #78ba78;
   background-color: #1b9a19;
   font-weight: 600;
 }
@@ -76,6 +76,10 @@ h3 {
 }
 .AccordionTrigger[data-state='open'] > .AccordionChevron {
   transform: rotate(90deg);
+}
+
+.AccordionTrigger[data-state='open'] {
+  background-color: #1F8E23;
 }
 
 @keyframes slideDown {

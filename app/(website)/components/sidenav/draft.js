@@ -12,31 +12,33 @@ export default function Accordion({ links }) {
     <Root className="AccordionRoot" type="single" collapsible>
       {links.map(function(link) {
         return (
-          <Item className={`AccordionItem ${link.children.length === 0 ? "ActiveLink" : ""}`} key={link._id} value={link._id}>
+          <Item className="AccordionItem" key={link._id} value={link._id}>
             <AccordionTrigger segment={link?.segment} hasChildren={link.children.length > 0}>
               {link.title}
             </AccordionTrigger>
             {link.children.length > 0 && (
               <AccordionContent>
-                {link.children.map(function(child) {
-                  const href = child.href ? child.href : `/${link.segment}/${child.segment}`;
-                  return (
-                    <Link 
-                      style={{ 
-                        height: 45, 
-                        display: "flex", 
-                        alignItems: "center",
-                        paddingLeft: 30
-                      }} 
-                      className="block hover:bg-[#1F8E23]" 
-                      href={href} 
-                      key={child.title}
-                      target={child.href ? "_blank" : null }
-                    >
-                      {child.title}
-                    </Link>
-                  );
-                })}
+                {
+                  link.children.map(function(child) {
+                    const href = child.href ? child.href : `/${link.segment}/${child.segment}`;
+                    return (
+                      <Link 
+                        style={{ 
+                          height: 45, 
+                          display: "flex", 
+                          alignItems: "center",
+                          paddingLeft: 30
+                        }} 
+                        className="block hover:bg-[#1F8E23]" 
+                        href={href} 
+                        key={child.title}
+                        target={child.href ? "_blank" : null }
+                      >
+                        {child.title}
+                      </Link>
+                    );
+                  })
+                }
               </AccordionContent>
             )}
           </Item>
