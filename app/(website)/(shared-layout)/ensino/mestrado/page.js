@@ -13,14 +13,14 @@ export default async function Page() {
       <ul className="grid grid-cols-3 gap-x-5 gap-y-7">
         {mestrados.map(function(link) {
           return (
-            <li key={link.segment} className="bg-[#ffffff] divide-y divide-[#ddeedd] rounded shadow-md shadow-[#ddeedd] border border-[#ddeedd]">
+            <li key={link.segment} className="p-3 bg-[#ffffff] divide-y-4 divide-[#78ba78] rounded shadow-md shadow-[#ddeedd] border border-[#ddeedd]">
               <Link
-                className="text-base font-bold p-3 block text-[#178415] hover:underline"
+                className="text-base font-bold pb-3 block text-[#178415] hover:underline"
                 href={`/ensino/mestrado/${link.segment}`}
               >
                 {link.title}
               </Link>
-              <p style={{ fontSize: 15 }} className="p-3 text-zinc-500">{link.description}</p>
+              <p style={{ fontSize: 15 }} className="pt-3 text-zinc-500">{link.description}</p>
             </li>
           );
         })}
