@@ -21,7 +21,7 @@ export default async function Page() {
                 {link.title}
               </Link>
               <p style={{ fontSize: 15 }} className="p-3 text-zinc-500">
-                Oferecer aos participantes uma formação multidisciplinar, orientada para a solução de problemas de Saúde em Moçambique e proporcionar o domínio de conceitos biomédic
+                Oferecer aos participantes uma formação multidisciplinar, orientada para a solução de problemas de Saúde em Moçambique.
               </p>
             </li>
           );
