@@ -20,7 +20,7 @@ export default async function Page() {
               >
                 {link.title}
               </Link>
-              <p style={{ fontSize: 15 }} className="pt-3 text-zinc-500">{link.description}</p>
+              <p style={{ fontSize: 15 }} className="pt-3 pb-2 text-zinc-500">{link.description}</p>
             </li>
           );
         })}
