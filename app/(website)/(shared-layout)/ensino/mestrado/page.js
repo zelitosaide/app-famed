@@ -10,7 +10,7 @@ export default async function Page() {
   return (
     <div className="pt-2.5 pr-3 pl-5 pb-5">
       <h1>Cursos de Mestrado</h1>
-      <ul className="grid grid-cols-2 gap-7">
+      <ul className="grid grid-cols-3 gap-x-5 gap-y-7">
         {mestrados.map(function(link) {
           return (
             <li key={link.segment} className="bg-[#ffffff] divide-y divide-[#ddeedd] rounded shadow-md shadow-[#ddeedd] border border-[#ddeedd]">
@@ -20,9 +20,7 @@ export default async function Page() {
               >
                 {link.title}
               </Link>
-              <p style={{ fontSize: 15 }} className="p-3 text-zinc-500">
-                Oferecer aos participantes uma formação multidisciplinar, orientada para a solução de problemas de Saúde em Moçambique.
-              </p>
+              <p style={{ fontSize: 15 }} className="p-3 text-zinc-500">{link.description}</p>
             </li>
           );
         })}
