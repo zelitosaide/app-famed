@@ -21,6 +21,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #178415;
+}
+
+h2 {
+  font-weight: 700;
+  color: #178415;
+  font-size: 1.25rem;
+}
+
 .tiptap .is-empty::before {
   content: attr(data-placeholder);
   float: left;
@@ -28,10 +41,6 @@ body {
   pointer-events: none;
   height: 0;
 }
-
-/* .tiptap > * + * {
-  margin-top: 0.75em;
-} */
 
 .tiptap {
   padding-left: 20px;
