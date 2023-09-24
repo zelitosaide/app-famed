@@ -35,20 +35,20 @@ h2 {
   line-height: 1.75rem;
 }
 
-/* .tiptap .is-empty::before {
+.tiptap .is-empty::before {
   content: attr(data-placeholder);
   float: left;
   color: #ced4da;
   pointer-events: none;
   height: 0;
-} */
+}
 
-/* .tiptap {
+.tiptap {
   padding-left: 20px;
   padding-right: 12px;
   padding-bottom: 20px;
   padding-top: 10px;
-} */
+}
 
 .tiptap ul, .tiptap ol {
   padding: 0 1rem;
