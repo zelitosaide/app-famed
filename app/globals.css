@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 :root {
-  /* Minhas estilizacoes */
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
   --primary-button-rgb: 23, 132, 21;
@@ -24,6 +23,7 @@ body {
 h1 {
   font-size: 1.5rem;
   text-transform: uppercase;
+  line-height: 2rem;
   font-weight: 700;
   color: #178415;
 }
@@ -32,22 +32,23 @@ h2 {
   font-weight: 700;
   color: #178415;
   font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
-.tiptap .is-empty::before {
+/* .tiptap .is-empty::before {
   content: attr(data-placeholder);
   float: left;
   color: #ced4da;
   pointer-events: none;
   height: 0;
-}
+} */
 
-.tiptap {
+/* .tiptap {
   padding-left: 20px;
   padding-right: 12px;
   padding-bottom: 20px;
   padding-top: 10px;
-}
+} */
 
 .tiptap ul, .tiptap ol {
   padding: 0 1rem;
