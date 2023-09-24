@@ -90,7 +90,7 @@ export default function Content({ content, id }) {
     
     const res = await fetch("http://localhost:3001/files", { 
       method: "POST", 
-      body: formData 
+      body: formData,
     });
 
     let data = await res.json();
