@@ -2,8 +2,8 @@ import { getLinkByTitle } from "@/app/api/server";
 import Link from "next/link";
 
 export default async function Page() {
-  const { children } = await getLinkByTitle("Ensino");
-  const { children: mestrados} = children.find(function(child) {
+  const { children: ensino } = await getLinkByTitle("Ensino");
+  const { children: mestrados } = ensino.find(function(child) {
     return child.segment === "mestrado";
   });
 
