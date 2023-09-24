@@ -6,7 +6,7 @@ export default function Layout({ children }) {
       <div className="shrink-0 w-72">
         <SideNav />
       </div>
-      <div className="bg-[red]">
+      <div>
         {children}
       </div>
     </div>
