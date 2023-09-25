@@ -1,3 +1,10 @@
+export async function getCourses() {
+  const res = await fetch(`http://localhost:3001/courses`, {
+    cache: "no-cache"
+  });
+  return res.json();
+}
+
 export async function getLinks(category) {
   const res = await fetch(`http://localhost:3001/links/category/${category}`, {
     cache: "no-cache"

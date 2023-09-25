@@ -10,7 +10,7 @@ export default async function Page() {
   return (
     <div className="pt-2.5 pr-3 pl-5 pb-5">
       <h1>Cursos de Doutoramento</h1>
-      <ul className="grid grid-cols-3 gap-x-5 gap-y-7">
+      <ul className="grid grid-cols-3 gap-x-7 gap-y-7">
         {doutoramento.map(function(link) {
           return (
             <li key={link.segment} className="p-3 bg-[#ffffff] divide-y-4 divide-[#78ba78] rounded shadow-md shadow-[#ddeedd] border border-[#ddeedd]">
