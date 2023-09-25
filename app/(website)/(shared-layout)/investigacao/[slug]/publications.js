@@ -16,7 +16,7 @@ export default function Publications({ publications }) {
             >
               {pub.title}
             </Link>
-            <p>
+            <p style={{ fontSize: 15 }} className="pt-3 pb-2 text-zinc-500">
               {pub.authors.join(", ")}
             </p>
           </li>
