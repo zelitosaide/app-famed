@@ -16,9 +16,14 @@ export default function Publications({ publications }) {
             >
               {pub.title}
             </Link>
-            <p style={{ fontSize: 15 }} className="pt-3 pb-2 text-zinc-500">
-              {pub.authors.join(", ")}
-            </p>
+            <div style={{ fontSize: 15 }} className="pt-3 pb-2">
+              <p className="text-zinc-500">
+                {pub.authors.join(", ")}
+              </p>
+              <p className="text-[#C7681C] pt-2 italic">
+                {pub.review}. PMID: {pub.pmid}
+              </p>
+            </div>
           </li>
         );
       })}
