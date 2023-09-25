@@ -10,7 +10,7 @@ export default async function Page({ params }) {
   return (
     <div className="pt-2.5 pr-3 pl-5 pb-5">
       <h1>
-        {params.slug.split("-").join(" ")}
+        {isPublications ? "Publicações da Faculdade" : "Projectos de Pesquisa da Faculdade"}
       </h1>
 
       {isPublications ? (
