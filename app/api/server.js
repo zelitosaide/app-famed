@@ -1,3 +1,10 @@
+export async function getPublicationsOrProjects(name) {
+  const res = await fetch(`http://localhost:3001/${name}`, {
+    cache: "no-cache"
+  });
+  return res.json();
+}
+
 export async function getCourseById(id) {
   const res = await fetch(`http://localhost:3001/courses/${id}`, {
     cache: "no-cache"
