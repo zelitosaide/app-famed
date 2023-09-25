@@ -1,3 +1,11 @@
 export default function Publications({ publications }) {
-  return;
+  return (
+    <ul>
+      {publications.map(function(pub) {
+        return (
+          <li key={pub._id}>{pub.title}</li>
+        );
+      })}
+    </ul>
+  )
 }
