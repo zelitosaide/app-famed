@@ -1,23 +1,14 @@
-import { getPublicationsOrProjects } from "@/app/api/server";
-import Publications from "./publications";
+import { getProjects } from "@/app/api/server";
 import Projects from "./projects";
 
-export default async function Page({ params }) {
-  const isPublications = params.slug === "publicacoes-da-faculdade";
-  const resourceName = isPublications ? "publications" : "projects";
-  const resource = await getPublicationsOrProjects(resourceName);
+export default async function Page() {
+  const projects = await getProjects();
   
   return (
     <div className="pt-2.5 pr-3 pl-5 pb-5">
-      <h1>
-        {isPublications ? "Publicações da Faculdade" : "Projectos de Pesquisa da Faculdade"}
-      </h1>
+      <h1>Projectos de Pesquisa da Faculdade</h1>
 
-      {isPublications ? (
-        <Publications publications={resource} />
-      ) : (
-        <Projects projects={data} />
-      )}
+      <Projects projects={data} />
 
     </div>
   );

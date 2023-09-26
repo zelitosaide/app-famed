@@ -1,5 +1,12 @@
-export async function getPublicationsOrProjects(name) {
-  const res = await fetch(`http://localhost:3001/${name}`, {
+export async function getPublications() {
+  const res = await fetch(`http://localhost:3001/publications`, {
+    cache: "no-cache"
+  });
+  return res.json();
+}
+
+export async function getProjects() {
+  const res = await fetch(`http://localhost:3001/projects`, {
     cache: "no-cache"
   });
   return res.json();

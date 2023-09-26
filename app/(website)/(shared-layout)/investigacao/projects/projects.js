@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-
-
 export default function Projects({ projects }) {
   return (
     <ul className="grid grid-cols-1 gap-y-7">
