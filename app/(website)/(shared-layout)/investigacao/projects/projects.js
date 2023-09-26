@@ -35,7 +35,7 @@ export default function Projects({ projects }) {
                   Início do Projecto: Fim do Projecto:
                 </p>
                 <p style={{ fontSize: 15 }} className="text-zinc-500 pt-2">
-                  {project.description.slice(0, 200)}
+                  {project.description}
                 </p>
               </div>
             </div>
