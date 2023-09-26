@@ -6,10 +6,13 @@ export default function Projects({ projects }) {
   return (
     <ul className="grid grid-cols-1 gap-y-7">
       {projects.map(function(project) {
-        const src = project.description.includes("PROJECTO YKP") 
+        const src = project.description.includes("PROJECTO YKP")
           ? "/proj_1.png"
-          : project.description.includes("PROJECTO INCUBATOR") ? "/incubator_.png" : 
-          project.description.includes("Pneumocystis jirovecii") ? "/pcp_.png" : project.image.base64Image;
+          : project.description.includes("PROJECTO INCUBATOR")
+          ? "/incubator_.png"
+          : project.description.includes("Pneumocystis jirovecii")
+          ? "/pcp_.png"
+          : project.image.base64Image;
 
         return (
           <li 
@@ -38,14 +41,6 @@ export default function Projects({ projects }) {
                 </p>
               </div>
             </div>
-            {/* <div style={{ fontSize: 15 }} className="pt-3 pb-2">
-              <p className="text-zinc-500">
-                {project.authors.join(", ")}
-              </p>
-              <p className="text-[#C7681C] pt-2 italic">
-                {project.review}. PMID: {project.pmid}
-              </p>
-            </div> */}
           </li>
         );
       })}
