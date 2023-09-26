@@ -12,6 +12,13 @@ export async function getProjects() {
   return res.json();
 }
 
+export async function getProjectById(id) {
+  const res = await fetch(`http://localhost:3001/projects/${id}`, {
+    cache: "no-cache"
+  });
+  return res.json();
+}
+
 export async function getCourseById(id) {
   const res = await fetch(`http://localhost:3001/courses/${id}`, {
     cache: "no-cache"
