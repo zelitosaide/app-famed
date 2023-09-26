@@ -26,7 +26,7 @@ export default function Projects({ projects }) {
               </p>
               <div className="p-3">
                 <Link
-                  href={`/investigacao/projectos-de-pesquisa-da-faculdade/${project._id}`}
+                  href={`/investigacao/projects/${project._id}`}
                   className="text-base font-bold pb-3 text-[#178415] hover:underline"
                 >
                   {project.title}
