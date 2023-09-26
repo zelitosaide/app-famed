@@ -10,12 +10,10 @@ export default function Projects({ projects }) {
             className="overflow-hidden bg-[#ffffff] rounded shadow-sm shadow-[#ddeedd] border border-[#ddeedd]"
           >
             <div className="flex">
-              <p className="shrink-0 w-40 flex">
-                <img 
-                  src={`http://localhost:3001/${project.thumbnail}`}
-                  style={{ width: "100%" }}
-                />
-              </p>
+              <img 
+                className="shrink-0 w-40"
+                src={`http://localhost:3001/${project.thumbnail}`}
+              />
               <div className="p-3">
                 <Link
                   href={`/investigacao/projects/${project._id}`}
