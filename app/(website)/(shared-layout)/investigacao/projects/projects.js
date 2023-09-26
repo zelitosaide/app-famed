@@ -4,14 +4,6 @@ export default function Projects({ projects }) {
   return (
     <ul className="grid grid-cols-1 gap-y-7">
       {projects.map(function(project) {
-        const src = project.description.includes("PROJECTO YKP")
-          ? "/proj_1.png"
-          : project.description.includes("PROJECTO INCUBATOR")
-          ? "/incubator_.png"
-          : project.description.includes("Pneumocystis jirovecii")
-          ? "/pcp_.png"
-          : project.image.base64Image;
-
         return (
           <li 
             key={project._id}
@@ -20,7 +12,7 @@ export default function Projects({ projects }) {
             <div className="flex">
               <p className="shrink-0 w-40 flex">
                 <img 
-                  src={src}
+                  src={`http://localhost:3001/${project.thumbnail}`}
                   style={{ width: "100%" }}
                 />
               </p>
