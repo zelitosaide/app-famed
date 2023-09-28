@@ -1,10 +1,11 @@
+import { getNewsById } from "@/app/api/server";
+
 export default async function Page({ params }) {
+  const news = await getNewsById(params.slug);
+
   return (
-    <h1 
-      style={{ color: "#178415" }}
-      className="text-2xl font-bold uppercase"
-    >
-      {params.slug.split("-").join(" ")}
-    </h1>
+    <div className="pt-2.5 pr-3 pl-5 pb-5">
+      <h1>{news.title}</h1>
+    </div>
   );
 }

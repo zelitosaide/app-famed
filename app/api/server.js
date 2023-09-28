@@ -1,3 +1,10 @@
+export async function getNewsById(id) {
+  const res = await fetch(`http://localhost:3001/news/${id}`, {
+    cache: "no-cache"
+  });
+  return res.json();
+}
+
 export async function getNews() {
   const res = await fetch(`http://localhost:3001/news`, {
     cache: "no-cache"
