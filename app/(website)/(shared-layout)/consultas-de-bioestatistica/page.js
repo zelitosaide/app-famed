@@ -23,6 +23,9 @@ export default async function Page() {
 
           Resumo da pesquisa (deixar um espaço com pelo menos 10 linhas) 
           <textarea className="block" style={{ border: "1px solid black" }} />
+
+          <button type="submit">Marcar</button>
+          <button>Cancelar</button>
         </form>
       </div>
     </div>
