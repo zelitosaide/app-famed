@@ -1,5 +1,6 @@
 "use client";
 
+import { BookmarkFilledIcon } from "@radix-ui/react-icons";
 import { Box, Button, Flex, Grid, Select, Text, TextArea, TextField, Theme } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
 
@@ -115,7 +116,7 @@ export default function Form() {
               size="3"
               className="!outline outline-offset-2 outline-2 focus:outline-[#23c520] cursor-pointer disabled:opacity-70 disabled:cursor-progress"
             >
-              Marcar a Consulta
+              <BookmarkFilledIcon /> Marcar a Consulta
             </Button>
           </Box>
         </Flex>
