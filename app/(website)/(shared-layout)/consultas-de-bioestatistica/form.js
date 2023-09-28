@@ -113,7 +113,6 @@ export default function Form() {
               style={{ width: "100%", backgroundColor: "#1b9a19" }} 
               variant="solid"
               size="3"
-              color="green"
               className="!outline outline-offset-2 outline-2 focus:outline-[#23c520] cursor-pointer disabled:opacity-70 disabled:cursor-progress"
             >
               Marcar a Consulta
