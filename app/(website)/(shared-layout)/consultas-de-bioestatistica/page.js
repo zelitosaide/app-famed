@@ -1,3 +1,5 @@
+import Form from "./form";
+
 export default async function Page() {
   return (
     <div className="pt-2.5 pr-3 pl-5 pb-5">
@@ -5,7 +7,9 @@ export default async function Page() {
       <div className="rounded shadow-sm shadow-[#ddeedd] border border-[#ddeedd] p-3">
         Caro(a) solicitante, Preencha o Formulário de requisição de Consulta de Bioestatística
 
-        <form>
+        <Form />
+
+        {/* <form>
           Nome Completo
           <input type="text" className="block" style={{ border: "1px solid black" }} />
 
@@ -26,7 +30,7 @@ export default async function Page() {
 
           <button type="submit">Marcar</button>
           <button>Cancelar</button>
-        </form>
+        </form> */}
       </div>
     </div>
   );
