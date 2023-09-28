@@ -3,17 +3,17 @@
 import { Box, Flex, Grid, Select, Text, TextField, Theme } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
 
-export default function Form() {
-  const topicos = [
-    "Cálculo de amostra",
-    "Análise estatística descritiva (tabela/gráfico)",
-    "Análise estatística inferencial (bivariada/multivariada/outros)",
-    "Sobre base de dados (Criação, limpeza, preparação para análises, etc)",
-    "Reporte, interpretação de resultados de análise inferencial",
-    "Redação de aspectos de análise estatística no protocolo",
-    "Outro",
-  ];
+const topicos = [
+  "Cálculo de amostra",
+  "Análise estatística descritiva (tabela/gráfico)",
+  "Análise estatística inferencial (bivariada/multivariada/outros)",
+  "Sobre base de dados (Criação, limpeza, preparação para análises, etc)",
+  "Reporte, interpretação de resultados de análise inferencial",
+  "Redação de aspectos de análise estatística no protocolo",
+  "Outro",
+];
 
+export default function Form() {
   return (
     <form>
       <Theme>
