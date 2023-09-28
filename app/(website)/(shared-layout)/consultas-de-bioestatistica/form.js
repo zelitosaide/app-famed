@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Grid, Select, Text, TextArea, TextField, Theme } from "@radix-ui/themes";
+import { Box, Button, Flex, Grid, Select, Text, TextArea, TextField, Theme } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
 
 const topicos = [
@@ -106,6 +106,17 @@ export default function Form() {
               size="3" 
               placeholder="Digite o resumo da pesquisa" 
             />
+          </Box>
+
+          <Box>
+            <Button
+              style={{ width: "100%", backgroundColor: "#1b9a19" }} 
+              variant="solid"
+              size="3"
+              color="green"
+            >
+              Marcar a Consulta
+            </Button>
           </Box>
         </Flex>
       </Theme>
