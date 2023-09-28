@@ -25,8 +25,7 @@ export default function News({ news }) {
                   Data da Publicação: 
                 </p>
                 <p style={{ fontSize: 15 }} className="text-zinc-500 pt-2">
-                  {/* {noticia.description} */}
-                  {noticia.content.slice(0, 200)}
+                  {noticia.description}
                 </p>
               </div>
             </div>

@@ -1,3 +1,10 @@
+export async function getNews() {
+  const res = await fetch(`http://localhost:3001/news`, {
+    cache: "no-cache"
+  });
+  return res.json();
+}
+
 export async function getPublications() {
   const res = await fetch(`http://localhost:3001/publications`, {
     cache: "no-cache"
