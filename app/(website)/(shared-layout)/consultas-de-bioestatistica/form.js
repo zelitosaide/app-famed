@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Grid, TextField, Theme } from "@radix-ui/themes";
+import { Box, Flex, Grid, Text, TextField, Theme } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
 
 export default function Form() {
@@ -10,15 +10,27 @@ export default function Form() {
         <Flex direction="column" gap="3">
           <Grid columns="2" gap="3" width="auto">
             <Box>
+              <Text size="2" weight="bold">
+                Nome Completo
+              </Text>
               <TextField.Input radius="large" placeholder="Search the docs…" />
             </Box>
             <Box>
+              <Text size="2" weight="bold">
+                E-mail
+              </Text>
               <TextField.Input radius="large" placeholder="Search the docs…" />
             </Box>
             <Box>
+              <Text size="2" weight="bold">
+                Contacto telemóvel
+              </Text>
               <TextField.Input radius="large" placeholder="Search the docs…" />
             </Box>
             <Box>
+              <Text size="2" weight="bold">
+                Tópico de consulta
+              </Text>
               <TextField.Input radius="large" placeholder="Search the docs…" />
             </Box>
           </Grid>
