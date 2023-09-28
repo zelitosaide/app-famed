@@ -10,7 +10,7 @@ export default async function Page() {
       <ul className="grid grid-cols-3 gap-x-5 gap-y-7">
         {cursosCurtaDuracao.map(function(curso) {
           return (
-            <li key={curso._id} className="p-3 bg-[#ffffff] divide-y-4 divide-[#78ba78] rounded shadow-md shadow-[#ddeedd] border border-[#ddeedd]">
+            <li key={curso._id} className="p-3 bg-[#ffffff] divide-y-4 divide-[#78ba78] rounded shadow-sm shadow-[#ddeedd] border border-[#ddeedd]">
               <Link
                 className="text-base font-bold pb-3 block text-[#178415] hover:underline"
                 href={`/ensino/curta-duracao/${curso._id}`}

@@ -13,7 +13,7 @@ export default async function Page() {
       <ul className="grid grid-cols-3 gap-x-7 gap-y-7">
         {doutoramento.map(function(link) {
           return (
-            <li key={link.segment} className="p-3 bg-[#ffffff] divide-y-4 divide-[#78ba78] rounded shadow-md shadow-[#ddeedd] border border-[#ddeedd]">
+            <li key={link.segment} className="p-3 bg-[#ffffff] divide-y-4 divide-[#78ba78] rounded shadow-sm shadow-[#ddeedd] border border-[#ddeedd]">
               <Link
                 className="text-base font-bold pb-3 block text-[#178415] hover:underline"
                 href={`/ensino/doutoramento/${link.segment}`}
