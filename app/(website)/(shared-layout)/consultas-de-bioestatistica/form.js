@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Grid, Select, Text, TextField, Theme } from "@radix-ui/themes";
+import { Box, Flex, Grid, Select, Text, TextArea, TextField, Theme } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
 
 const topicos = [
@@ -17,8 +17,8 @@ export default function Form() {
   return (
     <form>
       <Theme>
-        <Flex direction="column" gap="3">
-          <Grid columns="2" gap="4" width="auto">
+        <Flex direction="column" gap="5">
+          <Grid columns="2" gap="5" width="auto">
             <Box>
               <Text style={{ color: "#178415" }} size="2" weight="bold" as="p" mb="1">
                 Nome Completo
@@ -27,7 +27,7 @@ export default function Form() {
                 radius="medium" 
                 size="3"
                 placeholder="Escreva seu nome completo"
-                color="green"
+                color="grass"
                 style={{ fontSize: 15 }}
               />
             </Box>
@@ -39,7 +39,7 @@ export default function Form() {
                 radius="medium" 
                 size="3"
                 placeholder="Escreva seu email"
-                color="green"
+                color="grass"
                 style={{ fontSize: 15 }}
               />
             </Box>
@@ -51,7 +51,7 @@ export default function Form() {
                 radius="medium" 
                 size="3"
                 placeholder="Digite seu número de telefone"
-                color="green"
+                color="grass"
                 style={{ fontSize: 15 }}
               />
             </Box>
@@ -63,7 +63,7 @@ export default function Form() {
                 radius="medium" 
                 size="3"
                 placeholder="Search the docs…"
-                color="green"
+                color="grass"
                 style={{ fontSize: 15 }}
               />
             </Box>
@@ -74,7 +74,7 @@ export default function Form() {
               Tópico de consulta
             </Text>
             <Select.Root size="3">
-              <Select.Trigger color="green" style={{ fontSize: 15, width: "100%" }} radius="medium" placeholder="Select a fruit…" />
+              <Select.Trigger color="grass" style={{ fontSize: 15, width: "100%" }} radius="medium" placeholder="Select a fruit…" />
               <Select.Content position="popper">
                 {topicos.map(function(topico) {
                   return (
@@ -89,6 +89,18 @@ export default function Form() {
                 })}
               </Select.Content>
             </Select.Root>
+          </Box>
+
+          <Box>
+            <Text style={{ color: "#178415" }} size="2" weight="bold" as="p" mb="1">
+              Resumo da pesquisa (deixar um espaço com pelo menos 10 linhas)
+            </Text>
+            <TextArea 
+              color="grass"
+              style={{ fontSize: 15, height: 150 }}
+              size="3" 
+              placeholder="Reply to comment…" 
+            />
           </Box>
         </Flex>
       </Theme>
