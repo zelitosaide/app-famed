@@ -104,7 +104,7 @@ export default function Form() {
               color="grass"
               style={{ fontSize: 15, height: 150 }}
               size="3" 
-              placeholder="Reply to comment…" 
+              placeholder="Digite o resumo da pesquisa" 
             />
           </Box>
         </Flex>
