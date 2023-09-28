@@ -60,11 +60,12 @@ export default function Form() {
                 Data e hora (apenas em todas Quarta-feira, das 16-18h)
               </Text>
               <TextField.Input 
+                type="date"
                 radius="medium" 
                 size="3"
                 placeholder="Search the docs…"
                 color="grass"
-                style={{ fontSize: 15 }}
+                style={{ fontSize: 15, paddingRight: 8 }}
               />
             </Box>
           </Grid>
@@ -74,7 +75,11 @@ export default function Form() {
               Tópico de consulta
             </Text>
             <Select.Root size="3">
-              <Select.Trigger color="grass" style={{ fontSize: 15, width: "100%" }} radius="medium" placeholder="Select a fruit…" />
+              <Select.Trigger 
+                color="grass" 
+                style={{ fontSize: 15, width: "100%" }} 
+                radius="medium" placeholder="Selecione o Tópico da consulta" 
+              />
               <Select.Content position="popper">
                 {topicos.map(function(topico) {
                   return (
