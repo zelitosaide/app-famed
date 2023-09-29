@@ -38,7 +38,9 @@ export default function Carousel({ news }) {
             />
             <div>
               <h2 className="text-[red]">{news.title}</h2>
-              <p>{news.description}</p>
+              <p>
+                {news.description.length <= 200 ? news.description : `${news.description.slice(0, 200)}...`}
+              </p>
               <Link href={`/noticias/${news._id}`}>
                 Ver mais <DoubleArrowRightIcon />
               </Link>
