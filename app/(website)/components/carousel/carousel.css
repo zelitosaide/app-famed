@@ -26,7 +26,6 @@
   left: 112px;
   width: 600px;
   background-color: #178415;
-  /* background-color: #0d5e0c; */
   opacity: 0.9;
   padding: 16px;
 }
@@ -103,7 +102,3 @@
 .swiper-button-prev::after, .swiper-button-next::after {
   font-size: 20px;
 }
-
-/* .swiper-button-prev:hover, .swiper-button-next:hover {
-  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, .3);
-} */
