@@ -34,6 +34,7 @@ export default function Content({ content, id }) {
   const fileRefBubble = useRef(null);
   const [isEditable, setIsEditable] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
 
   const editor = useEditor({
     extensions: [
@@ -456,39 +457,8 @@ export default function Content({ content, id }) {
 
       <EditorContent editor={editor} />
 
-      {/* <div className="flex" style={{ position: "absolute", top: -2, right: -2 }}>
-        {isEditable ? (
-          <button 
-            disabled={isLoading}
-            className="pl-2 pr-2 rounded-tr-lg cursor-pointer bg-[#1b9a19] text-white outline outline-offset-2 outline-2 focus:outline-[#23c520] hover:outline-[#23c520] disabled:opacity-70 disabled:cursor-progress"
-            onClick={async function() {
-              setIsLoading(true);
-              setTimeout(async () => {
-                await updateContent(id, editor.getHTML());
-                setIsLoading(false);
-                setIsEditable(false);
-                showNotification("Salvo com sucesso!");
-              }, 3000);
-            }}
-          >
-            {isLoading ? "Save..." : "Save"}
-          </button>
-        ) : (
-          <button
-            className="pl-2 pr-2 rounded-tr-lg cursor-pointer bg-[#E2F0E2]"
-            onClick={function() {
-              setIsEditable(!isEditable);
-            }}
-          >
-            <i className="ri-edit-line" />
-          </button>
-        )}
-      </div> */}
 
-
-
-
-      <Root>
+      <Root open={openDialog}>
         <Trigger asChild>
           <div className="flex" style={{ position: "absolute", top: -2, right: -2 }}>
             {isEditable ? (
@@ -496,13 +466,13 @@ export default function Content({ content, id }) {
                 disabled={isLoading}
                 className="pl-2 pr-2 rounded-tr-lg cursor-pointer bg-[#1b9a19] text-white outline outline-offset-2 outline-2 focus:outline-[#23c520] hover:outline-[#23c520] disabled:opacity-70 disabled:cursor-progress"
                 onClick={async function() {
-                  setIsLoading(true);
-                  setTimeout(async () => {
-                    await updateContent(id, editor.getHTML());
-                    setIsLoading(false);
-                    setIsEditable(false);
-                    showNotification("Salvo com sucesso!");
-                  }, 3000);
+                  // setIsLoading(true);
+                  // setTimeout(async () => {
+                  //   await updateContent(id, editor.getHTML());
+                  //   setIsLoading(false);
+                  //   setIsEditable(false);
+                  //   showNotification("Salvo com sucesso!");
+                  // }, 3000);
                 }}
               >
                 {isLoading ? "Save..." : "Save"}
@@ -511,7 +481,8 @@ export default function Content({ content, id }) {
               <button
                 className="pl-2 pr-2 rounded-tr-lg cursor-pointer bg-[#E2F0E2]"
                 onClick={function() {
-                  setIsEditable(!isEditable);
+                  setOpenDialog(true);
+                  // setIsEditable(!isEditable);
                 }}
               >
                 <i className="ri-edit-line" />
@@ -541,7 +512,13 @@ export default function Content({ content, id }) {
               </Close>
             </div>
             <Close asChild>
-              <button className="IconButton" aria-label="Close">
+              <button 
+                className="IconButton" 
+                aria-label="Close" 
+                onClick={function() {
+                  setOpenDialog(false);
+                }}
+              >
                 <Cross2Icon />
               </button>
             </Close>
