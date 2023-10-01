@@ -5,6 +5,8 @@ export default async function Page({ params }) {
   const data = await getContent(params.slug);
 
   return (
-    <Content content={data.content} id={data._id} />
+    <>
+      <Content content={data.content} id={data._id} />
+    </>
   );
 }
