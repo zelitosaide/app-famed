@@ -21,7 +21,7 @@ export default function Carousel({ news }) {
   };   
 
   const noticias = news.filter(function(news) {
-    return news._id !== "6515296f13b350c34957b033";
+    return news._id !== "6515296f13b350c34957b033" && news._id !== "65152d3613b350c34957b064";
   });
 
   return (
