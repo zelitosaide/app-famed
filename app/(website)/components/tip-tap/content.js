@@ -522,7 +522,7 @@ export default function Content({ content, id }) {
         <Portal>
           <Overlay className="DialogOverlay" />
           <DialogContent className="DialogContent">
-            <Title className="DialogTitle">Edit profile</Title>
+            <Title className="DialogTitle">Faça login para editar o Conteúdo</Title>
             <fieldset className="Fieldset">
               <label className="Label" htmlFor="email">
                 Email
