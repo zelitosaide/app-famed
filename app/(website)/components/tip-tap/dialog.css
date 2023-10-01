@@ -20,6 +20,9 @@ input {
   line-height: 1;
   font-weight: 500;
   height: 35px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .Button.violet {
@@ -90,7 +93,6 @@ input {
   font-size: 15px;
   color: #178415;
   margin-bottom: 10px;
-  font-weight: 500;
 }
 
 .Input {

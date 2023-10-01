@@ -535,7 +535,7 @@ export default function Content({ content, id }) {
               </label>
               <input className="Input" id="senha" type="password" defaultValue="12345678" />
             </fieldset>
-            <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
+            <div style={{ marginTop: 25 }}>
               <Close asChild>
                 <button className="Button green">Login</button>
               </Close>
