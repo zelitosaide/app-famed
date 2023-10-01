@@ -1,6 +1,7 @@
 "use client";
 
 import "./tip-tap.css";
+import "./dialog.css";
 
 import { EditorContent, FloatingMenu, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
@@ -20,6 +21,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { updateContent } from "@/app/api/server";
 import { showNotification } from "@/app/utils/notifications";
 import { BubbleMenu } from "@tiptap/react";
+import { Overlay, Portal, Root, Trigger, Content as DialogContent, Title, Description, Close } from "@radix-ui/react-dialog";
+import { Cross2Icon } from "@radix-ui/react-icons";
 
 const CustomDocument = Document.extend({
   content: "heading block+",
@@ -453,7 +456,7 @@ export default function Content({ content, id }) {
 
       <EditorContent editor={editor} />
 
-      <div className="flex" style={{ position: "absolute", top: -2, right: -2 }}>
+      {/* <div className="flex" style={{ position: "absolute", top: -2, right: -2 }}>
         {isEditable ? (
           <button 
             disabled={isLoading}
@@ -480,7 +483,73 @@ export default function Content({ content, id }) {
             <i className="ri-edit-line" />
           </button>
         )}
-      </div>
+      </div> */}
+
+
+
+
+      <Root>
+        <Trigger asChild>
+          <div className="flex" style={{ position: "absolute", top: -2, right: -2 }}>
+            {isEditable ? (
+              <button 
+                disabled={isLoading}
+                className="pl-2 pr-2 rounded-tr-lg cursor-pointer bg-[#1b9a19] text-white outline outline-offset-2 outline-2 focus:outline-[#23c520] hover:outline-[#23c520] disabled:opacity-70 disabled:cursor-progress"
+                onClick={async function() {
+                  setIsLoading(true);
+                  setTimeout(async () => {
+                    await updateContent(id, editor.getHTML());
+                    setIsLoading(false);
+                    setIsEditable(false);
+                    showNotification("Salvo com sucesso!");
+                  }, 3000);
+                }}
+              >
+                {isLoading ? "Save..." : "Save"}
+              </button>
+            ) : (
+              <button
+                className="pl-2 pr-2 rounded-tr-lg cursor-pointer bg-[#E2F0E2]"
+                onClick={function() {
+                  setIsEditable(!isEditable);
+                }}
+              >
+                <i className="ri-edit-line" />
+              </button>
+            )}
+          </div>
+        </Trigger>
+        <Portal>
+          <Overlay className="DialogOverlay" />
+          <DialogContent className="DialogContent">
+            <Title className="DialogTitle">Edit profile</Title>
+            <fieldset className="Fieldset">
+              <label className="Label" htmlFor="email">
+                Email
+              </label>
+              <input className="Input" id="email" defaultValue="example@gmail.com" />
+            </fieldset>
+            <fieldset className="Fieldset">
+              <label className="Label" htmlFor="senha">
+                Senha
+              </label>
+              <input className="Input" id="senha" type="password" defaultValue="12345678" />
+            </fieldset>
+            <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
+              <Close asChild>
+                <button className="Button green">Login</button>
+              </Close>
+            </div>
+            <Close asChild>
+              <button className="IconButton" aria-label="Close">
+                <Cross2Icon />
+              </button>
+            </Close>
+          </DialogContent>
+        </Portal>
+      </Root>
+
+
     </div>
   );
 }

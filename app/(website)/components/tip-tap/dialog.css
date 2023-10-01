@@ -61,11 +61,10 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90vw;
-  max-width: 450px;
-  max-height: 85vh;
-  padding: 25px;
+  max-width: 400px;
+  max-height: 80vh;
+  padding: 20px;
   animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
-
   z-index: 3000000;
 }
 
@@ -78,36 +77,23 @@ input {
   font-weight: 500;
   color: var(--mauve-12);
   font-size: 17px;
+  margin-bottom: 10px;
 }
-
-.DialogDescription {
-  margin: 10px 0 20px;
-  color: var(--mauve-11);
-  font-size: 15px;
-  line-height: 1.5;
-}
-
 
 .Fieldset {
   display: flex;
-  gap: 20px;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: 15px;
 }
 
 .Label {
   font-size: 15px;
   color: var(--violet-11);
-  width: 90px;
-  text-align: right;
+  margin-bottom: 10px;
 }
 
 .Input {
   width: 100%;
-  flex: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 4px;
   padding: 0 10px;
   font-size: 15px;
@@ -115,6 +101,7 @@ input {
   color: var(--violet-11);
   box-shadow: 0 0 0 1px var(--violet-7);
   height: 35px;
+  box-sizing: border-box;
 }
 .Input:focus {
   box-shadow: 0 0 0 2px var(--violet-8);
