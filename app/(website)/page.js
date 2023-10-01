@@ -7,7 +7,9 @@ export default async function Page() {
 
   return (
     <main className="pl-28 pr-28">
-      <Carousel news={news} />
+      <div className="mt-8">
+        <Carousel news={news} />
+      </div>
       <Link href="/sobre-a-faculdade">Sobre</Link>
     </main>
   );
