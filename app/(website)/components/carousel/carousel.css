@@ -70,7 +70,10 @@
   line-height: 20px;
   font-size: 12px;
   opacity: 1;
+  display: inline-block;
+  color: var(--slate-4);
   background: rgba(0, 0, 0, 0.2);
+  outline: 1px solid green;
 }
 
 .swiper-pagination-bullet-active {
