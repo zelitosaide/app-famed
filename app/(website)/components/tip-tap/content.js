@@ -466,13 +466,13 @@ export default function Content({ content, id }) {
                 disabled={isLoading}
                 className="pl-2 pr-2 rounded-tr-lg cursor-pointer bg-[#1b9a19] text-white outline outline-offset-2 outline-2 focus:outline-[#23c520] hover:outline-[#23c520] disabled:opacity-70 disabled:cursor-progress"
                 onClick={async function() {
-                  // setIsLoading(true);
-                  // setTimeout(async () => {
-                  //   await updateContent(id, editor.getHTML());
-                  //   setIsLoading(false);
-                  //   setIsEditable(false);
-                  //   showNotification("Salvo com sucesso!");
-                  // }, 3000);
+                  setIsLoading(true);
+                  setTimeout(async () => {
+                    // await updateContent(id, editor.getHTML());
+                    setIsLoading(false);
+                    setIsEditable(false);
+                    showNotification("Salvo com sucesso!");
+                  }, 3000);
                 }}
               >
                 {isLoading ? "Save..." : "Save"}
@@ -508,7 +508,15 @@ export default function Content({ content, id }) {
             </fieldset>
             <div style={{ marginTop: 25 }}>
               <Close asChild>
-                <button className="Button green">Login</button>
+                <button 
+                  className="Button green"
+                  onClick={function() {
+                    setIsEditable(true);
+                    setOpenDialog(false);
+                  }}
+                >
+                  Login
+                </button>
               </Close>
             </div>
             <Close asChild>
