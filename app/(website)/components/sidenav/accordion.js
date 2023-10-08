@@ -22,11 +22,13 @@ export default function Accordion({ links }) {
                   const href = child.href ? child.href : `/${link.segment}/${child.segment}`;
                   return (
                     <Link 
-                      style={{ 
-                        height: 45, 
+                      style={{
                         display: "flex", 
                         alignItems: "center",
-                        paddingLeft: 30
+                        paddingLeft: 20,
+                        paddingRight: 10,
+                        paddingTop: 10,
+                        paddingBottom: 10
                       }} 
                       className="block hover:bg-[#1F8E23]" 
                       href={href} 
