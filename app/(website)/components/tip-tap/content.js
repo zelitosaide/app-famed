@@ -18,7 +18,7 @@ import Placeholder from "@tiptap/extension-placeholder";
 
 import "remixicon/fonts/remixicon.css";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { updateContent } from "@/app/api/server";
+import { baseURL, updateContent } from "@/app/api/server";
 import { showNotification } from "@/app/utils/notifications";
 import { BubbleMenu } from "@tiptap/react";
 import { Overlay, Portal, Root, Trigger, Content as DialogContent, Title, Description, Close } from "@radix-ui/react-dialog";
@@ -92,7 +92,7 @@ export default function Content({ content, id }) {
     formData.append("caption", "Image upload using TipTap");
     formData.append("category", "ImageTipTap");
     
-    const res = await fetch("http://localhost:3001/files", { 
+    const res = await fetch(`${baseURL}/files`, { 
       method: "POST", 
       body: formData,
     });
@@ -103,7 +103,7 @@ export default function Content({ content, id }) {
       editor
         .chain()
         .focus()
-        .setImage({ src: "http://localhost:3001/" + data.url })
+        .setImage({ src: `${baseURL}/${data.url}` })
         .run();
     }
   }, [editor]);
@@ -114,7 +114,7 @@ export default function Content({ content, id }) {
     formData.append("caption", "File upload using TipTap");
     formData.append("category", "FileTipTap");
     
-    const res = await fetch("http://localhost:3001/files", { 
+    const res = await fetch(`${baseURL}/files`, { 
       method: "POST", 
       body: formData 
     });
@@ -139,7 +139,7 @@ export default function Content({ content, id }) {
       .chain()
       .focus()
       .extendMarkRange('link')
-      .setLink({ href: "http://localhost:3001/" + url })
+      .setLink({ href: `${baseURL}/${url}` })
       .run();
 
   }, [editor]);

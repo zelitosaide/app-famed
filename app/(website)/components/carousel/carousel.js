@@ -12,6 +12,8 @@ import { Navigation, Pagination, Keyboard } from "swiper/modules";
 import Link from "next/link";
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 
+import { baseURL } from "@/app/api/server";
+
 export default function Carousel({ news }) {
   const pagination = {
     clickable: true,
@@ -36,7 +38,7 @@ export default function Carousel({ news }) {
         return (
           <SwiperSlide key={news._id}>
             <img
-              src={`http://localhost:3001/${news.image}`}
+              src={`${baseURL}/${news.image}`}
               alt="Image3"
               className="shadow-sm shadow-[#ddeedd] border border-[#E2F0E2]"
             />

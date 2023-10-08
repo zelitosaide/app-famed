@@ -17,7 +17,7 @@ export default function MenuItem({ icon, title, action, isActive = null, disable
       <input  
         type="file" 
         ref={ref} 
-        style={{ display: "none"}} 
+        style={{ display: "none" }} 
         onChange={function(e) {
           const formData = new FormData();
           formData.append("file", e.target.files[0]);

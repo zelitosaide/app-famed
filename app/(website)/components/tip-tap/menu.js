@@ -5,9 +5,11 @@ import "./tip-tap.css";
 import { Fragment, useCallback } from "react";
 import MenuItem from "./menu-item";
 
+import { baseURL } from "@/app/api/server";
+
 export default function Menu({ editor }) {
   const addImage = useCallback(async (formData) => {
-    const res = await fetch("http://localhost:3001/files", { 
+    const res = await fetch(`${baseURL}/files`, { 
       method: "POST", 
       body: formData 
     });
@@ -18,7 +20,7 @@ export default function Menu({ editor }) {
       editor
         .chain()
         .focus()
-        .setImage({ src: `http://localhost:3001/${data.url}` })
+        .setImage({ src: `${baseURL}/${data.url}` })
         .run();
     }
   }, [editor]);
