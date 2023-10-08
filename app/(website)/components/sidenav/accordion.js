@@ -77,3 +77,5 @@ const AccordionContent = forwardRef(({ children, className, ...props }, forwarde
     {children}
   </Content>
 ));
+
+AccordionTrigger.displayName = "AccordionTrigger";
